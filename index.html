@@ -1,354 +1,1365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Immadi | AI Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiran Immadi | AI Engineer & Application Developer</title>
+  <meta name="description"
+    content="Portfolio of Kiran Immadi — AI Engineer & Application Developer specializing in autonomous AI agents, production mobile apps, systems engineering, and fintech analytics.">
+  <meta name="keywords"
+    content="Kiran Immadi, AI Engineer, Agentic AI, Autonomous Agents, Flutter, Machine Learning, Python, Full Stack">
+  <meta name="author" content="Kiran Immadi">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kiran Immadi | AI Engineer & Application Developer">
+  <meta property="og:description"
+    content="Building Intelligent Solutions for a Better Tomorrow. Flagship AI & Agentic Systems, Production Mobile & Systems Engineering.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" id="favicon-svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" id="favicon-png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Google Fonts: Inter (editorial sans), Space Grotesk (tech numbers), Caveat (handwritten notes) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('ki_theme');
+        var theme = savedTheme || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <header id="header">
-        <nav>
-            <div class="logo">KI</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="#hero" class="logo" id="logo">
+        <span class="logo-text">KIRAN IMMADI</span>
+      </a>
 
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active" id="nav-home">Home</a>
+        <a href="#about" class="nav-link" id="nav-about">About</a>
+        <a href="#tech-stack" class="nav-link" id="nav-tech">Tech Stack</a>
+        <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+        <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
+        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiranimmadi2@gmail.com" target="_blank"
+          rel="noopener noreferrer" class="btn btn-pill btn-talk" id="header-cta">
+          Let's Talk <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
         <div class="hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-name">Kiran Immadi</h1>
-                        <h2 class="hero-title"></h2>
-            <p class="hero-desc">Building production-grade GenAI applications, multi-agent systems, RAG pipelines, and LLM-powered tools at ProsperLink. I architect, build, and ship AI solutions that handle real-world complexity.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Get In Touch</a>
-                <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
-            </div>
-            <div class="hero-socials">
-                <a href="https://github.com/kiranimmadi2" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kiran-immadi/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:kiranimmadi2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                </div>
-                <pre><code><span class="code-keyword">class</span> <span class="code-class">AIEngineer</span>:
-    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
-        self.name = <span class="code-string">"Kiran Immadi"</span>
-        self.role = <span class="code-string">"AI Engineer"</span>
-        self.stack = [<span class="code-string">"LangChain"</span>, <span class="code-string">"RAG"</span>,
-                      <span class="code-string">"Multi-Agents"</span>, <span class="code-string">"LLMs"</span>]
-        self.company = <span class="code-string">"ProsperLink"</span>
+          <div class="eyebrow-tag">
+            <span>AI ENGINEER</span>
+            <span class="bullet">•</span>
+            <span>APPLICATION DEVELOPER</span>
+          </div>
 
-    <span class="code-keyword">def</span> <span class="code-func">build</span>(self):
-        <span class="code-keyword">return</span> <span class="code-string">"Production AI Systems"</span></code></pre>
-            </div>
-        </div>
-    </section>
+          <h1 class="hero-title">
+            Building <br>
+            <span class="highlight-text">Intelligent Solutions</span> <br>
+            for a <span class="editorial-serif">Better Tomorrow.</span>
+          </h1>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>AI Engineer at <strong>ProsperLink</strong> with hands-on experience building production-grade GenAI applications, from multi-agent systems and RAG pipelines to LLM-powered tools and cross-platform mobile apps.</p>
-                <p>I don't just prototype. I architect, build, and ship AI solutions that handle real-world complexity: browser automation agents that navigate the web autonomously, natural language interfaces that let non-technical users query databases, multilingual legal AI assistants, and intelligent email generators that adapt to context.</p>
-                <p>What sets me apart: I think in systems, not just models. I understand how to connect LLMs to real data, design reliable agent workflows, handle edge cases, and deliver experiences that users actually trust.</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <span class="stat-number">1,472+</span>
-                    <span class="stat-label">GitHub Contributions</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">AI/ML Projects</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">9+</span>
-                    <span class="stat-label">Months at ProsperLink</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">B.Tech</span>
-                    <span class="stat-label">AI &amp; ML, DSU (2025)</span>
-                </div>
-            </div>
-        </div>
-    </section>
+          <p class="hero-description">
+            Hi, I'm Kiran Immadi — an AI Engineer and Application Developer passionate about turning ideas into
+            real-world solutions. I build intelligent, scalable, and user-centric applications that combine the power of
+            AI with modern technology.
+          </p>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>AI Engineer</h3>
-                        <span class="timeline-date">Jul 2025 - Present</span>
-                    </div>
-                    <h4>ProsperLink &middot; Full-time &middot; Bengaluru</h4>
-                    <p>Building production AI systems, designing multi-agent architectures, developing MCP-based AI tools, and deploying LLM-powered applications. Working with APIs, RAG pipelines, LangChain, LangGraph, and cloud-native infrastructure.</p>
-                    <div class="timeline-tags">
-                        <span>AI Agents</span>
-                        <span>LangChain</span>
-                        <span>RAG</span>
-                        <span>MCP</span>
-                        <span>LLMs</span>
-                        <span>Python</span>
-                        <span>N8N</span>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>GenAI Developer Intern</h3>
-                        <span class="timeline-date">Dec 2024 - Feb 2025</span>
-                    </div>
-                    <h4>ARTECO &middot; Internship &middot; Bengaluru</h4>
-                    <p>Developed generative AI applications and explored production use-cases for LLMs. Built prototypes integrating AI models into real-world workflows.</p>
-                    <div class="timeline-tags">
-                        <span>Generative AI</span>
-                        <span>Python</span>
-                        <span>LLMs</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <h2 class="section-title" style="margin-top:3rem;">Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>B.Tech in Computer Science (AI &amp; ML)</h3>
-                        <span class="timeline-date">2021 - 2025</span>
-                    </div>
-                    <h4>Dayananda Sagar University, Bengaluru</h4>
-                </div>
-            </div>
-        </div>
-
-        <!-- Certifications -->
-        <h2 class="section-title" style="margin-top:3rem;">Certifications</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <i class="fas fa-certificate"></i>
-                <h4>Claude Code in Action</h4>
-                <p>Anthropic &middot; Feb 2026</p>
-            </div>
-            <div class="cert-card">
-                <i class="fas fa-certificate"></i>
-                <h4>Prompt Engineering</h4>
-                <p>Google &middot; Oct 2025</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <h2 class="section-title">Skills &amp; Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class="fas fa-brain"></i> AI &amp; GenAI</h3>
-                <div class="skill-tags">
-                    <span>LangChain</span>
-                    <span>LangGraph</span>
-                    <span>RAG</span>
-                    <span>Multi-Agent Systems</span>
-                    <span>MCP Protocol</span>
-                    <span>FAISS</span>
-                    <span>Pinecone</span>
-                    <span>OpenAI</span>
-                    <span>Claude</span>
-                    <span>Gemini</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Languages</h3>
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>Dart</span>
-                    <span>JavaScript</span>
-                    <span>TypeScript</span>
-                    <span>Java</span>
-                    <span>SQL</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-                <div class="skill-tags">
-                    <span>Flutter</span>
-                    <span>Firebase</span>
-                    <span>FastAPI</span>
-                    <span>Flask</span>
-                    <span>Streamlit</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>N8N</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-database"></i> Data &amp; ML</h3>
-                <div class="skill-tags">
-                    <span>TensorFlow</span>
-                    <span>Scikit-learn</span>
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                    <span>Matplotlib</span>
-                    <span>MySQL</span>
-                    <span>MongoDB</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-cloud"></i> Cloud &amp; DevOps</h3>
-                <div class="skill-tags">
-                    <span>GCP</span>
-                    <span>AWS</span>
-                    <span>Docker</span>
-                    <span>Vercel</span>
-                    <span>Git</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                <h3>MCP-Based AI Code Analysis Tool</h3>
-                <p>AI-powered developer tool built on the Model Context Protocol that enables LLM agents to interact with, analyze, and debug codebases via structured MCP tool calls. Scans project structure, extracts code elements, and detects anti-patterns.</p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>MCP</span>
-                    <span>LangChain</span>
-                    <span>AI Agents</span>
-                </div>
-                <a href="https://github.com/kiranimmadi2/MCP-Server" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-globe"></i></div>
-                <h3>AI Browser Automation Agent</h3>
-                <p>Open-source tool that lets AI control web browsers using natural language for tasks like page navigation, form filling, and data extraction. Supports multiple AI models and autonomous web workflows.</p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>NLP</span>
-                    <span>LLM</span>
-                    <span>Browser Automation</span>
-                </div>
-                <a href="https://github.com/kiranimmadi2/AI-Agent-Browser-Automation" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-gavel"></i></div>
-                <h3>Indian Legal AI Assistant</h3>
-                <p>Multilingual AI assistant that helps people understand legal documents in any Indian language. Supports PDFs, Word files, and images, detects language, and explains legal cases in simple terms.</p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>GenAI</span>
-                    <span>NLP</span>
-                    <span>Multilingual</span>
-                </div>
-                <a href="https://github.com/kiranimmadi2/Indian-law-AI-assistant" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-database"></i></div>
-                <h3>QueryAI - Natural Language to SQL</h3>
-                <p>AI-powered data query interface that turns everyday language into SQL queries using NLP and ML. Features dynamic visualizations including bar charts, pie charts, and scatter plots for data insights.</p>
-                <div class="project-tags">
-                    <span>Gemini</span>
-                    <span>MySQL</span>
-                    <span>React</span>
-                    <span>Flask</span>
-                </div>
-                <a href="https://github.com/kiranimmadi2/QueryAI" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-envelope-open-text"></i></div>
-                <h3>GenAI Cold Email Generator</h3>
-                <p>Intelligent email generator using Groq, LangChain, and Streamlit that extracts job listings from career pages and creates personalized cold emails with relevant portfolio links.</p>
-                <div class="project-tags">
-                    <span>LangChain</span>
-                    <span>Streamlit</span>
-                    <span>LLaMA 3.1</span>
-                    <span>Groq</span>
-                </div>
-                <a href="https://github.com/kiranimmadi2/GenAi-Email-Writter" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-video"></i></div>
-                <h3>Cloud-Based CCTV Analysis</h3>
-                <p>Cloud-based public safety system for uploading images and searching across regional CCTV networks using image recognition. Features real-time alerts and centralized monitoring.</p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>Computer Vision</span>
-                    <span>Cloud</span>
-                </div>
-                <a href="https://github.com/kiranimmadi2/cloud-based-CCTV-footage" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="contact-subtitle">Currently open to full-time roles and high-impact collaborations in AI engineering, GenAI product development, and applied LLM systems.</p>
-        <div class="contact-grid">
-            <a href="mailto:kiranimmadi2@gmail.com" class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <h4>Email</h4>
-                <p>kiranimmadi2@gmail.com</p>
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="hero-view-work">
+              View My Work <span class="arrow">↗</span>
             </a>
-            <a href="https://www.linkedin.com/in/kiran-immadi/" target="_blank" class="contact-card">
-                <i class="fab fa-linkedin"></i>
-                <h4>LinkedIn</h4>
-                <p>kiran-immadi</p>
+            <a href="#resume-modal" class="btn btn-secondary" id="hero-download-resume">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Resume
             </a>
-            <a href="https://github.com/kiranimmadi2" target="_blank" class="contact-card">
-                <i class="fab fa-github"></i>
-                <h4>GitHub</h4>
-                <p>kiranimmadi2</p>
-            </a>
-            <a href="https://wa.me/919916398527" target="_blank" class="contact-card">
-                <i class="fab fa-whatsapp"></i>
-                <h4>WhatsApp</h4>
-                <p>+91 99163 98527</p>
-            </a>
+          </div>
+
+          <div class="availability-badge" id="availability-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">AVAILABLE FOR OPPORTUNITIES</span>
+          </div>
         </div>
+
+        <!-- Sketch Portrait Area -->
+        <div class="hero-portrait-wrapper">
+          <div class="portrait-card" id="portrait-card">
+            <!-- Hand-written callout 1 -->
+            <div class="handwritten-note top-right">
+              Same Person<br>
+              <em>Bigger Possibilities</em>
+            </div>
+
+            <!-- Hand-written vertical tags -->
+            <div class="editorial-column right-sidebar">
+              <span>IDEAS</span>
+              <span>CODE</span>
+              <span>AI</span>
+              <span>IMPACT</span>
+              <div class="dash-divider"></div>
+              <span class="author-name">KIRAN IMMADI</span>
+            </div>
+
+            <div class="portrait-image-container" id="portrait-image-container" tabindex="0" role="region"
+              aria-label="Portrait of Kiran Immadi">
+              <!-- Light Theme Portrait -->
+              <img src="assets/kiran_light.png" alt="Portrait of Kiran Immadi"
+                class="portrait-img light-portrait" id="kiran-light-img">
+
+              <!-- Dark Theme Portrait -->
+              <img src="assets/kiran_dark.png" alt="Portrait of Kiran Immadi"
+                class="portrait-img dark-portrait" id="kiran-dark-img">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Kiran Immadi. All rights reserved.</p>
-    </footer>
 
-    <script src="script.js"></script>
+    <!-- Tech Stack Infinite Marquee Line (Iconify Real Black Icons) -->
+    <section class="tech-marquee-section" id="tech-stack">
+      <div class="marquee-header-strip">
+        <div class="container marquee-header-inner">
+          <div class="marquee-label-badge">
+            <span class="pulse-dot"></span>
+            <span>TECH STACK & TOOLS</span>
+          </div>
+          <p class="marquee-headline">Technologies, frameworks & architectures powering my work</p>
+        </div>
+      </div>
+
+      <div class="marquee-outer-container">
+        <!-- Fade edge gradients -->
+        <div class="marquee-fade-gradient left"></div>
+        <div class="marquee-fade-gradient right"></div>
+
+        <!-- Row 1 (Moving Left) -->
+        <div class="marquee-row marquee-row-left">
+          <div class="marquee-track">
+            <div class="marquee-group">
+<div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M22.282 9.821a6 6 0 0 0-.516-4.91a6.05 6.05 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a6 6 0 0 0-3.998 2.9a6.05 6.05 0 0 0 .743 7.097a5.98 5.98 0 0 0 .51 4.911a6.05 6.05 0 0 0 6.515 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.772-4.206a6 6 0 0 0 3.997-2.9a6.06 6.06 0 0 0-.747-7.073M13.26 22.43a4.48 4.48 0 0 1-2.876-1.04l.141-.081l4.779-2.758a.8.8 0 0 0 .392-.681v-6.737l2.02 1.168a.07.07 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494M3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085l4.783 2.759a.77.77 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646M2.34 7.896a4.5 4.5 0 0 1 2.366-1.973V11.6a.77.77 0 0 0 .388.677l5.815 3.354l-2.02 1.168a.08.08 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.08.08 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667m2.01-3.023l-.141-.085l-4.774-2.782a.78.78 0 0 0-.785 0L9.409 9.23V6.897a.07.07 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.8.8 0 0 0-.393.681zm1.097-2.365l2.602-1.5l2.607 1.5v2.999l-2.597 1.5l-2.607-1.5Z"/></svg> <span class="tech-name">OpenAI</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="m14.25.18l.9.2l.73.26l.59.3l.45.32l.34.34l.25.34l.16.33l.1.3l.04.26l.02.2l-.01.13V8.5l-.05.63l-.13.55l-.21.46l-.26.38l-.3.31l-.33.25l-.35.19l-.35.14l-.33.1l-.3.07l-.26.04l-.21.02H8.77l-.69.05l-.59.14l-.5.22l-.41.27l-.33.32l-.27.35l-.2.36l-.15.37l-.1.35l-.07.32l-.04.27l-.02.21v3.06H3.17l-.21-.03l-.28-.07l-.32-.12l-.35-.18l-.36-.26l-.36-.36l-.35-.46l-.32-.59l-.28-.73l-.21-.88l-.14-1.05l-.05-1.23l.06-1.22l.16-1.04l.24-.87l.32-.71l.36-.57l.4-.44l.42-.33l.42-.24l.4-.16l.36-.1l.32-.05l.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75l-.02-.37l.05-.34l.11-.31l.17-.28l.25-.26l.31-.23l.38-.2l.44-.18l.51-.15l.58-.12l.64-.1l.71-.06l.77-.04l.84-.02l1.27.05zm-6.3 1.98l-.23.33l-.08.41l.08.41l.23.34l.33.22l.41.09l.41-.09l.33-.22l.23-.34l.08-.41l-.08-.41l-.23-.33l-.33-.22l-.41-.09l-.41.09zm13.09 3.95l.28.06l.32.12l.35.18l.36.27l.36.35l.35.47l.32.59l.28.73l.21.88l.14 1.04l.05 1.23l-.06 1.23l-.16 1.04l-.24.86l-.32.71l-.36.57l-.4.45l-.42.33l-.42.24l-.4.16l-.36.09l-.32.05l-.24.02l-.16-.01h-8.22v.82h5.84l.01 2.76l.02.36l-.05.34l-.11.31l-.17.29l-.25.25l-.31.24l-.38.2l-.44.17l-.51.15l-.58.13l-.64.09l-.71.07l-.77.04l-.84.01l-1.27-.04l-1.07-.14l-.9-.2l-.73-.25l-.59-.3l-.45-.33l-.34-.34l-.25-.34l-.16-.33l-.1-.3l-.04-.25l-.02-.2l.01-.13v-5.34l.05-.64l.13-.54l.21-.46l.26-.38l.3-.32l.33-.24l.35-.2l.35-.14l.33-.1l.3-.06l.26-.04l.21-.02l.13-.01h5.84l.69-.05l.59-.14l.5-.21l.41-.28l.33-.32l.27-.35l.2-.36l.15-.36l.1-.35l.07-.32l.04-.28l.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33l-.08.41l.08.41l.23.33l.33.23l.41.08l.41-.08l.33-.23l.23-.33l.08-.41l-.08-.41l-.23-.33l-.33-.23l-.41-.08l-.41.08z"/></svg> <span class="tech-name">Python</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564l.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l4.095-2.378V14.87l3.092 1.788l-.018-4.618l-3.074-1.756V7.603z"/></svg> <span class="tech-name">TensorFlow</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12.005 0L4.952 7.053a9.865 9.865 0 0 0 0 14.022a9.866 9.866 0 0 0 14.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0s-2.904-7.634 0-10.538l4.647-4.646l.582-.665zm3.568 3.899a1.327 1.327 0 0 0-1.327 1.327a1.327 1.327 0 0 0 1.327 1.328A1.327 1.327 0 0 0 16.9 5.226A1.327 1.327 0 0 0 15.573 3.9z"/></svg> <span class="tech-name">PyTorch</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.796 0a6.93 6.93 0 0 0-4.91 2.019L5.451 5.455l3.273 3.27l3.432-3.432a2.284 2.284 0 0 1 3.277 0a2.28 2.28 0 0 1 0 3.275L12 12.001l3.273 3.273l3.433-3.435c2.692-2.692 2.692-7.127 0-9.82A6.92 6.92 0 0 0 13.796 0m-5.07 8.728l-3.433 3.434c-2.692 2.693-2.692 7.126 0 9.819A6.92 6.92 0 0 0 10.203 24a6.93 6.93 0 0 0 4.911-2.02l3.432-3.432l-3.271-3.272l-3.433 3.433a2.284 2.284 0 0 1-3.277 0a2.28 2.28 0 0 1 0-3.276L12 12z"/></svg> <span class="tech-name">LangChain</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56c-2.93 2.93-2.083 8.53-1.088 9.525c.805.804 6.595 1.843 9.526-1.088a10 10 0 0 0 .584-.643q.064-.437.489-1.106a1.9 1.9 0 0 1-.537.176q-.217.398-.676.855q-.53.503-.76.656a.8.8 0 0 1-.437.152q-.524 0-.494-.924q-.33.474-.612.7a.9.9 0 0 1-.578.224q-.292 0-.496-.273a1.03 1.03 0 0 1-.193-.507a4 4 0 0 1-.726.583q-.335.197-.74.197q-.45 0-.727-.288a1 1 0 0 1-.257-.524v.004q-.45.414-.79.611a1.3 1.3 0 0 1-.649.197a.7.7 0 0 1-.571-.275q-.218-.275-.218-.739q0-.695.302-1.67q.301-.976.733-1.797l.842-.312a.2.2 0 0 1 .06-.013q.095 0 .157.14q.06.142.061.38q0 .677-.312 1.31q-.31.633-.974 1.352q-.027.345-.027.474q0 .289.106.458q.107.17.282.169a.7.7 0 0 0 .382-.13q.198-.127.602-.523q.04-.626.482-1.142q.487-.57 1.08-.569q.308 0 .494.16a.52.52 0 0 1 .186.417q0 .687-1.459 1.114q.133.646.693.646a.8.8 0 0 0 .417-.117q.194-.115.575-.497q.048-.378.259-.728q.273-.45.701-.73q.427-.278.756-.278q.415 0 .58.381l.677-.374h.186l-.292.971q-.225.732-.226 1.004q0 .285.202.285q.129 0 .285-.137q.156-.138.437-.42v.001q.215-.233.392-.494q-.285-.127-.285-.375q0-.255.174-.545q.173-.29.479-.29q.258 0 .258.265q0 .209-.149.596q.55-.06.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732c-1.019-1.02-2.408-1.5-3.895-1.471m4.725 8.203a9 9 0 0 1-1.333 2.151a1 1 0 0 0-.012.147q0 .252.14.423q.139.17.34.17q.444-.001 1.254-.787l-.003.121q0 .219.036.666l.733-.172q0-.3.01-.474q.016-.236.066-.517q.03-.166.152-.315l.186-.216a5 5 0 0 1 .378-.397q.093-.083.162-.13a.26.26 0 0 1 .123-.046q.083 0 .083.106q0 .105-.156.497q-.292.73-.292 1.084q0 .262.136.418a.45.45 0 0 0 .358.155q.548 0 1.313-.808v-.381q-.542.64-.784.64q-.163 0-.163-.2q0-.15.195-.65q.285-.73.285-1.048a.46.46 0 0 0-.112-.319a.36.36 0 0 0-.282-.127q-.247 0-.567.233q-.319.234-.863.84q.08-.393.335-1.08l-.809.156a6.5 6.5 0 0 0-.399 1.074q-.06.234-.092.48a8 8 0 0 1-.49.45a.38.38 0 0 1-.229.08a.21.21 0 0 1-.174-.082a.35.35 0 0 1-.064-.222q0-.15.056-.343t.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854c-1.352 1.352-1.07 3.827.631 5.527c1.7 1.701 4.95 1.21 5.527.632c.467-.466 1.07-3.827-.631-5.527c-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362l.428.684h-.198l-.357-.575l-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717q0 .056.02.075q.018.02.074.02a.2.2 0 0 0 .078-.01v.141a1 1 0 0 1-.136.014a.23.23 0 0 1-.15-.043a.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258q.121 0 .207.038q.085.036.13.11a.26.26 0 0 1 .045.173h-.176q-.009-.167-.208-.167a.3.3 0 0 0-.164.041a.13.13 0 0 0-.06.117q0 .053.045.088q.045.036.15.06l.16.039a.47.47 0 0 1 .224.105q.07.069.07.186a.3.3 0 0 1-.052.175a.33.33 0 0 1-.152.116a.6.6 0 0 1-.226.041q-.205 0-.309-.088q-.103-.089-.109-.269h.176q.006.056.017.084a.2.2 0 0 0 .034.054q.066.065.204.065a.3.3 0 0 0 .177-.045a.14.14 0 0 0 .067-.119a.12.12 0 0 0-.038-.09a.3.3 0 0 0-.124-.055l-.156-.038a1 1 0 0 1-.159-.05a.4.4 0 0 1-.098-.061a.2.2 0 0 1-.058-.083a.3.3 0 0 1-.016-.108q0-.144.109-.232a.45.45 0 0 1 .29-.087m1.035 0a.5.5 0 0 1 .202.043a.35.35 0 0 1 .187.212a.6.6 0 0 1 .023.126h-.168a.26.26 0 0 0-.078-.168a.24.24 0 0 0-.17-.06a.25.25 0 0 0-.155.05a.3.3 0 0 0-.1.144a.7.7 0 0 0-.034.224a.6.6 0 0 0 .035.214a.3.3 0 0 0 .101.135a.26.26 0 0 0 .157.048q.213 0 .256-.252h.167a.5.5 0 0 1-.065.22a.35.35 0 0 1-.146.138a.5.5 0 0 1-.216.048a.45.45 0 0 1-.246-.066a.44.44 0 0 1-.161-.192a.7.7 0 0 1-.057-.293q0-.128.032-.233a.5.5 0 0 1 .095-.182a.4.4 0 0 1 .15-.117a.45.45 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618q-.121 0-.356.611q-.232.61-.459 1.71q.422-.468.683-1.05q.262-.58.262-.999a.5.5 0 0 0-.036-.197q-.038-.075-.093-.075zm4.662 1.797q-.332 0-.629.563q-.296.564-.296 1.038q0 .18.088.29a.27.27 0 0 0 .223.111q.332 0 .625-.565q.294-.566.294-1.043a.46.46 0 0 0-.083-.29a.27.27 0 0 0-.222-.104m-2.848.007q-.219 0-.417.333q-.2.332-.2.866q.849-.238.849-.881q0-.318-.232-.318"/></svg> <span class="tech-name">scikit-learn</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378c0 1.112.178 2.181.503 3.185c.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284c.278.173.48.408.71.694c.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542c.01.026.653 1.552 1.657 2.54c.616.605 1.01 1.223 1.082 1.912c.055.537-.096 1.059-.38 1.572c.637.121 1.294.187 1.967.187c.657 0 1.298-.063 1.921-.178c-.287-.517-.44-1.041-.384-1.581c.07-.69.465-1.307 1.081-1.913c1.004-.987 1.647-2.513 1.657-2.539c.021-.074.083-.285.233-.542c.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952c.23-.286.432-.52.71-.694c.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174a1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094c-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71c-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013a1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921a.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92a.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164c1.607-.007 2.984-1.155 3.572-1.164c.196-.003.305.12.305.454c0 .886-.424 2.328-1.563 3.202c-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026l-.01.008l-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116a1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243a1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444c-.034-.016-.104-.008-.2.022q-.094.03-.216.087q-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096a3 3 0 0 0-.26.219a2 2 0 0 0-.12.121a2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203c0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194c-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858s-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64c-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647s2.822 2.813 2.562 3.244s-1.176-.506-1.176-.506s-2.866-2.567-3.49-1.898s.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405c-.238.839-2.71-1.587-3.216-.642c-.506.946 3.49 2.056 3.522 2.064c1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194c1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858s.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64c.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647s-2.822 2.813-2.562 3.244s1.176-.506 1.176-.506s2.866-2.567 3.49-1.898s-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405c.238.839 2.71-1.587 3.216-.642c.506.946-3.49 2.056-3.522 2.064c-1.29.33-4.568 1.028-5.713-.624"/></svg> <span class="tech-name">Hugging Face</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M14.314 0L2.3 12L6 15.7L21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468l6.46-6.46h-7.37z"/></svg> <span class="tech-name">Flutter</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M4.105 4.105S9.158 1.58 11.684.316a3.1 3.1 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643c-.302-.267-.567-.468-1.07-.462c-.37.014-.87.195-.87.195L6.341 4.105z"/></svg> <span class="tech-name">Dart</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236a2.236 2.236 0 0 1-2.236-2.236a2.236 2.236 0 0 1 2.235-2.236a2.236 2.236 0 0 1 2.236 2.236m2.648-10.69c-1.346 0-3.107.96-4.888 2.622c-1.78-1.653-3.542-2.602-4.887-2.602c-.41 0-.783.093-1.106.278c-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03c-.704 3.113-.39 5.588.988 6.38c.32.187.69.275 1.102.275c1.345 0 3.107-.96 4.888-2.624c1.78 1.654 3.542 2.603 4.887 2.603c.41 0 .783-.09 1.106-.275c1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032c.704-3.11.39-5.587-.988-6.38a2.17 2.17 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127c.666.382.955 1.835.73 3.704c-.054.46-.142.945-.25 1.44a23.5 23.5 0 0 0-3.107-.534A24 24 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28c-.686.72-1.37 1.537-2.02 2.442a23 23 0 0 0-3.113.538a15 15 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707c.19-.09.4-.127.563-.132zm4.882 3.05q.684.704 1.36 1.564c-.44-.02-.89-.034-1.345-.034q-.691-.001-1.36.034c.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093q.61.874 1.183 1.86q.557.961 1.018 1.946c-.308.655-.646 1.31-1.013 1.95c-.38.66-.773 1.288-1.18 1.87a25.6 25.6 0 0 1-4.412.005a27 27 0 0 1-1.183-1.86q-.557-.961-1.018-1.946a25 25 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25 25 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16q-.336.585-.635 1.174c-.265-.656-.49-1.31-.676-1.947c.64-.15 1.315-.283 2.015-.386zm7.26 0q1.044.153 2.006.387c-.18.632-.405 1.282-.66 1.933a26 26 0 0 0-1.345-2.32zm3.063.675q.727.226 1.375.498c1.732.74 2.852 1.708 2.852 2.476c-.005.768-1.125 1.74-2.857 2.475c-.42.18-.88.342-1.355.493a24 24 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23 23 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5c-1.732-.737-2.852-1.706-2.852-2.474s1.12-1.742 2.852-2.476c.42-.18.88-.342 1.356-.494m11.678 4.28c.265.657.49 1.312.676 1.948c-.64.157-1.316.29-2.016.39a26 26 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175q.345.586.705 1.143a22 22 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423c.23 1.868-.054 3.32-.714 3.708c-.147.09-.338.128-.563.128c-1.012 0-2.514-.807-4.11-2.28c.686-.72 1.37-1.536 2.02-2.44c1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532c.66.905 1.345 1.727 2.035 2.446c-1.595 1.483-3.092 2.295-4.11 2.295a1.2 1.2 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703c.054-.46.142-.944.25-1.438zm4.56.64q.661.032 1.345.034q.691.001 1.36-.034c-.44.572-.895 1.095-1.345 1.565q-.684-.706-1.36-1.565"/></svg> <span class="tech-name">React</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M18.665 21.978A11.94 11.94 0 0 1 12 24C5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251zm-3.332-8.533l1.6 2.061V7.2h-1.6z"/></svg> <span class="tech-name">Next.js</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 22.016c-.438-.245-.224-.332-.08-.383c.585-.203.703-.25 1.328-.604c.065-.037.151-.023.218.017l2.256 1.339a.29.29 0 0 0 .272 0l8.795-5.076a.28.28 0 0 0 .134-.238V6.921a.28.28 0 0 0-.137-.242l-8.791-5.072a.28.28 0 0 0-.271 0L3.075 6.68a.28.28 0 0 0-.139.241v10.15a.27.27 0 0 0 .139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745c-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.236a1.93 1.93 0 0 1 1.848 0l8.794 5.082c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 0 1-.924 1.604l-8.794 5.078c-.28.163-.599.247-.925.247m7.101-10.007c0-1.9-1.284-2.406-3.987-2.763c-2.731-.361-3.009-.548-3.009-1.187c0-.528.235-1.233 2.258-1.233c1.807 0 2.473.389 2.747 1.607a.254.254 0 0 0 .247.199h1.141a.26.26 0 0 0 .186-.081a.26.26 0 0 0 .067-.196c-.177-2.098-1.571-3.076-4.388-3.076c-2.508 0-4.004 1.058-4.004 2.833c0 1.925 1.488 2.457 3.895 2.695c2.88.282 3.103.703 3.103 1.269c0 .983-.789 1.402-2.642 1.402c-2.327 0-2.839-.584-3.011-1.742a.255.255 0 0 0-.253-.215h-1.137a.25.25 0 0 0-.254.253c0 1.482.806 3.248 4.655 3.248c2.788.001 4.386-1.096 4.386-3.013"/></svg> <span class="tech-name">Node.js</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 .039c-6.627 0-12 5.354-12 11.96c-.001 6.606 5.372 11.963 12 11.962S24.001 18.605 24 12S18.627.039 12 .039m-.829 5.415h7.55l-7.58 5.329h5.182L5.28 18.543l5.891-13.088"/></svg> <span class="tech-name">FastAPI</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="m16.673 11.32l6.862-3.618c.233-.136.554.12.442.387L20.463 17.1zm-8.556-.229l3.473-5.187c.203-.328.578-.316.793-.028l7.886 11.75zm-3.375 7.25c-.28 0-.835-.284-.993-.716l-3.72-9.46c-.118-.331.139-.614.48-.464l19.474 10.306c-.149.147-.453.337-.72.334z"/></svg> <span class="tech-name">Streamlit</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569a447 447 0 0 0-1.884-2.245l-.488-.576l-.207-.245l-.113-.133l-.022-.032l-.01-.005L12.57 0l-.609.488a13.34 13.34 0 0 0-3.681 4.64a11.4 11.4 0 0 0-1.043 3.176a12 12 0 0 0-.121.738a11 11 0 0 0-.632-.033l-.059-.003a7.5 7.5 0 0 0-2.28.274l-.317.089l-.163.286a9.6 9.6 0 0 0-1.252 4.416a9.53 9.53 0 0 0 1.583 5.625a9.57 9.57 0 0 0 4.42 3.611l.236.095l.071.025l.003-.001a9.6 9.6 0 0 0 2.941.568q.171.006.342.006a9.5 9.5 0 0 0 3.69-.742l.008.004l.313-.145a9.63 9.63 0 0 0 3.927-3.335a9.6 9.6 0 0 0 1.641-5.042c.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558c-1.135-1.12-1.967-2.352-2.475-3.665c-.543-1.404-.87-2.74-.974-3.975c.48.157.922.366 1.315.622c1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028a7.9 7.9 0 0 1-2.369.273a8 8 0 0 1-.373-.022a9 9 0 0 0 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398a7.4 7.4 0 0 0-2.194-.95a9 9 0 0 1 .089-.713a11.6 11.6 0 0 1 .91-2.765l.004-.008c.177-.358.376-.719.61-1.105l.092-.152l-.003-.001a11.7 11.7 0 0 1 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237c1.291 1.549 2.966 3.583 3.612 4.48c1.277 1.771 1.893 3.579 1.83 5.375a7.97 7.97 0 0 1-3.995 6.641a15.5 15.5 0 0 1-2.539-1.599c.79-1.575.952-3.28.479-5.072zm-2.575 5.397a7.9 7.9 0 0 1-2.09 1.856a6 6 0 0 1-.243-.093l-.065-.026a7.97 7.97 0 0 1-3.635-3.01a7.94 7.94 0 0 1-1.298-4.653a7.9 7.9 0 0 1 .882-3.379q.476-.105.96-.131l.084-.002q.245-.005.478 0q.341.017.677.07c.073 1.513.445 3.145 1.105 4.852c.637 1.644 1.694 3.162 3.144 4.515z"/></svg> <span class="tech-name">Firebase</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115c-.28-.394-.53-.954-.735-1.44c-.036.495-.055.685-.523 1.184c-.723.566-4.438 3.682-4.74 10.02c-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695c-.381-.045-.765-1.76-.765-2.405"/></svg> <span class="tech-name">MongoDB</span></div>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+<div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M22.282 9.821a6 6 0 0 0-.516-4.91a6.05 6.05 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a6 6 0 0 0-3.998 2.9a6.05 6.05 0 0 0 .743 7.097a5.98 5.98 0 0 0 .51 4.911a6.05 6.05 0 0 0 6.515 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.772-4.206a6 6 0 0 0 3.997-2.9a6.06 6.06 0 0 0-.747-7.073M13.26 22.43a4.48 4.48 0 0 1-2.876-1.04l.141-.081l4.779-2.758a.8.8 0 0 0 .392-.681v-6.737l2.02 1.168a.07.07 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494M3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085l4.783 2.759a.77.77 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646M2.34 7.896a4.5 4.5 0 0 1 2.366-1.973V11.6a.77.77 0 0 0 .388.677l5.815 3.354l-2.02 1.168a.08.08 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.08.08 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667m2.01-3.023l-.141-.085l-4.774-2.782a.78.78 0 0 0-.785 0L9.409 9.23V6.897a.07.07 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.8.8 0 0 0-.393.681zm1.097-2.365l2.602-1.5l2.607 1.5v2.999l-2.597 1.5l-2.607-1.5Z"/></svg> <span class="tech-name">OpenAI</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="m14.25.18l.9.2l.73.26l.59.3l.45.32l.34.34l.25.34l.16.33l.1.3l.04.26l.02.2l-.01.13V8.5l-.05.63l-.13.55l-.21.46l-.26.38l-.3.31l-.33.25l-.35.19l-.35.14l-.33.1l-.3.07l-.26.04l-.21.02H8.77l-.69.05l-.59.14l-.5.22l-.41.27l-.33.32l-.27.35l-.2.36l-.15.37l-.1.35l-.07.32l-.04.27l-.02.21v3.06H3.17l-.21-.03l-.28-.07l-.32-.12l-.35-.18l-.36-.26l-.36-.36l-.35-.46l-.32-.59l-.28-.73l-.21-.88l-.14-1.05l-.05-1.23l.06-1.22l.16-1.04l.24-.87l.32-.71l.36-.57l.4-.44l.42-.33l.42-.24l.4-.16l.36-.1l.32-.05l.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75l-.02-.37l.05-.34l.11-.31l.17-.28l.25-.26l.31-.23l.38-.2l.44-.18l.51-.15l.58-.12l.64-.1l.71-.06l.77-.04l.84-.02l1.27.05zm-6.3 1.98l-.23.33l-.08.41l.08.41l.23.34l.33.22l.41.09l.41-.09l.33-.22l.23-.34l.08-.41l-.08-.41l-.23-.33l-.33-.22l-.41-.09l-.41.09zm13.09 3.95l.28.06l.32.12l.35.18l.36.27l.36.35l.35.47l.32.59l.28.73l.21.88l.14 1.04l.05 1.23l-.06 1.23l-.16 1.04l-.24.86l-.32.71l-.36.57l-.4.45l-.42.33l-.42.24l-.4.16l-.36.09l-.32.05l-.24.02l-.16-.01h-8.22v.82h5.84l.01 2.76l.02.36l-.05.34l-.11.31l-.17.29l-.25.25l-.31.24l-.38.2l-.44.17l-.51.15l-.58.13l-.64.09l-.71.07l-.77.04l-.84.01l-1.27-.04l-1.07-.14l-.9-.2l-.73-.25l-.59-.3l-.45-.33l-.34-.34l-.25-.34l-.16-.33l-.1-.3l-.04-.25l-.02-.2l.01-.13v-5.34l.05-.64l.13-.54l.21-.46l.26-.38l.3-.32l.33-.24l.35-.2l.35-.14l.33-.1l.3-.06l.26-.04l.21-.02l.13-.01h5.84l.69-.05l.59-.14l.5-.21l.41-.28l.33-.32l.27-.35l.2-.36l.15-.36l.1-.35l.07-.32l.04-.28l.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33l-.08.41l.08.41l.23.33l.33.23l.41.08l.41-.08l.33-.23l.23-.33l.08-.41l-.08-.41l-.23-.33l-.33-.23l-.41-.08l-.41.08z"/></svg> <span class="tech-name">Python</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564l.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l4.095-2.378V14.87l3.092 1.788l-.018-4.618l-3.074-1.756V7.603z"/></svg> <span class="tech-name">TensorFlow</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12.005 0L4.952 7.053a9.865 9.865 0 0 0 0 14.022a9.866 9.866 0 0 0 14.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0s-2.904-7.634 0-10.538l4.647-4.646l.582-.665zm3.568 3.899a1.327 1.327 0 0 0-1.327 1.327a1.327 1.327 0 0 0 1.327 1.328A1.327 1.327 0 0 0 16.9 5.226A1.327 1.327 0 0 0 15.573 3.9z"/></svg> <span class="tech-name">PyTorch</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.796 0a6.93 6.93 0 0 0-4.91 2.019L5.451 5.455l3.273 3.27l3.432-3.432a2.284 2.284 0 0 1 3.277 0a2.28 2.28 0 0 1 0 3.275L12 12.001l3.273 3.273l3.433-3.435c2.692-2.692 2.692-7.127 0-9.82A6.92 6.92 0 0 0 13.796 0m-5.07 8.728l-3.433 3.434c-2.692 2.693-2.692 7.126 0 9.819A6.92 6.92 0 0 0 10.203 24a6.93 6.93 0 0 0 4.911-2.02l3.432-3.432l-3.271-3.272l-3.433 3.433a2.284 2.284 0 0 1-3.277 0a2.28 2.28 0 0 1 0-3.276L12 12z"/></svg> <span class="tech-name">LangChain</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56c-2.93 2.93-2.083 8.53-1.088 9.525c.805.804 6.595 1.843 9.526-1.088a10 10 0 0 0 .584-.643q.064-.437.489-1.106a1.9 1.9 0 0 1-.537.176q-.217.398-.676.855q-.53.503-.76.656a.8.8 0 0 1-.437.152q-.524 0-.494-.924q-.33.474-.612.7a.9.9 0 0 1-.578.224q-.292 0-.496-.273a1.03 1.03 0 0 1-.193-.507a4 4 0 0 1-.726.583q-.335.197-.74.197q-.45 0-.727-.288a1 1 0 0 1-.257-.524v.004q-.45.414-.79.611a1.3 1.3 0 0 1-.649.197a.7.7 0 0 1-.571-.275q-.218-.275-.218-.739q0-.695.302-1.67q.301-.976.733-1.797l.842-.312a.2.2 0 0 1 .06-.013q.095 0 .157.14q.06.142.061.38q0 .677-.312 1.31q-.31.633-.974 1.352q-.027.345-.027.474q0 .289.106.458q.107.17.282.169a.7.7 0 0 0 .382-.13q.198-.127.602-.523q.04-.626.482-1.142q.487-.57 1.08-.569q.308 0 .494.16a.52.52 0 0 1 .186.417q0 .687-1.459 1.114q.133.646.693.646a.8.8 0 0 0 .417-.117q.194-.115.575-.497q.048-.378.259-.728q.273-.45.701-.73q.427-.278.756-.278q.415 0 .58.381l.677-.374h.186l-.292.971q-.225.732-.226 1.004q0 .285.202.285q.129 0 .285-.137q.156-.138.437-.42v.001q.215-.233.392-.494q-.285-.127-.285-.375q0-.255.174-.545q.173-.29.479-.29q.258 0 .258.265q0 .209-.149.596q.55-.06.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732c-1.019-1.02-2.408-1.5-3.895-1.471m4.725 8.203a9 9 0 0 1-1.333 2.151a1 1 0 0 0-.012.147q0 .252.14.423q.139.17.34.17q.444-.001 1.254-.787l-.003.121q0 .219.036.666l.733-.172q0-.3.01-.474q.016-.236.066-.517q.03-.166.152-.315l.186-.216a5 5 0 0 1 .378-.397q.093-.083.162-.13a.26.26 0 0 1 .123-.046q.083 0 .083.106q0 .105-.156.497q-.292.73-.292 1.084q0 .262.136.418a.45.45 0 0 0 .358.155q.548 0 1.313-.808v-.381q-.542.64-.784.64q-.163 0-.163-.2q0-.15.195-.65q.285-.73.285-1.048a.46.46 0 0 0-.112-.319a.36.36 0 0 0-.282-.127q-.247 0-.567.233q-.319.234-.863.84q.08-.393.335-1.08l-.809.156a6.5 6.5 0 0 0-.399 1.074q-.06.234-.092.48a8 8 0 0 1-.49.45a.38.38 0 0 1-.229.08a.21.21 0 0 1-.174-.082a.35.35 0 0 1-.064-.222q0-.15.056-.343t.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854c-1.352 1.352-1.07 3.827.631 5.527c1.7 1.701 4.95 1.21 5.527.632c.467-.466 1.07-3.827-.631-5.527c-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362l.428.684h-.198l-.357-.575l-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717q0 .056.02.075q.018.02.074.02a.2.2 0 0 0 .078-.01v.141a1 1 0 0 1-.136.014a.23.23 0 0 1-.15-.043a.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258q.121 0 .207.038q.085.036.13.11a.26.26 0 0 1 .045.173h-.176q-.009-.167-.208-.167a.3.3 0 0 0-.164.041a.13.13 0 0 0-.06.117q0 .053.045.088q.045.036.15.06l.16.039a.47.47 0 0 1 .224.105q.07.069.07.186a.3.3 0 0 1-.052.175a.33.33 0 0 1-.152.116a.6.6 0 0 1-.226.041q-.205 0-.309-.088q-.103-.089-.109-.269h.176q.006.056.017.084a.2.2 0 0 0 .034.054q.066.065.204.065a.3.3 0 0 0 .177-.045a.14.14 0 0 0 .067-.119a.12.12 0 0 0-.038-.09a.3.3 0 0 0-.124-.055l-.156-.038a1 1 0 0 1-.159-.05a.4.4 0 0 1-.098-.061a.2.2 0 0 1-.058-.083a.3.3 0 0 1-.016-.108q0-.144.109-.232a.45.45 0 0 1 .29-.087m1.035 0a.5.5 0 0 1 .202.043a.35.35 0 0 1 .187.212a.6.6 0 0 1 .023.126h-.168a.26.26 0 0 0-.078-.168a.24.24 0 0 0-.17-.06a.25.25 0 0 0-.155.05a.3.3 0 0 0-.1.144a.7.7 0 0 0-.034.224a.6.6 0 0 0 .035.214a.3.3 0 0 0 .101.135a.26.26 0 0 0 .157.048q.213 0 .256-.252h.167a.5.5 0 0 1-.065.22a.35.35 0 0 1-.146.138a.5.5 0 0 1-.216.048a.45.45 0 0 1-.246-.066a.44.44 0 0 1-.161-.192a.7.7 0 0 1-.057-.293q0-.128.032-.233a.5.5 0 0 1 .095-.182a.4.4 0 0 1 .15-.117a.45.45 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618q-.121 0-.356.611q-.232.61-.459 1.71q.422-.468.683-1.05q.262-.58.262-.999a.5.5 0 0 0-.036-.197q-.038-.075-.093-.075zm4.662 1.797q-.332 0-.629.563q-.296.564-.296 1.038q0 .18.088.29a.27.27 0 0 0 .223.111q.332 0 .625-.565q.294-.566.294-1.043a.46.46 0 0 0-.083-.29a.27.27 0 0 0-.222-.104m-2.848.007q-.219 0-.417.333q-.2.332-.2.866q.849-.238.849-.881q0-.318-.232-.318"/></svg> <span class="tech-name">scikit-learn</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378c0 1.112.178 2.181.503 3.185c.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284c.278.173.48.408.71.694c.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542c.01.026.653 1.552 1.657 2.54c.616.605 1.01 1.223 1.082 1.912c.055.537-.096 1.059-.38 1.572c.637.121 1.294.187 1.967.187c.657 0 1.298-.063 1.921-.178c-.287-.517-.44-1.041-.384-1.581c.07-.69.465-1.307 1.081-1.913c1.004-.987 1.647-2.513 1.657-2.539c.021-.074.083-.285.233-.542c.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952c.23-.286.432-.52.71-.694c.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174a1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094c-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71c-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013a1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921a.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92a.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164c1.607-.007 2.984-1.155 3.572-1.164c.196-.003.305.12.305.454c0 .886-.424 2.328-1.563 3.202c-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026l-.01.008l-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116a1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243a1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444c-.034-.016-.104-.008-.2.022q-.094.03-.216.087q-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096a3 3 0 0 0-.26.219a2 2 0 0 0-.12.121a2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203c0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194c-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858s-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64c-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647s2.822 2.813 2.562 3.244s-1.176-.506-1.176-.506s-2.866-2.567-3.49-1.898s.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405c-.238.839-2.71-1.587-3.216-.642c-.506.946 3.49 2.056 3.522 2.064c1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194c1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858s.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64c.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647s-2.822 2.813-2.562 3.244s1.176-.506 1.176-.506s2.866-2.567 3.49-1.898s-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405c.238.839 2.71-1.587 3.216-.642c.506.946-3.49 2.056-3.522 2.064c-1.29.33-4.568 1.028-5.713-.624"/></svg> <span class="tech-name">Hugging Face</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M14.314 0L2.3 12L6 15.7L21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468l6.46-6.46h-7.37z"/></svg> <span class="tech-name">Flutter</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M4.105 4.105S9.158 1.58 11.684.316a3.1 3.1 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643c-.302-.267-.567-.468-1.07-.462c-.37.014-.87.195-.87.195L6.341 4.105z"/></svg> <span class="tech-name">Dart</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236a2.236 2.236 0 0 1-2.236-2.236a2.236 2.236 0 0 1 2.235-2.236a2.236 2.236 0 0 1 2.236 2.236m2.648-10.69c-1.346 0-3.107.96-4.888 2.622c-1.78-1.653-3.542-2.602-4.887-2.602c-.41 0-.783.093-1.106.278c-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03c-.704 3.113-.39 5.588.988 6.38c.32.187.69.275 1.102.275c1.345 0 3.107-.96 4.888-2.624c1.78 1.654 3.542 2.603 4.887 2.603c.41 0 .783-.09 1.106-.275c1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032c.704-3.11.39-5.587-.988-6.38a2.17 2.17 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127c.666.382.955 1.835.73 3.704c-.054.46-.142.945-.25 1.44a23.5 23.5 0 0 0-3.107-.534A24 24 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28c-.686.72-1.37 1.537-2.02 2.442a23 23 0 0 0-3.113.538a15 15 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707c.19-.09.4-.127.563-.132zm4.882 3.05q.684.704 1.36 1.564c-.44-.02-.89-.034-1.345-.034q-.691-.001-1.36.034c.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093q.61.874 1.183 1.86q.557.961 1.018 1.946c-.308.655-.646 1.31-1.013 1.95c-.38.66-.773 1.288-1.18 1.87a25.6 25.6 0 0 1-4.412.005a27 27 0 0 1-1.183-1.86q-.557-.961-1.018-1.946a25 25 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25 25 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16q-.336.585-.635 1.174c-.265-.656-.49-1.31-.676-1.947c.64-.15 1.315-.283 2.015-.386zm7.26 0q1.044.153 2.006.387c-.18.632-.405 1.282-.66 1.933a26 26 0 0 0-1.345-2.32zm3.063.675q.727.226 1.375.498c1.732.74 2.852 1.708 2.852 2.476c-.005.768-1.125 1.74-2.857 2.475c-.42.18-.88.342-1.355.493a24 24 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23 23 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5c-1.732-.737-2.852-1.706-2.852-2.474s1.12-1.742 2.852-2.476c.42-.18.88-.342 1.356-.494m11.678 4.28c.265.657.49 1.312.676 1.948c-.64.157-1.316.29-2.016.39a26 26 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175q.345.586.705 1.143a22 22 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423c.23 1.868-.054 3.32-.714 3.708c-.147.09-.338.128-.563.128c-1.012 0-2.514-.807-4.11-2.28c.686-.72 1.37-1.536 2.02-2.44c1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532c.66.905 1.345 1.727 2.035 2.446c-1.595 1.483-3.092 2.295-4.11 2.295a1.2 1.2 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703c.054-.46.142-.944.25-1.438zm4.56.64q.661.032 1.345.034q.691.001 1.36-.034c-.44.572-.895 1.095-1.345 1.565q-.684-.706-1.36-1.565"/></svg> <span class="tech-name">React</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M18.665 21.978A11.94 11.94 0 0 1 12 24C5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251zm-3.332-8.533l1.6 2.061V7.2h-1.6z"/></svg> <span class="tech-name">Next.js</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 22.016c-.438-.245-.224-.332-.08-.383c.585-.203.703-.25 1.328-.604c.065-.037.151-.023.218.017l2.256 1.339a.29.29 0 0 0 .272 0l8.795-5.076a.28.28 0 0 0 .134-.238V6.921a.28.28 0 0 0-.137-.242l-8.791-5.072a.28.28 0 0 0-.271 0L3.075 6.68a.28.28 0 0 0-.139.241v10.15a.27.27 0 0 0 .139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745c-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.236a1.93 1.93 0 0 1 1.848 0l8.794 5.082c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 0 1-.924 1.604l-8.794 5.078c-.28.163-.599.247-.925.247m7.101-10.007c0-1.9-1.284-2.406-3.987-2.763c-2.731-.361-3.009-.548-3.009-1.187c0-.528.235-1.233 2.258-1.233c1.807 0 2.473.389 2.747 1.607a.254.254 0 0 0 .247.199h1.141a.26.26 0 0 0 .186-.081a.26.26 0 0 0 .067-.196c-.177-2.098-1.571-3.076-4.388-3.076c-2.508 0-4.004 1.058-4.004 2.833c0 1.925 1.488 2.457 3.895 2.695c2.88.282 3.103.703 3.103 1.269c0 .983-.789 1.402-2.642 1.402c-2.327 0-2.839-.584-3.011-1.742a.255.255 0 0 0-.253-.215h-1.137a.25.25 0 0 0-.254.253c0 1.482.806 3.248 4.655 3.248c2.788.001 4.386-1.096 4.386-3.013"/></svg> <span class="tech-name">Node.js</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 .039c-6.627 0-12 5.354-12 11.96c-.001 6.606 5.372 11.963 12 11.962S24.001 18.605 24 12S18.627.039 12 .039m-.829 5.415h7.55l-7.58 5.329h5.182L5.28 18.543l5.891-13.088"/></svg> <span class="tech-name">FastAPI</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="m16.673 11.32l6.862-3.618c.233-.136.554.12.442.387L20.463 17.1zm-8.556-.229l3.473-5.187c.203-.328.578-.316.793-.028l7.886 11.75zm-3.375 7.25c-.28 0-.835-.284-.993-.716l-3.72-9.46c-.118-.331.139-.614.48-.464l19.474 10.306c-.149.147-.453.337-.72.334z"/></svg> <span class="tech-name">Streamlit</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569a447 447 0 0 0-1.884-2.245l-.488-.576l-.207-.245l-.113-.133l-.022-.032l-.01-.005L12.57 0l-.609.488a13.34 13.34 0 0 0-3.681 4.64a11.4 11.4 0 0 0-1.043 3.176a12 12 0 0 0-.121.738a11 11 0 0 0-.632-.033l-.059-.003a7.5 7.5 0 0 0-2.28.274l-.317.089l-.163.286a9.6 9.6 0 0 0-1.252 4.416a9.53 9.53 0 0 0 1.583 5.625a9.57 9.57 0 0 0 4.42 3.611l.236.095l.071.025l.003-.001a9.6 9.6 0 0 0 2.941.568q.171.006.342.006a9.5 9.5 0 0 0 3.69-.742l.008.004l.313-.145a9.63 9.63 0 0 0 3.927-3.335a9.6 9.6 0 0 0 1.641-5.042c.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558c-1.135-1.12-1.967-2.352-2.475-3.665c-.543-1.404-.87-2.74-.974-3.975c.48.157.922.366 1.315.622c1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028a7.9 7.9 0 0 1-2.369.273a8 8 0 0 1-.373-.022a9 9 0 0 0 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398a7.4 7.4 0 0 0-2.194-.95a9 9 0 0 1 .089-.713a11.6 11.6 0 0 1 .91-2.765l.004-.008c.177-.358.376-.719.61-1.105l.092-.152l-.003-.001a11.7 11.7 0 0 1 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237c1.291 1.549 2.966 3.583 3.612 4.48c1.277 1.771 1.893 3.579 1.83 5.375a7.97 7.97 0 0 1-3.995 6.641a15.5 15.5 0 0 1-2.539-1.599c.79-1.575.952-3.28.479-5.072zm-2.575 5.397a7.9 7.9 0 0 1-2.09 1.856a6 6 0 0 1-.243-.093l-.065-.026a7.97 7.97 0 0 1-3.635-3.01a7.94 7.94 0 0 1-1.298-4.653a7.9 7.9 0 0 1 .882-3.379q.476-.105.96-.131l.084-.002q.245-.005.478 0q.341.017.677.07c.073 1.513.445 3.145 1.105 4.852c.637 1.644 1.694 3.162 3.144 4.515z"/></svg> <span class="tech-name">Firebase</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115c-.28-.394-.53-.954-.735-1.44c-.036.495-.055.685-.523 1.184c-.723.566-4.438 3.682-4.74 10.02c-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695c-.381-.045-.765-1.76-.765-2.405"/></svg> <span class="tech-name">MongoDB</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 (Moving Right) -->
+        <div class="marquee-row marquee-row-right">
+          <div class="marquee-track">
+            <div class="marquee-group">
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M21.678.521c-1.032-.92-2.28-.55-3.513.544a9 9 0 0 0-.547.535c-2.109 2.237-4.066 6.38-4.674 9.544c.237.48.422 1.093.544 1.561a13 13 0 0 1 .164.703s-.019-.071-.096-.296l-.05-.146l-.033-.08c-.138-.32-.518-.995-.686-1.289c-.143.423-.27.818-.376 1.176c.484.884.778 2.4.778 2.4s-.025-.099-.147-.442c-.107-.303-.644-1.244-.772-1.464c-.217.804-.304 1.346-.226 1.478c.152.256.296.698.422 1.186c.286 1.1.485 2.44.485 2.44l.017.224a22 22 0 0 0 .056 2.748c.095 1.146.273 2.13.5 2.657l.155-.084c-.334-1.038-.47-2.399-.41-3.967c.09-2.398.642-5.29 1.661-8.304c1.723-4.55 4.113-8.201 6.3-9.945c-1.993 1.8-4.692 7.63-5.5 9.788c-.904 2.416-1.545 4.684-1.931 6.857c.666-2.037 2.821-2.912 2.821-2.912s1.057-1.304 2.292-3.166c-.74.169-1.955.458-2.362.629c-.6.251-.762.337-.762.337s1.945-1.184 3.613-1.72C21.695 7.9 24.195 2.767 21.678.521m-18.573.543A1.84 1.84 0 0 0 1.27 2.9v16.608a1.84 1.84 0 0 0 1.835 1.834h9.418a23 23 0 0 1-.052-2.707c-.006-.062-.011-.141-.016-.2a27 27 0 0 0-.473-2.378c-.121-.47-.275-.898-.369-1.057c-.116-.197-.098-.31-.097-.432c0-.12.015-.245.037-.386a10 10 0 0 1 .234-1.045l.217-.028c-.017-.035-.014-.065-.031-.097l-.041-.381a33 33 0 0 1 .382-1.194l.2-.019c-.008-.016-.01-.038-.018-.053l-.043-.316c.63-3.28 2.587-7.443 4.8-9.791c.066-.069.133-.128.198-.194Z"/></svg> <span class="tech-name">SQLite</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51q-.508.001-1.01.087c-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199l-.226.327c-.284.438-.49.922-.612 1.43c-.23.97-.09 1.882.403 2.661c-.595.332-1.55.413-1.744.42H.751a.75.75 0 0 0-.75.748a11.4 11.4 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124c1.18.723 3.1 1.137 5.275 1.137a15.7 15.7 0 0 0 2.93-.266a12.3 12.3 0 0 0 3.823-1.389a10.5 10.5 0 0 0 2.61-2.136c1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009c.309-.293.55-.65.707-1.046l.098-.288Z"/></svg> <span class="tech-name">Docker</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M23.033 11.296c-.05 0-.101 0-.151.013L18.86 3.87a.968.968 0 0 0-1.558-1.118L9.286 1.156a.97.97 0 0 0-.968-.854a.976.976 0 0 0-.967.967a.93.93 0 0 0 .113.453L1.219 10.68a.8.8 0 0 0-.251-.038a.968.968 0 0 0 0 1.935h.037l3.368 8.33a1.1 1.1 0 0 0-.088.403a.968.968 0 0 0 1.671.666l10.115.993c.1.427.49.728.943.728c.54 0 .967-.44.967-.967a1 1 0 0 0-.226-.628l5.114-8.872c.05.013.1.013.164.013c.54 0 .967-.44.967-.968a.97.97 0 0 0-.967-.98zm-5.806-7.275a1 1 0 0 0 .453.327L16.147 15.92c-.1.025-.189.05-.277.1L7.451 8.708a.8.8 0 0 0 .038-.251c0-.063-.013-.126-.013-.189zm4.876 8.507l-5.177 3.556a1 1 0 0 0-.126-.075l1.546-11.674h.012l3.946 7.288a.96.96 0 0 0-.201.905M6.383 7.502a.98.98 0 0 0-.83.955v.062l-3.455 2.048l5.378-7.702zm.352 1.91a.9.9 0 0 0 .352-.164l8.356 7.263a1.1 1.1 0 0 0-.063.352v.05l-9.31 3.845a.97.97 0 0 0-.604-.402zm8.896 8.117a.92.92 0 0 0 .503.289l.465 4.046a1.05 1.05 0 0 0-.452.452l-9.814-.955zm1.144.213a.96.96 0 0 0 .54-.867a1 1 0 0 0-.038-.25l4.738-3.255l-4.8 8.33zm.251-14.35l-9.889 4.31l-.113-.075l1.257-5.39h.037c.34 0 .641-.176.817-.44l7.891 1.57zm-15.091 8.22c0-.063-.013-.126-.013-.189l3.908-2.3c.076.076.164.151.264.202L4.825 20.243l-3.204-7.904c.188-.176.314-.44.314-.728"/></svg> <span class="tech-name">ONNX</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg> <span class="tech-name">Pandas</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="m10.315 4.876l-4.01-2.024l-4.401 2.196l4.118 2.068zm1.838.928l4.205 2.122l-4.363 2.19l-4.125-2.07zm5.615-2.922l4.32 2.166l-3.863 1.94l-4.213-2.125zM15.91 1.95L12.021 0L8.174 1.92l4.007 2.02zm-3.04 16.744V24l4.711-2.35l-.005-5.31zm4.704-4.206l-.005-5.253l-4.699 2.336v5.254zm5.655-.984v5.327l-4.018 2.005l-.002-5.303zm0-1.863v-5.22l-4.025 2.001l.003 5.264zm-12.022-.07L8.033 9.976v6.895s-3.88-8.257-4.24-8.998c-.046-.096-.237-.201-.285-.227A358 358 0 0 0 .773 6.25v12.18l2.82 1.508V13.57s3.84 7.378 3.878 7.458c.04.08.425.858.837 1.132c.548.363 2.899 1.776 2.899 1.776z"/></svg> <span class="tech-name">NumPy</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799a1.784 1.799 0 0 1 1.784-1.799a1.784 1.799 0 0 1 1.783 1.799M20.582 1.427a1.415 1.427 0 0 1-1.415 1.428a1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427M4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056m7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.36 9.36 0 0 0-3.393-4.547a9.24 9.24 0 0 0-5.377-1.728A9.24 9.24 0 0 0 6.95 3.73a9.36 9.36 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424m.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.36 9.36 0 0 0 3.394 4.547A9.24 9.24 0 0 0 12.33 21a9.24 9.24 0 0 0 5.377-1.729a9.36 9.36 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></svg> <span class="tech-name">Jupyter</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19l2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63L10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></svg> <span class="tech-name">Git</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> <span class="tech-name">GitHub</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M23.15 2.587L18.21.21a1.49 1.49 0 0 0-1.705.29l-9.46 8.63l-4.12-3.128a1 1 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12L.326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a1 1 0 0 0 1.276.057l4.12-3.128l9.46 8.63a1.49 1.49 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352m-5.146 14.861L10.826 12l7.178-5.448z"/></svg> <span class="tech-name">VS Code</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12.504 0q-.232 0-.48.021c-4.226.333-3.105 4.807-3.17 6.298c-.076 1.092-.3 1.953-1.05 3.02c-.885 1.051-2.127 2.75-2.716 4.521c-.278.832-.41 1.684-.287 2.489a.4.4 0 0 0-.11.135c-.26.268-.45.6-.663.839c-.199.199-.485.267-.797.4c-.313.136-.658.269-.864.68c-.09.189-.136.394-.132.602c0 .199.027.4.055.536c.058.399.116.728.04.97c-.249.68-.28 1.145-.106 1.484c.174.334.535.47.94.601c.81.2 1.91.135 2.774.6c.926.466 1.866.67 2.616.47c.526-.116.97-.464 1.208-.946c.587-.003 1.23-.269 2.26-.334c.699-.058 1.574.267 2.577.2c.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071s1.592-.536 2.257-1.306c.631-.765 1.683-1.084 2.378-1.503c.348-.199.629-.469.649-.853c.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926c-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.36.36 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694c-.533-1.41-1.465-2.638-2.175-3.483c-.796-1.005-1.576-1.957-1.56-3.368c.026-2.152.236-6.133-3.544-6.139m.529 3.405h.013c.213 0 .396.062.584.198c.19.135.33.332.438.533c.105.259.158.459.166.724c0-.02.006-.04.006-.06v.105l-.004-.021l-.004-.024a1.8 1.8 0 0 1-.15.706a.95.95 0 0 1-.213.335a1 1 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.3 1.3 0 0 0-.22-.066c.05-.06.146-.133.183-.198q.08-.193.088-.402v-.02a1.2 1.2 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333c-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334a1.2 1.2 0 0 0-.09.4v.019q.002.134.02.267c-.193-.067-.438-.135-.607-.202a2 2 0 0 1-.018-.2v-.02a1.8 1.8 0 0 1 .15-.768a1.08 1.08 0 0 1 .43-.533a1 1 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135c.146.129.264.288.344.465c.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024c-.152.055-.274.135-.393.2q.018-.136.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.6.6 0 0 0-.166-.267a.25.25 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.55.55 0 0 0-.12.27a1 1 0 0 0-.023.33v.015c.012.135.037.2.08.334c.046.134.098.2.166.268q.014.014.034.024c-.07.057-.117.07-.176.136a.3.3 0 0 1-.131.068a2.6 2.6 0 0 1-.275-.402a1.8 1.8 0 0 1-.155-.667a1.8 1.8 0 0 1 .08-.668a1.4 1.4 0 0 1 .283-.535c.128-.133.26-.2.418-.2m1.37 1.706c.332 0 .733.065 1.216.399c.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.57.57 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465c-.276.135-.588.292-1.012.267a1.1 1.1 0 0 1-.448-.067a4 4 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71q-.104-.403.193-.6c.224-.135.38-.271.483-.336c.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601c.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473c.286.534.855 1.659 1.102 3.024c.156-.005.33.018.513.064c.646-1.671-.546-3.467-1.089-3.966c-.22-.2-.232-.335-.123-.335c.59.534 1.365 1.572 1.646 2.757c.13.535.16 1.104.021 1.67c.067.028.135.06.205.067c1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224c-.915-.4-1.646-.336-1.77.465c-.008.043-.013.066-.018.135c-.068.023-.139.053-.209.064c-.43.268-.662.669-.793 1.187c-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35c-1.5 1.072-3.58 1.538-5.348.334a2.7 2.7 0 0 0-.402-.533a1.5 1.5 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.62.62 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163s-.931-.995-1.788-1.521c-.63-.4-.986-.87-1.15-1.396c-.165-.534-.143-1.085-.015-1.645c.245-1.07.873-2.11 1.274-2.763c.107-.065.037.135-.408.974c-.396.751-1.14 2.497-.122 3.854a8.1 8.1 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268c.048.036.217.135.289.202c.218.133.38.333.59.465c.21.201.477.335.876.335q.058.005.11.006c.412 0 .73-.134.997-.268c.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377c.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876c.085.4.154.78.409 1.066c.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595c-.63.401-1.746.712-2.457 1.57c-.618.737-1.37 1.14-2.036 1.191c-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69c.176-.668.428-1.344.463-1.897c.037-.714.076-1.335.195-1.814c.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01q.08 0 .157.014c.376.055.706.333 1.023.752l.91 1.664l.003.003c.243.533.754 1.064 1.189 1.637c.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294c-.645.135-1.52.002-2.395-.464c-.968-.536-2.118-.469-2.857-.602q-.553-.1-.723-.4c-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118c-.055-.401-.083-.71.043-.94c.16-.334.396-.4.69-.533c.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838c.19-.201.38-.336.663-.336m7.159-9.074c-.435.201-.945.535-1.488.535c-.542 0-.97-.267-1.28-.466c-.154-.134-.28-.268-.373-.335c-.164-.134-.144-.333-.074-.333c.109.016.129.134.199.2c.096.066.215.2.36.333c.292.2.68.467 1.167.467c.485 0 1.053-.267 1.398-.466c.195-.135.445-.334.648-.467c.156-.136.149-.267.279-.267c.128.016.034.134-.147.332a8 8 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05c.074-.043.18-.027.26.004c.063 0 .16.067.15.135c-.006.049-.085.066-.135.066c-.055 0-.092-.043-.141-.068c-.052-.018-.146-.008-.163-.065m-.551 0c-.02.058-.113.049-.166.066c-.047.025-.086.068-.14.068c-.05 0-.13-.02-.136-.068c-.01-.066.088-.133.15-.133c.08-.031.184-.047.259-.005c.019.009.036.03.03.05v.02h.003z"/></svg> <span class="tech-name">Linux</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91s.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69s.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91M12 19.11c-3.92 0-7.109-3.19-7.109-7.11s3.19-7.11 7.11-7.11a7.13 7.13 0 0 1 6.156 3.553l-3.076 1.78a3.57 3.57 0 0 0-3.08-1.78A3.56 3.56 0 0 0 8.444 12A3.56 3.56 0 0 0 12 15.555a3.57 3.57 0 0 0 3.08-1.778l3.078 1.78A7.14 7.14 0 0 1 12 19.11m7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></svg> <span class="tech-name">C++</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428c6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099m2.471 7.485a.86.86 0 0 0-.593.25l-4.453 4.453l-.307-.307l-.643-.643c4.389-4.376 5.18-4.418 5.996-3.753m-4.863 4.861l4.44-4.44a.62.62 0 1 1 .847.903l-4.699 4.125zm.33.694l-1.1.238a.06.06 0 0 1-.067-.032a.06.06 0 0 1 .01-.073l.645-.645zm-2.803-.459l1.172-1.172l.879.878l-1.979.426a.074.074 0 0 1-.085-.039a.07.07 0 0 1 .013-.093m-3.646 6.058a.076.076 0 0 1-.069-.083a.1.1 0 0 1 .022-.046h.002l.946-.946l1.222 1.222zm2.425-1.256a.23.23 0 0 0-.117.256l.203.865a.125.125 0 0 1-.211.117h-.003l-.934-.934l-.294-.295l3.762-3.758l1.82-.393l.874.874c-1.255 1.102-2.971 2.201-5.1 3.268m5.279-3.428h-.002l-.839-.839l4.699-4.125a1 1 0 0 0 .119-.127c-.148 1.345-2.029 3.245-3.977 5.091m3.657-6.46l-.003-.002a1.822 1.822 0 0 1 2.459-2.684l-1.61 1.613a.12.12 0 0 0 0 .169l1.247 1.247a1.82 1.82 0 0 1-2.093-.343m2.578 0a1.7 1.7 0 0 1-.271.218h-.001l-1.207-1.207l1.533-1.533c.661.72.637 1.832-.054 2.522m-.1-1.544a.14.14 0 0 0-.053.157a.42.42 0 0 1-.053.45a.14.14 0 0 0 .023.197a.14.14 0 0 0 .084.03a.14.14 0 0 0 .106-.05a.69.69 0 0 0 .087-.751a.14.14 0 0 0-.194-.033"/></svg> <span class="tech-name">Postman</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491M12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539m-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019c1.705 0 3.093-1.376 3.093-3.068v-2.97zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49m-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019z"/></svg> <span class="tech-name">Figma</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514c-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233l4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632"/></svg> <span class="tech-name">Notion</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M11.9.853a5.73 5.73 0 0 0-2.91 10.665l1.641-2.785a.154.154 0 0 0-.05-.204a2.35 2.35 0 1 1 2.635 0a.154.154 0 0 0-.049.204l1.642 2.785A5.73 5.73 0 0 0 11.899.852M5.73 11.689a5.73 5.73 0 1 0 0 11.458c3.179 0 5.807-2.699 5.727-5.876H8.23a.155.155 0 0 0-.152.157c-.008 1.266-1.064 2.34-2.35 2.34a2.35 2.35 0 1 1 .955-4.498a.154.154 0 0 0 .196-.06l1.646-2.793a5.7 5.7 0 0 0-2.797-.728m15.442.761l-1.637 2.788a.154.154 0 0 0 .05.205a2.35 2.35 0 0 1-1.31 4.3a2.35 2.35 0 0 1-1.325-4.295a.154.154 0 0 0 .049-.205l-1.646-2.782a5.73 5.73 0 1 0 5.82-.01"/></svg> <span class="tech-name">OpenCV</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391l1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.5.5 0 0 1-.354.146m9.353-.147l1.534-1.532a.5.5 0 0 0-.707-.707l-1.181 1.18l-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001M4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85m2.03-2.436L4 6.602V3.406zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.5 3.5 0 0 1-3.46-3h-2.08a3.5 3.5 0 0 1-3.46 3a3.5 3.5 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3c1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.5 3.5 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.01 5.01 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.48 2.48 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.5 3.5 0 0 1 3.46 3h2.08a3.5 3.5 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5m-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5s-1.122-2.5-2.5-2.5S9 19.122 9 20.5M5 9c2.206 0 4-1.794 4-4S7.206 1 5 1S1 2.794 1 5s1.794 4 4 4m9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5m9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5m-13 8a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0m12 0c0 1.93-1.57 3.5-3.5 3.5a3.5 3.5 0 0 1-3.46-3.002l-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.5 3.5 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5m-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5"/></svg> <span class="tech-name">GitHub Actions</span></div>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M21.678.521c-1.032-.92-2.28-.55-3.513.544a9 9 0 0 0-.547.535c-2.109 2.237-4.066 6.38-4.674 9.544c.237.48.422 1.093.544 1.561a13 13 0 0 1 .164.703s-.019-.071-.096-.296l-.05-.146l-.033-.08c-.138-.32-.518-.995-.686-1.289c-.143.423-.27.818-.376 1.176c.484.884.778 2.4.778 2.4s-.025-.099-.147-.442c-.107-.303-.644-1.244-.772-1.464c-.217.804-.304 1.346-.226 1.478c.152.256.296.698.422 1.186c.286 1.1.485 2.44.485 2.44l.017.224a22 22 0 0 0 .056 2.748c.095 1.146.273 2.13.5 2.657l.155-.084c-.334-1.038-.47-2.399-.41-3.967c.09-2.398.642-5.29 1.661-8.304c1.723-4.55 4.113-8.201 6.3-9.945c-1.993 1.8-4.692 7.63-5.5 9.788c-.904 2.416-1.545 4.684-1.931 6.857c.666-2.037 2.821-2.912 2.821-2.912s1.057-1.304 2.292-3.166c-.74.169-1.955.458-2.362.629c-.6.251-.762.337-.762.337s1.945-1.184 3.613-1.72C21.695 7.9 24.195 2.767 21.678.521m-18.573.543A1.84 1.84 0 0 0 1.27 2.9v16.608a1.84 1.84 0 0 0 1.835 1.834h9.418a23 23 0 0 1-.052-2.707c-.006-.062-.011-.141-.016-.2a27 27 0 0 0-.473-2.378c-.121-.47-.275-.898-.369-1.057c-.116-.197-.098-.31-.097-.432c0-.12.015-.245.037-.386a10 10 0 0 1 .234-1.045l.217-.028c-.017-.035-.014-.065-.031-.097l-.041-.381a33 33 0 0 1 .382-1.194l.2-.019c-.008-.016-.01-.038-.018-.053l-.043-.316c.63-3.28 2.587-7.443 4.8-9.791c.066-.069.133-.128.198-.194Z"/></svg> <span class="tech-name">SQLite</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51q-.508.001-1.01.087c-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199l-.226.327c-.284.438-.49.922-.612 1.43c-.23.97-.09 1.882.403 2.661c-.595.332-1.55.413-1.744.42H.751a.75.75 0 0 0-.75.748a11.4 11.4 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124c1.18.723 3.1 1.137 5.275 1.137a15.7 15.7 0 0 0 2.93-.266a12.3 12.3 0 0 0 3.823-1.389a10.5 10.5 0 0 0 2.61-2.136c1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009c.309-.293.55-.65.707-1.046l.098-.288Z"/></svg> <span class="tech-name">Docker</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M23.033 11.296c-.05 0-.101 0-.151.013L18.86 3.87a.968.968 0 0 0-1.558-1.118L9.286 1.156a.97.97 0 0 0-.968-.854a.976.976 0 0 0-.967.967a.93.93 0 0 0 .113.453L1.219 10.68a.8.8 0 0 0-.251-.038a.968.968 0 0 0 0 1.935h.037l3.368 8.33a1.1 1.1 0 0 0-.088.403a.968.968 0 0 0 1.671.666l10.115.993c.1.427.49.728.943.728c.54 0 .967-.44.967-.967a1 1 0 0 0-.226-.628l5.114-8.872c.05.013.1.013.164.013c.54 0 .967-.44.967-.968a.97.97 0 0 0-.967-.98zm-5.806-7.275a1 1 0 0 0 .453.327L16.147 15.92c-.1.025-.189.05-.277.1L7.451 8.708a.8.8 0 0 0 .038-.251c0-.063-.013-.126-.013-.189zm4.876 8.507l-5.177 3.556a1 1 0 0 0-.126-.075l1.546-11.674h.012l3.946 7.288a.96.96 0 0 0-.201.905M6.383 7.502a.98.98 0 0 0-.83.955v.062l-3.455 2.048l5.378-7.702zm.352 1.91a.9.9 0 0 0 .352-.164l8.356 7.263a1.1 1.1 0 0 0-.063.352v.05l-9.31 3.845a.97.97 0 0 0-.604-.402zm8.896 8.117a.92.92 0 0 0 .503.289l.465 4.046a1.05 1.05 0 0 0-.452.452l-9.814-.955zm1.144.213a.96.96 0 0 0 .54-.867a1 1 0 0 0-.038-.25l4.738-3.255l-4.8 8.33zm.251-14.35l-9.889 4.31l-.113-.075l1.257-5.39h.037c.34 0 .641-.176.817-.44l7.891 1.57zm-15.091 8.22c0-.063-.013-.126-.013-.189l3.908-2.3c.076.076.164.151.264.202L4.825 20.243l-3.204-7.904c.188-.176.314-.44.314-.728"/></svg> <span class="tech-name">ONNX</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg> <span class="tech-name">Pandas</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="m10.315 4.876l-4.01-2.024l-4.401 2.196l4.118 2.068zm1.838.928l4.205 2.122l-4.363 2.19l-4.125-2.07zm5.615-2.922l4.32 2.166l-3.863 1.94l-4.213-2.125zM15.91 1.95L12.021 0L8.174 1.92l4.007 2.02zm-3.04 16.744V24l4.711-2.35l-.005-5.31zm4.704-4.206l-.005-5.253l-4.699 2.336v5.254zm5.655-.984v5.327l-4.018 2.005l-.002-5.303zm0-1.863v-5.22l-4.025 2.001l.003 5.264zm-12.022-.07L8.033 9.976v6.895s-3.88-8.257-4.24-8.998c-.046-.096-.237-.201-.285-.227A358 358 0 0 0 .773 6.25v12.18l2.82 1.508V13.57s3.84 7.378 3.878 7.458c.04.08.425.858.837 1.132c.548.363 2.899 1.776 2.899 1.776z"/></svg> <span class="tech-name">NumPy</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799a1.784 1.799 0 0 1 1.784-1.799a1.784 1.799 0 0 1 1.783 1.799M20.582 1.427a1.415 1.427 0 0 1-1.415 1.428a1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427M4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056m7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.36 9.36 0 0 0-3.393-4.547a9.24 9.24 0 0 0-5.377-1.728A9.24 9.24 0 0 0 6.95 3.73a9.36 9.36 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424m.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.36 9.36 0 0 0 3.394 4.547A9.24 9.24 0 0 0 12.33 21a9.24 9.24 0 0 0 5.377-1.729a9.36 9.36 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></svg> <span class="tech-name">Jupyter</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19l2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63L10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></svg> <span class="tech-name">Git</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> <span class="tech-name">GitHub</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M23.15 2.587L18.21.21a1.49 1.49 0 0 0-1.705.29l-9.46 8.63l-4.12-3.128a1 1 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12L.326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a1 1 0 0 0 1.276.057l4.12-3.128l9.46 8.63a1.49 1.49 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352m-5.146 14.861L10.826 12l7.178-5.448z"/></svg> <span class="tech-name">VS Code</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M12.504 0q-.232 0-.48.021c-4.226.333-3.105 4.807-3.17 6.298c-.076 1.092-.3 1.953-1.05 3.02c-.885 1.051-2.127 2.75-2.716 4.521c-.278.832-.41 1.684-.287 2.489a.4.4 0 0 0-.11.135c-.26.268-.45.6-.663.839c-.199.199-.485.267-.797.4c-.313.136-.658.269-.864.68c-.09.189-.136.394-.132.602c0 .199.027.4.055.536c.058.399.116.728.04.97c-.249.68-.28 1.145-.106 1.484c.174.334.535.47.94.601c.81.2 1.91.135 2.774.6c.926.466 1.866.67 2.616.47c.526-.116.97-.464 1.208-.946c.587-.003 1.23-.269 2.26-.334c.699-.058 1.574.267 2.577.2c.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071s1.592-.536 2.257-1.306c.631-.765 1.683-1.084 2.378-1.503c.348-.199.629-.469.649-.853c.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926c-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.36.36 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694c-.533-1.41-1.465-2.638-2.175-3.483c-.796-1.005-1.576-1.957-1.56-3.368c.026-2.152.236-6.133-3.544-6.139m.529 3.405h.013c.213 0 .396.062.584.198c.19.135.33.332.438.533c.105.259.158.459.166.724c0-.02.006-.04.006-.06v.105l-.004-.021l-.004-.024a1.8 1.8 0 0 1-.15.706a.95.95 0 0 1-.213.335a1 1 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.3 1.3 0 0 0-.22-.066c.05-.06.146-.133.183-.198q.08-.193.088-.402v-.02a1.2 1.2 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333c-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334a1.2 1.2 0 0 0-.09.4v.019q.002.134.02.267c-.193-.067-.438-.135-.607-.202a2 2 0 0 1-.018-.2v-.02a1.8 1.8 0 0 1 .15-.768a1.08 1.08 0 0 1 .43-.533a1 1 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135c.146.129.264.288.344.465c.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024c-.152.055-.274.135-.393.2q.018-.136.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.6.6 0 0 0-.166-.267a.25.25 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.55.55 0 0 0-.12.27a1 1 0 0 0-.023.33v.015c.012.135.037.2.08.334c.046.134.098.2.166.268q.014.014.034.024c-.07.057-.117.07-.176.136a.3.3 0 0 1-.131.068a2.6 2.6 0 0 1-.275-.402a1.8 1.8 0 0 1-.155-.667a1.8 1.8 0 0 1 .08-.668a1.4 1.4 0 0 1 .283-.535c.128-.133.26-.2.418-.2m1.37 1.706c.332 0 .733.065 1.216.399c.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.57.57 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465c-.276.135-.588.292-1.012.267a1.1 1.1 0 0 1-.448-.067a4 4 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71q-.104-.403.193-.6c.224-.135.38-.271.483-.336c.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601c.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473c.286.534.855 1.659 1.102 3.024c.156-.005.33.018.513.064c.646-1.671-.546-3.467-1.089-3.966c-.22-.2-.232-.335-.123-.335c.59.534 1.365 1.572 1.646 2.757c.13.535.16 1.104.021 1.67c.067.028.135.06.205.067c1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224c-.915-.4-1.646-.336-1.77.465c-.008.043-.013.066-.018.135c-.068.023-.139.053-.209.064c-.43.268-.662.669-.793 1.187c-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35c-1.5 1.072-3.58 1.538-5.348.334a2.7 2.7 0 0 0-.402-.533a1.5 1.5 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.62.62 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163s-.931-.995-1.788-1.521c-.63-.4-.986-.87-1.15-1.396c-.165-.534-.143-1.085-.015-1.645c.245-1.07.873-2.11 1.274-2.763c.107-.065.037.135-.408.974c-.396.751-1.14 2.497-.122 3.854a8.1 8.1 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268c.048.036.217.135.289.202c.218.133.38.333.59.465c.21.201.477.335.876.335q.058.005.11.006c.412 0 .73-.134.997-.268c.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377c.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876c.085.4.154.78.409 1.066c.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595c-.63.401-1.746.712-2.457 1.57c-.618.737-1.37 1.14-2.036 1.191c-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69c.176-.668.428-1.344.463-1.897c.037-.714.076-1.335.195-1.814c.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01q.08 0 .157.014c.376.055.706.333 1.023.752l.91 1.664l.003.003c.243.533.754 1.064 1.189 1.637c.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294c-.645.135-1.52.002-2.395-.464c-.968-.536-2.118-.469-2.857-.602q-.553-.1-.723-.4c-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118c-.055-.401-.083-.71.043-.94c.16-.334.396-.4.69-.533c.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838c.19-.201.38-.336.663-.336m7.159-9.074c-.435.201-.945.535-1.488.535c-.542 0-.97-.267-1.28-.466c-.154-.134-.28-.268-.373-.335c-.164-.134-.144-.333-.074-.333c.109.016.129.134.199.2c.096.066.215.2.36.333c.292.2.68.467 1.167.467c.485 0 1.053-.267 1.398-.466c.195-.135.445-.334.648-.467c.156-.136.149-.267.279-.267c.128.016.034.134-.147.332a8 8 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05c.074-.043.18-.027.26.004c.063 0 .16.067.15.135c-.006.049-.085.066-.135.066c-.055 0-.092-.043-.141-.068c-.052-.018-.146-.008-.163-.065m-.551 0c-.02.058-.113.049-.166.066c-.047.025-.086.068-.14.068c-.05 0-.13-.02-.136-.068c-.01-.066.088-.133.15-.133c.08-.031.184-.047.259-.005c.019.009.036.03.03.05v.02h.003z"/></svg> <span class="tech-name">Linux</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91s.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69s.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91M12 19.11c-3.92 0-7.109-3.19-7.109-7.11s3.19-7.11 7.11-7.11a7.13 7.13 0 0 1 6.156 3.553l-3.076 1.78a3.57 3.57 0 0 0-3.08-1.78A3.56 3.56 0 0 0 8.444 12A3.56 3.56 0 0 0 12 15.555a3.57 3.57 0 0 0 3.08-1.778l3.078 1.78A7.14 7.14 0 0 1 12 19.11m7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></svg> <span class="tech-name">C++</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428c6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099m2.471 7.485a.86.86 0 0 0-.593.25l-4.453 4.453l-.307-.307l-.643-.643c4.389-4.376 5.18-4.418 5.996-3.753m-4.863 4.861l4.44-4.44a.62.62 0 1 1 .847.903l-4.699 4.125zm.33.694l-1.1.238a.06.06 0 0 1-.067-.032a.06.06 0 0 1 .01-.073l.645-.645zm-2.803-.459l1.172-1.172l.879.878l-1.979.426a.074.074 0 0 1-.085-.039a.07.07 0 0 1 .013-.093m-3.646 6.058a.076.076 0 0 1-.069-.083a.1.1 0 0 1 .022-.046h.002l.946-.946l1.222 1.222zm2.425-1.256a.23.23 0 0 0-.117.256l.203.865a.125.125 0 0 1-.211.117h-.003l-.934-.934l-.294-.295l3.762-3.758l1.82-.393l.874.874c-1.255 1.102-2.971 2.201-5.1 3.268m5.279-3.428h-.002l-.839-.839l4.699-4.125a1 1 0 0 0 .119-.127c-.148 1.345-2.029 3.245-3.977 5.091m3.657-6.46l-.003-.002a1.822 1.822 0 0 1 2.459-2.684l-1.61 1.613a.12.12 0 0 0 0 .169l1.247 1.247a1.82 1.82 0 0 1-2.093-.343m2.578 0a1.7 1.7 0 0 1-.271.218h-.001l-1.207-1.207l1.533-1.533c.661.72.637 1.832-.054 2.522m-.1-1.544a.14.14 0 0 0-.053.157a.42.42 0 0 1-.053.45a.14.14 0 0 0 .023.197a.14.14 0 0 0 .084.03a.14.14 0 0 0 .106-.05a.69.69 0 0 0 .087-.751a.14.14 0 0 0-.194-.033"/></svg> <span class="tech-name">Postman</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491M12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539m-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019c1.705 0 3.093-1.376 3.093-3.068v-2.97zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49m-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019z"/></svg> <span class="tech-name">Figma</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514c-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233l4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632"/></svg> <span class="tech-name">Notion</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M11.9.853a5.73 5.73 0 0 0-2.91 10.665l1.641-2.785a.154.154 0 0 0-.05-.204a2.35 2.35 0 1 1 2.635 0a.154.154 0 0 0-.049.204l1.642 2.785A5.73 5.73 0 0 0 11.899.852M5.73 11.689a5.73 5.73 0 1 0 0 11.458c3.179 0 5.807-2.699 5.727-5.876H8.23a.155.155 0 0 0-.152.157c-.008 1.266-1.064 2.34-2.35 2.34a2.35 2.35 0 1 1 .955-4.498a.154.154 0 0 0 .196-.06l1.646-2.793a5.7 5.7 0 0 0-2.797-.728m15.442.761l-1.637 2.788a.154.154 0 0 0 .05.205a2.35 2.35 0 0 1-1.31 4.3a2.35 2.35 0 0 1-1.325-4.295a.154.154 0 0 0 .049-.205l-1.646-2.782a5.73 5.73 0 1 0 5.82-.01"/></svg> <span class="tech-name">OpenCV</span></div>
+        <div class="tech-marquee-pill"><svg xmlns="http://www.w3.org/2000/svg" class="marquee-icon"  viewBox="0 0 24 24"><path fill="currentColor" d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391l1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.5.5 0 0 1-.354.146m9.353-.147l1.534-1.532a.5.5 0 0 0-.707-.707l-1.181 1.18l-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001M4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85m2.03-2.436L4 6.602V3.406zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.5 3.5 0 0 1-3.46-3h-2.08a3.5 3.5 0 0 1-3.46 3a3.5 3.5 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3c1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.5 3.5 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.01 5.01 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.48 2.48 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.5 3.5 0 0 1 3.46 3h2.08a3.5 3.5 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5m-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5s-1.122-2.5-2.5-2.5S9 19.122 9 20.5M5 9c2.206 0 4-1.794 4-4S7.206 1 5 1S1 2.794 1 5s1.794 4 4 4m9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5m9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5m-13 8a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0m12 0c0 1.93-1.57 3.5-3.5 3.5a3.5 3.5 0 0 1-3.46-3.002l-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.5 3.5 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5m-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5"/></svg> <span class="tech-name">GitHub Actions</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-left">
+          <div class="section-tag">ABOUT ME</div>
+          <h2 class="section-title">
+            Engineering Ideas into <br>
+            <span class="highlight-text">Real-World Impact.</span>
+          </h2>
+          <p class="about-lead">
+            I enjoy working at the intersection of AI, software development, and user experience. Whether it's building
+            machine learning models, full-stack applications, or exploring new agentic technologies, I'm driven by the
+            impact technology can create in people's lives.
+          </p>
+
+          <div class="about-meta-row">
+            <div class="meta-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>India</span>
+            </div>
+            <div class="meta-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>Computer Science</span>
+            </div>
+            <div class="meta-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+              </svg>
+              <span>Always Learning</span>
+            </div>
+            <a href="https://leetcode.com/u/Kiranimmadi2/" target="_blank" rel="noopener noreferrer"
+              class="meta-pill meta-link" title="Kiran Immadi LeetCode Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;">
+                <path
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.966 3.65c.34.024.68.016 1.02-.025a6.04 6.04 0 0 0 2.457-.866l3.864-2.736a1.376 1.376 0 0 0 .375-1.91 1.377 1.377 0 0 0-1.91-.375l-3.864 2.736a3.284 3.284 0 0 1-1.336.471 3.253 3.253 0 0 1-2.708-1.987 3.01 3.01 0 0 1-.19-.553 3.02 3.02 0 0 1-.034-1.288 2.87 2.87 0 0 1 .66-1.147l3.855-4.126 5.405-5.788A1.374 1.374 0 0 0 13.483 0zm-2.88 7.283a1.374 1.374 0 0 0-.97.438L4.228 13.51a1.376 1.376 0 0 0 1.91 1.91l5.405-5.789a1.376 1.376 0 0 0-.94-2.348z" />
+              </svg>
+              <span>LeetCode (Kiranimmadi2) ↗</span>
+            </a>
+          </div>
+
+          <div class="about-btn-wrap">
+            <a href="#projects" class="btn btn-outline" id="about-explore-btn">
+              More About My Work <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon">📖</div>
+              <div class="metric-number">3+</div>
+              <div class="metric-label">Years of Learning</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">&lt;/&gt;</div>
+              <div class="metric-number">50+</div>
+              <div class="metric-label">Projects Completed</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">🗂️</div>
+              <div class="metric-number">10+</div>
+              <div class="metric-label">Technologies</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">📈</div>
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Passion for Impact</div>
+            </div>
+          </div>
+
+          <!-- Quote Card -->
+          <div class="quote-card editorial-quote-box">
+            <span class="giant-quote">“</span>
+            <blockquote class="quote-text">
+              Technology is more powerful when it makes people's lives simpler.
+            </blockquote>
+            <div class="quote-author">— KIRAN IMMADI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Projects Section ("Real Projects. Real Impact.") -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+
+        <!-- Section Header Matching Reference Image 1 -->
+        <div class="projects-header-wrapper">
+          <div class="projects-header-left">
+            <div class="section-tag">PROJECTS</div>
+            <h2 class="projects-main-title">
+              Real Projects. <br>
+              <span class="highlight-text">Real Impact.</span>
+            </h2>
+            <p class="projects-lead">
+              A collection of projects I've built — from autonomous AI agents and intelligent applications to production
+              mobile platforms and data systems — each solving real-world problems with practical, scalable solutions.
+            </p>
+          </div>
+
+          <div class="projects-header-right">
+            <div class="handwritten-badge-wrapper">
+              <div class="handwritten-stamp">
+                <span>Build</span>
+                <span>Learn</span>
+                <span>Ship</span>
+                <span class="repeat">Repeat</span>
+              </div>
+            </div>
+            <div class="mission-mini-card">
+              <div class="dash-line"></div>
+              <p>Turning ideas into products that make a difference.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="filter-controls-row">
+          <div class="filter-pills" id="filter-pills">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai">AI & Agentic</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="fintech">FinTech & Analytics</button>
+            <button class="filter-btn" data-filter="security">Security & Systems</button>
+          </div>
+
+          <div class="filter-meta">
+            <div class="search-input-wrapper">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input type="text" id="project-search-input" placeholder="Search projects or tech..."
+                aria-label="Search projects">
+            </div>
+            <span class="project-count-badge" id="project-count-display">17 Projects <span class="arrow">→</span></span>
+          </div>
+        </div>
+
+        <!-- Category 1: Flagship AI & Agentic Systems -->
+        <div class="category-block" data-category-group="ai">
+          <div class="category-heading-row">
+            <h3 class="category-title">Flagship AI & Agentic Systems</h3>
+            <span class="category-tagline">Pushing the boundaries of what autonomous AI can do.</span>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 01 -->
+            <article class="project-card" data-category="ai"
+              data-keywords="python browser automation llm agent web scraping">
+              <div class="card-thumb">
+                <span class="card-num">01</span>
+                <div class="card-visual visual-browser-agent">
+                  <div class="mock-browser-bar">
+                    <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span
+                      class="mock-dot green"></span>
+                    <span class="mock-url-bar">agent://execute?goal=automate-flow</span>
+                  </div>
+                  <div class="mock-agent-body">
+                    <div class="mock-terminal-line">$ browser_agent.navigate("https://...")</div>
+                    <div class="mock-terminal-line success">✓ Natural language interpreted</div>
+                    <div class="mock-terminal-line info">⚡ Action: form_fill & dynamic_wait</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">AI-Agent-Browser-Automation</h4>
+                <p class="card-desc">Autonomous browser agent that understands natural language commands to control
+                  browsers, fill forms, navigate multi-step flows, and extract web data.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> Browser-Use</span>
+                  <span class="tag"><i class="tech-dot"></i> LLM</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/AI-Agent-Browser-Automation" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/AI-Agent-Browser-Automation" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 02 -->
+            <article class="project-card" data-category="ai"
+              data-keywords="python nlp ocr legal reasoning document court">
+              <div class="card-thumb">
+                <span class="card-num">02</span>
+                <div class="card-visual visual-legal-ai">
+                  <div class="legal-scales-graphic">
+                    <div class="scale-beam"></div>
+                    <div class="scale-pan left"></div>
+                    <div class="scale-pan right"></div>
+                  </div>
+                  <div class="doc-lines-preview">
+                    <span class="d-line full"></span>
+                    <span class="d-line half"></span>
+                    <span class="d-line three-q"></span>
+                    <span class="d-tag">LEGAL REASONING • MULTILINGUAL</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Indian-Law-AI-Assistant</h4>
+                <p class="card-desc">Multilingual legal reasoning assistant that parses PDFs, Word docs, and judgments
+                  to explain complex legal cases in simple terms across Indian languages.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> NLP</span>
+                  <span class="tag"><i class="tech-dot"></i> OCR</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/Indian-law-AI-assistant" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/Indian-law-AI-assistant" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 03 -->
+            <article class="project-card" data-category="ai"
+              data-keywords="sql natural language database query llm nlp">
+              <div class="card-thumb">
+                <span class="card-num">03</span>
+                <div class="card-visual visual-query-ai">
+                  <div class="flow-pill-left">"Show total sales by year"</div>
+                  <div class="flow-arrow">→</div>
+                  <div class="flow-pill-right">SELECT year, SUM(val)...</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">QueryAI</h4>
+                <p class="card-desc">Conversational data interface that translates natural language into structured
+                  database queries, enabling non-technical users to interact with data seamlessly.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot"></i> NLP</span>
+                  <span class="tag"><i class="tech-dot"></i> LLM</span>
+                  <span class="tag"><i class="tech-dot"></i> SQL</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 04 -->
+            <article class="project-card" data-category="ai"
+              data-keywords="mcp protocol model context diagnostics python tools">
+              <div class="card-thumb">
+                <span class="card-num">04</span>
+                <div class="card-visual visual-mcp-server">
+                  <div class="mcp-hub">
+                    <span class="hub-label">MCP Core</span>
+                  </div>
+                  <div class="mcp-branches">
+                    <span class="branch-node">Code Analysis</span>
+                    <span class="branch-node">Diagnostics</span>
+                    <span class="branch-node">File System</span>
+                    <span class="branch-node">LLM Tools</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">MCP-Server</h4>
+                <p class="card-desc">Custom MCP implementation exposing diagnostic and code analysis tools to LLM coding
+                  agents, adhering to modern Model Context Protocol standards.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> MCP</span>
+                  <span class="tag"><i class="tech-dot"></i> Developer Tools</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/MCP-Server" target="_blank" rel="noopener noreferrer"
+                    class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/MCP-Server" target="_blank" rel="noopener noreferrer"
+                    class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 05 -->
+            <article class="project-card" data-category="ai"
+              data-keywords="email generator langchain groq llama outreach cold email">
+              <div class="card-thumb">
+                <span class="card-num">05</span>
+                <div class="card-visual visual-email-writer">
+                  <div class="mail-icon-envelope">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div class="sparkle-ai">✨ Automated Cold Outreach</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">GenAi-Email-Writter</h4>
+                <p class="card-desc">Automated cold outreach generator that extracts job descriptions and crafts
+                  personalized emails with relevant portfolio links using LangChain and Groq.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> LangChain</span>
+                  <span class="tag"><i class="tech-dot"></i> Groq</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/GenAi-Email-Writter" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/GenAi-Email-Writter" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Quote Insert Card 1 (Matches Mockup) -->
+            <div class="card-quote-feature">
+              <span class="big-quote-glyph">“</span>
+              <p class="quote-text-serif">
+                “AI is most powerful when it solves real problems for real people.”
+              </p>
+              <div class="quote-signature">— KIRAN IMMADI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Production Mobile & Systems Engineering -->
+        <div class="category-block" data-category-group="mobile">
+          <div class="category-heading-row">
+            <h3 class="category-title">Production Mobile & Systems Engineering</h3>
+            <span class="category-tagline">Building scalable, real-world native & cross-platform applications.</span>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 06 -->
+            <article class="project-card" data-category="mobile"
+              data-keywords="flutter dart c++ ffi mobile utility native">
+              <div class="card-thumb">
+                <span class="card-num">06</span>
+                <div class="card-visual visual-singletap">
+                  <div class="phone-mockup-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen-content">
+                      <span class="phone-speed-badge">⚡ Native C++ FFI</span>
+                      <div class="phone-action-btn">Instant Tap</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">SingleTap</h4>
+                <p class="card-desc">Cross-platform mobile utility leveraging native C++ modules via Dart FFI for
+                  performance-sensitive tasks and ultra low-latency executions.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot fl"></i> Flutter</span>
+                  <span class="tag"><i class="tech-dot"></i> Dart</span>
+                  <span class="tag"><i class="tech-dot"></i> C++</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/SingleTap" target="_blank" rel="noopener noreferrer"
+                    class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/SingleTap" target="_blank" rel="noopener noreferrer"
+                    class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 07 -->
+            <article class="project-card" data-category="mobile"
+              data-keywords="flutter litert onnx health fitness on-device ai">
+              <div class="card-thumb">
+                <span class="card-num">07</span>
+                <div class="card-visual visual-healthos">
+                  <div class="health-vitals-box">
+                    <div class="heartbeat-line">
+                      <svg viewBox="0 0 120 30" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M0 15 H30 L38 2 L46 28 L54 10 L60 20 L66 15 H120" />
+                      </svg>
+                    </div>
+                    <span class="vitals-metric">98 BPM • On-Device Inference</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">HealthOS</h4>
+                <p class="card-desc">Personal health tracking suite running on-device AI models for privacy and
+                  zero-latency performance without transmitting data to external servers.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot fl"></i> Flutter</span>
+                  <span class="tag"><i class="tech-dot"></i> LiteRT</span>
+                  <span class="tag"><i class="tech-dot"></i> ONNX</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/healthos" target="_blank" rel="noopener noreferrer"
+                    class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/healthos" target="_blank" rel="noopener noreferrer"
+                    class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 08 -->
+            <article class="project-card" data-category="mobile"
+              data-keywords="flutter bloc firebase budget finance tracker expenses">
+              <div class="card-thumb">
+                <span class="card-num">08</span>
+                <div class="card-visual visual-expense">
+                  <div class="expense-card-mini">
+                    <div class="expense-row"><span>Monthly Budget</span> <span class="green">$3,420</span></div>
+                    <div class="expense-progress-bar">
+                      <div class="fill" style="width: 64%"></div>
+                    </div>
+                    <span class="expense-meta">BLoC State • Firestore Sync</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Expenses-Tracker-App</h4>
+                <p class="card-desc">Personal finance and budget monitoring app with real-time sync, BLoC state
+                  management architecture, and Firebase cloud persistence.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot fl"></i> Flutter</span>
+                  <span class="tag"><i class="tech-dot"></i> BLoC</span>
+                  <span class="tag"><i class="tech-dot"></i> Firebase</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/expenses-tracker_app" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/expenses-tracker_app" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 09 -->
+            <article class="project-card" data-category="mobile"
+              data-keywords="family tree flutter dart graph algorithms genealogy nodes">
+              <div class="card-thumb">
+                <span class="card-num">09</span>
+                <div class="card-visual visual-tree">
+                  <div class="node-tree-graphic">
+                    <div class="t-node root">●</div>
+                    <div class="t-connectors"></div>
+                    <div class="t-row">
+                      <div class="t-node">●</div>
+                      <div class="t-node">●</div>
+                      <div class="t-node">●</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Family-Tree</h4>
+                <p class="card-desc">Interactive genealogy mapping tool with custom node layout algorithms for
+                  multi-generational trees with high performance Canvas rendering.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot fl"></i> Flutter</span>
+                  <span class="tag"><i class="tech-dot"></i> Dart</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/family-tree" target="_blank" rel="noopener noreferrer"
+                    class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/family-tree" target="_blank" rel="noopener noreferrer"
+                    class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 10 -->
+            <article class="project-card" data-category="mobile"
+              data-keywords="homebuild construction ai assistant flutter dart architectural">
+              <div class="card-thumb">
+                <span class="card-num">10</span>
+                <div class="card-visual visual-homebuild">
+                  <div class="house-blueprint-wireframe">
+                    <div class="roof-triangle"></div>
+                    <div class="house-box"></div>
+                    <span class="blueprint-label">📐 AI Estimator</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">HomeBuildAI</h4>
+                <p class="card-desc">Architectural and construction planning companion to track materials, milestones,
+                  and project progress with smart AI assistance.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot fl"></i> Flutter</span>
+                  <span class="tag"><i class="tech-dot"></i> Dart</span>
+                  <span class="tag"><i class="tech-dot"></i> AI</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/HomeBuildAI" target="_blank" rel="noopener noreferrer"
+                    class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/HomeBuildAI" target="_blank" rel="noopener noreferrer"
+                    class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Quote Insert Card 2 (Matches Mockup) -->
+            <div class="card-quote-feature">
+              <span class="big-quote-glyph">“</span>
+              <p class="quote-text-serif">
+                “From ideas on a screen to tools in people's hands.”
+              </p>
+              <div class="quote-signature">— KIRAN IMMADI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: FinTech, Analytics & Security -->
+        <div class="category-block" data-category-group="fintech">
+          <div class="category-heading-row">
+            <h3 class="category-title">FinTech, Analytics & Security</h3>
+            <span class="category-tagline">Using data, intelligence, and cryptography for a safer tomorrow.</span>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 11 -->
+            <article class="project-card" data-category="fintech"
+              data-keywords="fintech stock trading fastapi python automated finance">
+              <div class="card-thumb">
+                <span class="card-num">11</span>
+                <div class="card-visual visual-trading">
+                  <div class="trading-chart-svg">
+                    <svg viewBox="0 0 160 50" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M0 45 L30 35 L50 40 L80 18 L110 25 L140 8 L160 12" />
+                    </svg>
+                    <span class="chart-signal-dot"></span>
+                  </div>
+                  <span class="chart-label">+18.4% Alpha Execution</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">AI-Stock-Trading-APP</h4>
+                <p class="card-desc">Automated trading system analyzing market data and news sentiment with high-speed
+                  FastAPI backend and risk management rules.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> FastAPI</span>
+                  <span class="tag"><i class="tech-dot"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> FinTech</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/AI-Stock-Trading-APP" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/AI-Stock-Trading-APP" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 12 -->
+            <article class="project-card" data-category="fintech"
+              data-keywords="data analytics sales python pandas seaborn eda mobile marketplace">
+              <div class="card-thumb">
+                <span class="card-num">12</span>
+                <div class="card-visual visual-eda">
+                  <div class="bar-chart-mock">
+                    <span class="b-bar" style="height: 40%"></span>
+                    <span class="b-bar" style="height: 75%"></span>
+                    <span class="b-bar" style="height: 55%"></span>
+                    <span class="b-bar active" style="height: 90%"></span>
+                    <span class="b-bar" style="height: 60%"></span>
+                  </div>
+                  <span class="chart-sub">Sales Distribution & Market Share</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Mobile_Sales_Analysis</h4>
+                <p class="card-desc">EDA pipeline analyzing mobile marketplace data for customer trends, brand share
+                  distribution, and pricing insights.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> Pandas</span>
+                  <span class="tag"><i class="tech-dot"></i> Seaborn</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/Mobile_Sales_Analysis" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/Mobile_Sales_Analysis" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 13 -->
+            <article class="project-card" data-category="fintech"
+              data-keywords="transformers news summarization tts audio speech nlp">
+              <div class="card-thumb">
+                <span class="card-num">13</span>
+                <div class="card-visual visual-audio-news">
+                  <div class="audio-waveform-row">
+                    <span class="wave-bar h1"></span>
+                    <span class="wave-bar h3"></span>
+                    <span class="wave-bar h2"></span>
+                    <span class="wave-bar h4"></span>
+                    <span class="wave-bar h3"></span>
+                    <span class="wave-bar h1"></span>
+                  </div>
+                  <span class="tts-pill">Abstractive TTS Engine</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">News-Summarization</h4>
+                <p class="card-desc">Automated news parser with abstractive summarization models and realistic
+                  text-to-speech audio synthesis for quick daily briefings.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot"></i> Transformers</span>
+                  <span class="tag"><i class="tech-dot"></i> TTS</span>
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/News-Summarization" target="_blank" rel="noopener noreferrer"
+                    class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/News-Summarization" target="_blank" rel="noopener noreferrer"
+                    class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 14 -->
+            <article class="project-card" data-category="fintech"
+              data-keywords="sonar rock mine prediction scikit-learn machine learning classification">
+              <div class="card-thumb">
+                <span class="card-num">14</span>
+                <div class="card-visual visual-sonar">
+                  <div class="sonar-rings">
+                    <span class="s-ring r1"></span>
+                    <span class="s-ring r2"></span>
+                    <span class="s-ping"></span>
+                  </div>
+                  <span class="sonar-text">Sonar Frequency Classification</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Rock-vs-Mine-Prediction</h4>
+                <p class="card-desc">Machine learning classifier using sonar signal frequencies to distinguish
+                  underwater rocks from hazardous naval mines.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> Scikit-Learn</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 15 -->
+            <article class="project-card" data-category="security"
+              data-keywords="cctv surveillance cloud opencv facial recognition computer vision">
+              <div class="card-thumb">
+                <span class="card-num">15</span>
+                <div class="card-visual visual-cctv-cloud">
+                  <div class="cctv-hardware-lens">
+                    <span class="red-rec-dot">● REC</span>
+                    <div class="cam-lens-circle"></div>
+                  </div>
+                  <span class="cctv-cloud-label">Distributed Cloud Stream</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Cloud-Based-CCTV-Footage</h4>
+                <p class="card-desc">Distributed surveillance system with automated facial recognition, motion triggers,
+                  and secure cloud notifications.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> OpenCV</span>
+                  <span class="tag"><i class="tech-dot"></i> Cloud</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/cloud-based-CCTV-footage" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/cloud-based-CCTV-footage" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 16 -->
+            <article class="project-card" data-category="security"
+              data-keywords="cctv surveillance edge ai prototype iot vision perimeter">
+              <div class="card-thumb">
+                <span class="card-num">16</span>
+                <div class="card-visual visual-cctv-proto">
+                  <div class="bounding-box-demo">
+                    <span class="target-box">Target: Person [98%]</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">CCTV-Surveillance-Prototype</h4>
+                <p class="card-desc">Edge AI surveillance prototype for perimeter monitoring, intrusion detection, and
+                  bounding-box anomaly classification.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot py"></i> Python</span>
+                  <span class="tag"><i class="tech-dot"></i> OpenCV</span>
+                  <span class="tag"><i class="tech-dot"></i> Edge AI</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/cctv-surveillance-prototype" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/cctv-surveillance-prototype" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 17 -->
+            <article class="project-card" data-category="security"
+              data-keywords="text emoji encryption decryption cipher cryptography security">
+              <div class="card-thumb">
+                <span class="card-num">17</span>
+                <div class="card-visual visual-emoji-cipher">
+                  <div class="cipher-flow">
+                    <span class="cipher-item lock">🔒</span>
+                    <span class="cipher-arrow">→</span>
+                    <span class="cipher-item em">😎</span>
+                    <span class="cipher-arrow">→</span>
+                    <span class="cipher-item em">🚀</span>
+                    <span class="cipher-arrow">→</span>
+                    <span class="cipher-item em">🔑</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Text-to-Emoji-Encryption-and-Decryption</h4>
+                <p class="card-desc">Cipher utility to convert raw text into emoji sequences and back with reversible
+                  cryptographic decoding and secret message concealment.</p>
+                <div class="card-tags">
+                  <span class="tag"><i class="tech-dot"></i> Web</span>
+                  <span class="tag"><i class="tech-dot"></i> Cryptography</span>
+                </div>
+                <div class="card-footer">
+                  <a href="https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption" target="_blank"
+                    rel="noopener noreferrer" class="view-link">
+                    View Project <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption" target="_blank"
+                    rel="noopener noreferrer" class="github-icon-link" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- GitHub CTA Box (Matches Mockup) -->
+            <div class="github-profile-cta-card">
+              <div class="handwritten-github-accent">
+                More Projects<br>on GitHub ↗
+              </div>
+              <a href="https://github.com/kiranimmadi2?tab=repositories" target="_blank" rel="noopener noreferrer"
+                class="btn btn-github-all" id="btn-github-all">
+                View All Projects <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience & Philosophy Section -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-tag">EXPERIENCE & FOCUS</div>
+        <h2 class="section-title">
+          How I Build. <br>
+          <span class="highlight-text">Engineering with Purpose.</span>
+        </h2>
+
+        <div class="experience-grid">
+          <div class="exp-card">
+            <div class="exp-number">01</div>
+            <h3 class="exp-title">Autonomous Agent Architectures</h3>
+            <p class="exp-desc">
+              Designing self-correcting agent loops with tool-calling, browser control protocols, and MCP integration.
+              Specialized in transforming reasoning LLMs into real-world autonomous executors.
+            </p>
+            <div class="exp-tags">
+              <span>Agentic Workflows</span>
+              <span>Model Context Protocol</span>
+              <span>LangChain</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-number">02</div>
+            <h3 class="exp-title">Native Performance & Cross-Platform</h3>
+            <p class="exp-desc">
+              Crafting fluid 60fps/120fps mobile experiences using Flutter, paired with native C++ via Dart FFI for
+              computation-heavy routines and edge AI model deployment.
+            </p>
+            <div class="exp-tags">
+              <span>Flutter & Dart</span>
+              <span>C++ FFI</span>
+              <span>On-Device AI</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-number">03</div>
+            <h3 class="exp-title">Data Systems & Algorithmic Security</h3>
+            <p class="exp-desc">
+              Building robust data pipelines with FastAPI, automated trading rules, computer vision event processing,
+              and custom cryptographic algorithms with clean UX.
+            </p>
+            <div class="exp-tags">
+              <span>FastAPI</span>
+              <span>Computer Vision</span>
+              <span>Data Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Banner: "Let's build the next big thing" with Earth Horizon -->
+    <section class="connect-banner-section" id="contact">
+      <div class="earth-horizon-bg" style="background-image: url('assets/earth_horizon.jpg');"></div>
+      <div class="earth-overlay-gradient"></div>
+
+      <div class="container connect-banner-inner">
+        <div class="banner-left">
+          <div class="banner-tag">LET'S CONNECT</div>
+          <h2 class="banner-headline">
+            Let’s build the <br>next big thing.
+          </h2>
+          <p class="banner-subtext">
+            Have an idea, a project, or just want to talk about AI, systems engineering, and technology? I'd love to
+            hear from you.
+          </p>
+          <div class="banner-actions">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiranimmadi2@gmail.com" target="_blank"
+              rel="noopener noreferrer" class="btn btn-white-pill" id="footer-get-in-touch">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;margin-right:2px;">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              Compose Email <span class="arrow">↗</span>
+            </a>
+            <a href="https://wa.me/919916398527" target="_blank" rel="noopener noreferrer" class="btn btn-glass-pill"
+              id="footer-whatsapp">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;margin-right:2px;">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.13.17 1.76 2.69 4.26 3.77.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z" />
+              </svg>
+              WhatsApp <span class="arrow">↗</span>
+            </a>
+            <button class="btn btn-glass-pill" id="btn-copy-email" data-email="kiranimmadi2@gmail.com">
+              <span id="copy-email-text">Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="banner-right">
+          <div class="editorial-manifesto">
+            <div class="manifesto-line">Create.</div>
+            <div class="manifesto-line">Solve.</div>
+            <div class="manifesto-line">Improve.</div>
+            <div class="manifesto-line accent">Together.</div>
+            <div class="manifesto-divider"></div>
+            <div class="manifesto-author">KIRAN IMMADI</div>
+            <div class="manifesto-slogan">A BRIGHTER TOMORROW.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <span class="footer-name">KIRAN IMMADI</span>
+        <span class="footer-role">AI Engineer | Application Developer</span>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#tech-stack">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/kiran-immadi/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn Profile" class="social-icon" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.95 0-1.72.77-1.72 1.72 0 .95.77 1.72 1.72 1.72.95 0 1.72-.77 1.72-1.72 0-.95-.77-1.72-1.72-1.72z" />
+          </svg>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/kiranimmadi2" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"
+          class="social-icon" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+        <!-- LeetCode -->
+        <a href="https://leetcode.com/u/Kiranimmadi2/" target="_blank" rel="noopener noreferrer"
+          aria-label="LeetCode Profile" class="social-icon" title="LeetCode">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.966 3.65c.34.024.68.016 1.02-.025a6.04 6.04 0 0 0 2.457-.866l3.864-2.736a1.376 1.376 0 0 0 .375-1.91 1.377 1.377 0 0 0-1.91-.375l-3.864 2.736a3.284 3.284 0 0 1-1.336.471 3.253 3.253 0 0 1-2.708-1.987 3.01 3.01 0 0 1-.19-.553 3.02 3.02 0 0 1-.034-1.288 2.87 2.87 0 0 1 .66-1.147l3.855-4.126 5.405-5.788A1.374 1.374 0 0 0 13.483 0zm-2.88 7.283a1.374 1.374 0 0 0-.97.438L4.228 13.51a1.376 1.376 0 0 0 1.91 1.91l5.405-5.789a1.376 1.376 0 0 0-.94-2.348z" />
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919916398527" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+          class="social-icon" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.13.17 1.76 2.69 4.26 3.77.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z" />
+          </svg>
+        </a>
+        <!-- Gmail -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiranimmadi2@gmail.com" target="_blank"
+          rel="noopener noreferrer" aria-label="Compose Gmail to Kiran" class="social-icon" title="Gmail">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Kiran Immadi. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <span class="modal-tag">KIRAN IMMADI</span>
+        <h3 class="modal-title">Curriculum Vitae</h3>
+        <p class="modal-subtitle">AI Engineer & Application Developer • Specialized in LLM Agents & Cross-Platform
+          Systems</p>
+      </div>
+      <div class="modal-body">
+        <div class="resume-preview-box">
+          <div class="resume-meta-block">
+            <strong>Key Focus Areas:</strong>
+            <ul>
+              <li>Autonomous AI Agents (Browser automation, tool calling, reasoning loops)</li>
+              <li>Production Mobile Development (Flutter, Dart, C++ FFI, on-device AI)</li>
+              <li>Data Intelligence & APIs (FastAPI, LangChain, Groq, Computer Vision)</li>
+              <li>17+ Open-Source Projects Delivered</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/kiranimmadi2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          Explore Repositories
+        </a>
+        <button class="btn btn-primary" onclick="window.print()">
+          Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
+
 </html>
