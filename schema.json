@@ -1,0 +1,493 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kiranimmadi2.github.io/Portfolio/#website",
+      "url": "https://kiranimmadi2.github.io/Portfolio/",
+      "name": "Kiran Immadi — Software Engineer, AI Architect, GenAI Builder, Flutter Developer",
+      "description": "Official technical portfolio and engineering dossier of Kiran Immadi featuring Autonomous AI Agents, RAG Pipelines, Flutter Systems, and High-Throughput APIs.",
+      "publisher": {
+        "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+      },
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".hero-title",
+          ".hero-description",
+          ".eyebrow-tag"
+        ]
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://kiranimmadi2.github.io/Portfolio/#webpage",
+      "url": "https://kiranimmadi2.github.io/Portfolio/",
+      "name": "Kiran Immadi Portfolio & Engineering Dossier",
+      "dateModified": "2026-09-24",
+      "isPartOf": {
+        "@id": "https://kiranimmadi2.github.io/Portfolio/#website"
+      },
+      "about": {
+        "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+      },
+      "mainEntity": {
+        "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kiranimmadi2.github.io/Portfolio/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio & Engineering Dossier",
+            "item": "https://kiranimmadi2.github.io/Portfolio/#projects"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kiranimmadi2.github.io/Portfolio/#person",
+      "name": "Kiran Immadi",
+      "alternateName": [
+        "Kiran Immadi Bangalore Engineer",
+        "Kiran Immadi AI Engineer",
+        "Kiran Immadi AI Architect",
+        "Kiran Immadi GenAI Builder",
+        "Kiran Immadi Flutter Developer",
+        "Kiran Immadi Software Engineer",
+        "Bangalore AI Architect",
+        "Bangalore Flutter Developer"
+      ],
+      "jobTitle": [
+        "Senior Software Engineer",
+        "Enterprise AI Architect",
+        "Generative AI (GenAI) Builder",
+        "Lead Flutter Developer",
+        "Autonomous Agent Engineer"
+      ],
+      "description": "Bangalore-based Senior Software Engineer, Enterprise AI Architect, Generative AI Builder, and Lead Flutter Developer serving clients and organizations globally across India, USA, Europe, and worldwide.",
+      "url": "https://kiranimmadi2.github.io/Portfolio/",
+      "image": "https://kiranimmadi2.github.io/Portfolio/assets/kiran_dark.png",
+      "email": "mailto:kiranimmadi2@gmail.com",
+      "telephone": "+919916398527",
+      "knowsLanguage": [
+        "en",
+        "hi",
+        "te",
+        "kn"
+      ],
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Bangalore, Karnataka, India"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Bangalore, India & Remote Worldwide"
+      },
+      "areaServed": [
+        "Worldwide",
+        "Global",
+        "United States",
+        "Europe",
+        "India",
+        "Bangalore"
+      ],
+      "sameAs": [
+        "https://github.com/kiranimmadi2",
+        "https://www.linkedin.com/in/kiran-immadi/",
+        "https://leetcode.com/u/Kiranimmadi2/"
+      ],
+      "subjectOf": {
+        "@type": "DigitalDocument",
+        "name": "Kiran Immadi LLM Context Dossier",
+        "url": "https://kiranimmadi2.github.io/Portfolio/llms.txt",
+        "encodingFormat": "text/plain",
+        "description": "Standardized machine-readable LLM context and engineering dossier for AI models, search engines, and automated agents."
+      },
+      "knowsAbout": [
+        "Software Engineering",
+        "Artificial Intelligence (AI)",
+        "AI Architecture",
+        "Generative AI (GenAI)",
+        "Autonomous Agents",
+        "Agentic Systems",
+        "Model Context Protocol (MCP)",
+        "Retrieval-Augmented Generation (RAG)",
+        "Large Language Models (LLMs)",
+        "Flutter App Development",
+        "Dart Programming",
+        "C++ FFI",
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "TensorFlow",
+        "LangChain",
+        "Computer Vision",
+        "OpenCV",
+        "Full Stack Web Development",
+        "Docker",
+        "RESTful APIs",
+        "WebSockets",
+        "PostgreSQL",
+        "SQLite",
+        "MongoDB"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Enterprise AI Architect",
+          "description": "Architecting autonomous agents, tool-calling reasoning loops, and Model Context Protocol (MCP) server backends."
+        },
+        {
+          "@type": "Occupation",
+          "name": "Generative AI (GenAI) Builder",
+          "description": "Engineering high-speed multi-modal RAG systems, vector embeddings, semantic search, and prompt pipelines."
+        },
+        {
+          "@type": "Occupation",
+          "name": "Lead Flutter Developer",
+          "description": "Building high-performance cross-platform mobile apps with offline-first persistence, reactive state management, and C++ FFI."
+        },
+        {
+          "@type": "Occupation",
+          "name": "Senior Software Engineer",
+          "description": "Designing scalable backends, low-latency microservices, algorithmic security tools, and computer vision pipelines."
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://kiranimmadi2.github.io/Portfolio/#projects-list",
+      "name": "Kiran Immadi's Complete Open-Source Software Projects",
+      "itemListElement": [
+        {
+          "@type": "SoftwareApplication",
+          "position": 1,
+          "name": "AI-Agent-Browser-Automation",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Cross-Platform",
+          "description": "Autonomous browser agent executing multi-step web workflows from natural language commands.",
+          "url": "https://github.com/kiranimmadi2/AI-Agent-Browser-Automation",
+          "codeRepository": "https://github.com/kiranimmadi2/AI-Agent-Browser-Automation",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 2,
+          "name": "Indian-Law-AI-Assistant",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "Production RAG system for legal document question-answering and case law intelligence.",
+          "url": "https://github.com/kiranimmadi2/Indian-Law-AI-Assistant",
+          "codeRepository": "https://github.com/kiranimmadi2/Indian-Law-AI-Assistant",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 3,
+          "name": "QueryAI",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web",
+          "description": "AI-powered natural language to SQL and data query assistant with interactive visualization.",
+          "url": "https://github.com/kiranimmadi2/QueryAI",
+          "codeRepository": "https://github.com/kiranimmadi2/QueryAI",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 4,
+          "name": "MCP-Server",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Cross-Platform",
+          "description": "Model Context Protocol implementation connecting local tools and file APIs with Claude and AI agents.",
+          "url": "https://github.com/kiranimmadi2/MCP-Server",
+          "codeRepository": "https://github.com/kiranimmadi2/MCP-Server",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 5,
+          "name": "GenAi-Email-Writter",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "Context-aware executive email generation engine leveraging LLMs and structured templates.",
+          "url": "https://github.com/kiranimmadi2/GenAi-Email-Writter",
+          "codeRepository": "https://github.com/kiranimmadi2/GenAi-Email-Writter",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 6,
+          "name": "SingleTap",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Android",
+          "description": "Ultra-fast minimalist Android launcher powered by Flutter, Dart, and C++ FFI.",
+          "url": "https://github.com/kiranimmadi2/SingleTap",
+          "codeRepository": "https://github.com/kiranimmadi2/SingleTap",
+          "programmingLanguage": "Dart, C++",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 7,
+          "name": "HealthOS",
+          "applicationCategory": "MedicalApplication",
+          "operatingSystem": "Cross-Platform Mobile",
+          "description": "Offline-first clinical management system with appointment scheduling and encrypted records.",
+          "url": "https://github.com/kiranimmadi2/HealthOS",
+          "codeRepository": "https://github.com/kiranimmadi2/HealthOS",
+          "programmingLanguage": "Dart, Flutter",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 8,
+          "name": "Expenses-Tracker-App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Cross-Platform Mobile",
+          "description": "Zero-latency financial tracking application with offline persistence and dynamic analytics.",
+          "url": "https://github.com/kiranimmadi2/Expenses-Tracker-App",
+          "codeRepository": "https://github.com/kiranimmadi2/Expenses-Tracker-App",
+          "programmingLanguage": "Dart, Flutter",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 9,
+          "name": "Family-Tree",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Cross-Platform Mobile",
+          "description": "Interactive multi-generational pedigree visualization tool with custom canvas rendering.",
+          "url": "https://github.com/kiranimmadi2/Family-Tree",
+          "codeRepository": "https://github.com/kiranimmadi2/Family-Tree",
+          "programmingLanguage": "Dart, Flutter",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 10,
+          "name": "HomeBuildAI",
+          "applicationCategory": "DesignApplication",
+          "operatingSystem": "Cross-Platform Mobile",
+          "description": "AI architectural estimator computing floor plans and construction budgets on mobile.",
+          "url": "https://github.com/kiranimmadi2/HomeBuildAI",
+          "codeRepository": "https://github.com/kiranimmadi2/HomeBuildAI",
+          "programmingLanguage": "Dart, Flutter",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 11,
+          "name": "AI-Stock-Trading-APP",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "description": "Algorithmic market intelligence dashboard computing technical indicators and signal models.",
+          "url": "https://github.com/kiranimmadi2/AI-Stock-Trading-APP",
+          "codeRepository": "https://github.com/kiranimmadi2/AI-Stock-Trading-APP",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 12,
+          "name": "Mobile_Sales_Analysis",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "Retail business intelligence and sales forecasting application.",
+          "url": "https://github.com/kiranimmadi2/Mobile_Sales_Analysis",
+          "codeRepository": "https://github.com/kiranimmadi2/Mobile_Sales_Analysis",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 13,
+          "name": "News-Summarization",
+          "applicationCategory": "NewsApplication",
+          "operatingSystem": "Web",
+          "description": "Automated abstractive news summarization pipeline using Hugging Face Transformer models.",
+          "url": "https://github.com/kiranimmadi2/News-Summarization",
+          "codeRepository": "https://github.com/kiranimmadi2/News-Summarization",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 14,
+          "name": "Rock-vs-Mine-Prediction",
+          "applicationCategory": "ScientificApplication",
+          "operatingSystem": "Cross-Platform",
+          "description": "Underwater sonar signal machine learning classification system.",
+          "url": "https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction",
+          "codeRepository": "https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 15,
+          "name": "Cloud-Based-CCTV-Footage",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Cloud / Server",
+          "description": "Automated cloud video surveillance pipeline for real-time security streams.",
+          "url": "https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage",
+          "codeRepository": "https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 16,
+          "name": "CCTV-Surveillance-Prototype",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Cross-Platform",
+          "description": "Edge computer vision prototype for motion tracking and security frame analysis using OpenCV.",
+          "url": "https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype",
+          "codeRepository": "https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 17,
+          "name": "Text-to-Emoji-Encryption-and-Decryption",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Cross-Platform",
+          "description": "Steganographic cipher encoder converting cryptographic text into emoji representations.",
+          "url": "https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption",
+          "codeRepository": "https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption",
+          "programmingLanguage": "Python",
+          "author": {
+            "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kiranimmadi2.github.io/Portfolio/#faq-schema",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Kiran Immadi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran Immadi is a Bangalore-based Senior Software Engineer, Enterprise AI Architect, Generative AI (GenAI) Builder, and Lead Flutter Developer. He builds autonomous agentic systems, production RAG pipelines, and cross-platform mobile apps using Flutter and Dart C++ FFI, with open-source production projects published on GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Kiran Immadi a top AI Architect and GenAI Builder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran Immadi architects end-to-end autonomous agentic solutions including browser automation agents (AI-Agent-Browser-Automation), Model Context Protocol (MCP) servers, and enterprise RAG systems (Indian-Law-AI-Assistant) leveraging FastAPI, Groq LPUs, LangChain, and vector embeddings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why hire Kiran Immadi for Flutter and Mobile Application Development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran Immadi is an experienced Flutter Developer who engineers high-framerate 60fps/120fps iOS and Android applications. His work includes deep native C++ integration via Dart FFI (SingleTap), resilient offline-first data architectures (HealthOS, Expenses-Tracker-App), and on-device AI integration (HomeBuildAI)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What programming languages and frameworks does Kiran Immadi use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran Immadi specializes in Python, Dart, C++, JavaScript, TypeScript, Flutter, FastAPI, PyTorch, TensorFlow, LangChain, Groq, OpenCV, Docker, Firebase, SQLite, and MongoDB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Kiran Immadi based and does he work with international clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran Immadi is based in Bangalore, Karnataka, India, and actively works with global startups, engineering teams, and enterprises worldwide across the United States, Europe, and Asia in remote and hybrid engagements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What open source projects has Kiran Immadi created?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran Immadi has authored open source projects including AI-Agent-Browser-Automation (autonomous web navigation agent), Indian-Law-AI-Assistant (legal RAG engine), SingleTap (minimalist C++ FFI launcher), MCP-Server (Anthropic Model Context Protocol), HealthOS (clinical management system), QueryAI (natural language to SQL), and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Kiran Immadi optimize RAG and LLM systems for enterprise production?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiran implements hybrid retrieval combining dense vector embeddings with BM25 keyword search, semantic reranking, intelligent document chunking, low-latency inference on Groq LPUs, and structured tool-calling validation to eliminate hallucinations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Kiran Immadi for engineering roles or projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact Kiran Immadi via email at kiranimmadi2@gmail.com, on WhatsApp / Phone at +91 99163 98527, on LinkedIn at https://www.linkedin.com/in/kiran-immadi/, or explore his repositories on GitHub at https://github.com/kiranimmadi2."
+          }
+        }
+      ]
+    }
+  ]
+}

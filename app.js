@@ -1,6 +1,6 @@
 /**
- * Kiran Immadi - Portfolio Interactive Engine
- * Minimalist, fluid, and responsive interactions.
+ * Kiran Immadi - Portfolio Interactive & Micro-Animation Engine
+ * Minimalist, fluid, high-performance smooth scroll reveals & interactive elements.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,77 +49,144 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 2. Top Reading Scroll Progress Bar & Header Elevation
+  let progressBar = document.querySelector('.scroll-progress-bar');
+  if (!progressBar) {
+    progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress-bar';
+    document.body.appendChild(progressBar);
+  }
 
-  // 3. Category Filter Tabs
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-  const categoryBlocks = document.querySelectorAll('.category-block');
-  const projectCountDisplay = document.getElementById('project-count-display');
-  const searchInput = document.getElementById('project-search-input');
+  const siteHeader = document.getElementById('site-header');
 
-  function updateProjectCount(count) {
-    if (projectCountDisplay) {
-      projectCountDisplay.innerHTML = `${count} Project${count === 1 ? '' : 's'} <span class="arrow">→</span>`;
+  function updateScrollProgressAndHeader() {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+    progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+
+    if (siteHeader) {
+      if (scrollY > 20) {
+        siteHeader.classList.add('header-scrolled');
+      } else {
+        siteHeader.classList.remove('header-scrolled');
+      }
     }
   }
 
-  function filterProjects() {
-    const activeFilterBtn = document.querySelector('.filter-btn.active');
-    const filter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
-    const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+  window.addEventListener('scroll', updateScrollProgressAndHeader, { passive: true });
+  updateScrollProgressAndHeader();
 
-    let visibleCount = 0;
+  // 3. Smooth IntersectionObserver Scroll Reveal Engine
+  const revealSelectors = [
+    '.section-title',
+    '.section-tag',
+    '.section-lead',
+    '.projects-subtitle',
+    '.marquee-header-inner',
+    '.about-lead',
+    '.about-body',
+    '.about-quote-box',
+    '.about-meta-inline',
+    '.build-column',
+    '.project-card',
+    '.banner-headline',
+    '.banner-subtext',
+    '.banner-actions',
+    '.editorial-manifesto',
+    '.footer-brand',
+    '.footer-nav',
+    '.footer-socials'
+  ];
 
-    projectCards.forEach(card => {
-      const cardCategory = card.getAttribute('data-category');
-      const cardTitle = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-      const cardDesc = card.querySelector('.card-desc')?.textContent.toLowerCase() || '';
-      const cardTags = card.getAttribute('data-keywords') || '';
-
-      const matchesCategory = (filter === 'all') || (cardCategory === filter);
-      const matchesQuery = !query || cardTitle.includes(query) || cardDesc.includes(query) || cardTags.includes(query);
-
-      if (matchesCategory && matchesQuery) {
-        card.style.display = 'flex';
-        visibleCount++;
-      } else {
-        card.style.display = 'none';
-      }
-    });
-
-    // Handle visibility of category section blocks and quotes
-    categoryBlocks.forEach(block => {
-      const visibleCardsInBlock = block.querySelectorAll('.project-card:not([style*="display: none"])');
-      const quoteFeature = block.querySelector('.card-quote-feature');
-      const githubCta = block.querySelector('.github-profile-cta-card');
-
-      if (visibleCardsInBlock.length > 0) {
-        block.style.display = 'block';
-        if (quoteFeature) quoteFeature.style.display = 'flex';
-        if (githubCta) githubCta.style.display = 'flex';
-      } else {
-        block.style.display = 'none';
-      }
-    });
-
-    updateProjectCount(visibleCount);
-  }
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filterProjects();
-    });
+  const elementsToReveal = document.querySelectorAll(revealSelectors.join(', '));
+  elementsToReveal.forEach(el => {
+    if (!el.classList.contains('scroll-reveal')) {
+      el.classList.add('scroll-reveal');
+    }
   });
 
-  if (searchInput) {
-    searchInput.addEventListener('input', () => {
-      filterProjects();
+  // Stagger grid elements automatically for cascading reveals
+  function applyGridStagger(parentSelector, itemSelector) {
+    const parents = document.querySelectorAll(parentSelector);
+    parents.forEach(parent => {
+      const items = parent.querySelectorAll(itemSelector);
+      items.forEach((item, index) => {
+        const delay = Math.min((index % 6) * 0.07, 0.35);
+        item.style.transitionDelay = `${delay}s`;
+      });
     });
   }
 
-  // 4. Resume Modal Interaction
+  applyGridStagger('.projects-unified-grid', '.project-card');
+  applyGridStagger('.build-grid', '.build-column');
+  applyGridStagger('.banner-actions', '.btn');
+
+  const observerOptions = {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-zoom').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // 4. Smooth Stat Counter Animation on Scroll
+  function animateStatNumbers() {
+    const numberEls = document.querySelectorAll('.metric-number, .stat-number');
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const rawText = el.textContent.trim();
+          const match = rawText.match(/^([\d,]+)(\+?%?)$/);
+
+          if (match) {
+            const target = parseInt(match[1].replace(/,/g, ''), 10);
+            const suffix = match[2];
+            const duration = 1400;
+            const startTime = performance.now();
+
+            const updateCount = (currentTime) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease-Out Quartic easing function for fluid decelerating counter
+              const easedProgress = 1 - Math.pow(1 - progress, 4);
+              const current = Math.floor(easedProgress * target);
+
+              el.textContent = current.toLocaleString() + suffix;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                el.textContent = target.toLocaleString() + suffix;
+              }
+            };
+
+            requestAnimationFrame(updateCount);
+          }
+
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    numberEls.forEach(el => counterObserver.observe(el));
+  }
+
+  animateStatNumbers();
+
+  // 6. Resume Modal Interaction
   const resumeBtn = document.getElementById('hero-download-resume');
   const resumeModal = document.getElementById('resume-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -163,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. Copy Email Action
+  // 7. Copy Email Action
   const copyEmailBtn = document.getElementById('btn-copy-email');
   const copyEmailText = document.getElementById('copy-email-text');
 
@@ -184,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Active Navigation Link Tracker
+  // 8. Active Navigation Link Tracker
   const sections = document.querySelectorAll('section[id], main');
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -209,12 +276,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
 
-  // 7. Micro-interactions on Project Cards
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s';
-    });
-  });
-
-  console.log('Kiran Immadi Portfolio loaded successfully with 17 projects.');
+  console.log('Kiran Immadi Portfolio interactive & scroll-reveal engine loaded.');
 });

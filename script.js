@@ -273,35 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(el);
     });
 
-    // ===== Back to Top Button =====
-    const backToTop = document.createElement('button');
-    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTop.className = 'back-to-top';
-    backToTop.style.cssText = 'position:fixed;bottom:2rem;right:2rem;width:45px;height:45px;border-radius:12px;background:linear-gradient(135deg,#6C63FF,#00D4AA);color:white;border:none;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.3s;z-index:999;box-shadow:0 5px 20px rgba(108,99,255,0.3);';
-    document.body.appendChild(backToTop);
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTop.style.opacity = '1';
-            backToTop.style.visibility = 'visible';
-        } else {
-            backToTop.style.opacity = '0';
-            backToTop.style.visibility = 'hidden';
-        }
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    backToTop.addEventListener('mouseenter', () => {
-        backToTop.style.transform = 'translateY(-3px)';
-    });
-
-    backToTop.addEventListener('mouseleave', () => {
-        backToTop.style.transform = 'translateY(0)';
-    });
-
     // ===== Skill Tags Hover Glow Effect =====
     document.querySelectorAll('.skill-tags span').forEach(tag => {
         tag.addEventListener('mouseenter', function() {
