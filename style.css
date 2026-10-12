@@ -3109,10 +3109,10 @@ button {
   left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, #6C63FF 0%, #00D4AA 50%, #a855f7 100%);
+  background: var(--accent-black);
   z-index: 10000;
   transition: width 0.12s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+  box-shadow: none;
   pointer-events: none;
 }
 
