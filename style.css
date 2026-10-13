@@ -3654,6 +3654,13 @@ body.project-modal-open {
   background: rgba(0, 0, 0, 0.01);
 }
 
+[data-theme="dark"] .project-modal-card,
+[data-theme="dark"] .pm-header,
+[data-theme="dark"] .pm-hero-preview,
+[data-theme="dark"] .pm-footer {
+  background: #000000;
+}
+
 .pm-kbd-hint {
   font-size: 0.76rem;
   color: #64748b;

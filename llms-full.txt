@@ -55,111 +55,143 @@
 
 ## 3. Comprehensive Open-Source Projects Directory
 
-The projects below are published under Kiran Immadi's official GitHub account (`kiranimmadi2`):
+The portfolio includes browser-local interactive illustrations for all projects. Sample outputs are distinct from real project results.
 
-### AI-Agent-Browser-Automation
-- **Category**: Autonomous AI Agents / Browser Automation
-- **GitHub URL**: [https://github.com/kiranimmadi2/AI-Agent-Browser-Automation](https://github.com/kiranimmadi2/AI-Agent-Browser-Automation)
-- **Tech Stack**: Python, Browser-Use, Playwright, LangChain, OpenAI / Claude LLMs
-- **Architecture**: Autonomous agent that takes unstructured natural language instructions and translates them into headless/headed browser actions. Uses DOM parsing, visual screenshots, and action-verification loops to execute multi-step web workflows without human intervention.
+### AI Browser Automation
 
-### Indian-Law-AI-Assistant
-- **Category**: Enterprise Generative AI / Production Legal RAG
-- **GitHub URL**: [https://github.com/kiranimmadi2/Indian-Law-AI-Assistant](https://github.com/kiranimmadi2/Indian-Law-AI-Assistant)
-- **Tech Stack**: FastAPI, Groq LPU, LangChain, FAISS, Python
-- **Architecture**: High-throughput RAG engine for querying complex statutory Indian legal codes, landmark Supreme Court cases, and acts. Utilizes semantic chunking, vector embeddings, and ultra-fast inference on Groq LPUs to return verified legal citations with minimal latency.
+Turn a plain-language task into browser actions, from filling forms to collecting information.
+
+- Intended audience: People repeating the same tasks across websites.
+- Repository: https://github.com/kiranimmadi2/AI-Agent-Browser-Automation
+- Implementation: Python and Gradio provide the WebUI; browser-use and Playwright connect the agent to the browser. The repository credits the browser-use foundation.
+
+### Indian Law AI Assistant
+
+Make legal documents easier to understand with plain-language explanations and Indian-language translations.
+
+- Intended audience: Readers who need help understanding a legal document.
+- Repository: https://github.com/kiranimmadi2/Indian-Law-AI-Assistant
+- Implementation: The Python app supports OpenAI and Google Gemini models. The sample uses fictional excerpts and prepared translations; it provides no legal advice.
 
 ### QueryAI
-- **Category**: NLP / Text-to-SQL & Data Intelligence
-- **GitHub URL**: [https://github.com/kiranimmadi2/QueryAI](https://github.com/kiranimmadi2/QueryAI)
-- **Tech Stack**: Python, scikit-learn, NLP, Flask, React
-- **Architecture**: Conversational business intelligence tool translating natural language user prompts into validated relational SQL queries, executing them against database engines and rendering real-time interactive charts.
 
-### MCP-Server
-- **Category**: AI Protocols / Model Context Protocol
-- **GitHub URL**: [https://github.com/kiranimmadi2/MCP-Server](https://github.com/kiranimmadi2/MCP-Server)
-- **Tech Stack**: Python, Anthropic MCP SDK, JSON-RPC, AsyncIO
-- **Architecture**: Production implementation of Anthropic's Model Context Protocol (MCP) exposing verified system utilities, file access primitives, and API endpoints directly to Claude and autonomous AI agents.
+Ask a business question in ordinary language and explore the answer as a table or chart.
 
-### GenAi-Email-Writter
-- **Category**: Generative AI / Business Automation
-- **GitHub URL**: [https://github.com/kiranimmadi2/GenAi-Email-Writter](https://github.com/kiranimmadi2/GenAi-Email-Writter)
-- **Tech Stack**: Streamlit, OpenAI GPT, LangChain, Python
-- **Architecture**: Specialized enterprise generative AI application that drafts contextually tailored executive emails, outreach pitches, and formal correspondence based on recipient personas and company goals.
+- Intended audience: Business teams exploring information held in a database.
+- Repository: https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface
+- Implementation: The README describes React, Gemini, database APIs, and D3.js / Chart.js. This portfolio sample uses fixed questions and fictional sales data.
 
 ### SingleTap
-- **Category**: Mobile Systems / Flutter & C++ FFI
-- **GitHub URL**: [https://github.com/kiranimmadi2/SingleTap](https://github.com/kiranimmadi2/SingleTap)
-- **Tech Stack**: Flutter, Dart, C++ FFI, Android NDK
-- **Architecture**: Ultra-minimalist Android launcher engineered for maximum battery preservation and zero launcher latency. Uses Dart C++ Foreign Function Interface (FFI) to interact directly with native package management and launch applications in a single gesture.
+
+Explore how a Flutter interface can pass a task to native code and bring the result back to the screen.
+
+- Intended audience: Teams exploring Flutter applications with native processing.
+- Repository: https://github.com/kiranimmadi2/SingleTap
+- Implementation: This illustrates the Flutter / Dart FFI / C++ approach described in the portfolio. Repository documentation was unavailable during verification; no performance claims are made.
 
 ### HealthOS
-- **Category**: Mobile Health / Offline-First Systems
-- **GitHub URL**: [https://github.com/kiranimmadi2/HealthOS](https://github.com/kiranimmadi2/HealthOS)
-- **Tech Stack**: Flutter, SQLite, Provider, Dart
-- **Architecture**: Offline-first medical records and outpatient clinic management suite. Provides patient history tracking, prescription generation, appointment calendaring, and local encryption to ensure healthcare availability even without internet connectivity.
 
-### Expenses-Tracker-App
-- **Category**: Fintech / Mobile Analytics
-- **GitHub URL**: [https://github.com/kiranimmadi2/Expenses-Tracker-App](https://github.com/kiranimmadi2/Expenses-Tracker-App)
-- **Tech Stack**: Flutter, Hive, BLoC Pattern, Dart
-- **Architecture**: High-performance personal expense tracking and budgeting platform with local persistence on Hive, multi-currency support, zero-lag graphical visualization, and category budget alerts.
+Bring patient, doctor, hospital, and lab workflows together in a shared Flutter health platform.
 
-### Family-Tree
-- **Category**: Graphic Visualization / Mobile Canvas
-- **GitHub URL**: [https://github.com/kiranimmadi2/Family-Tree](https://github.com/kiranimmadi2/Family-Tree)
-- **Tech Stack**: Flutter, CustomPainter, Dart
-- **Architecture**: Complex multi-generational pedigree visualization engine. Implements custom mathematical canvas painting, recursive node placement algorithms, dynamic pinch-zoom navigation, and relationship tracing.
+- Intended audience: Patients and care teams working across appointments and reports.
+- Repository: https://github.com/kiranimmadi2/healthos
+- Implementation: Flutter with Riverpod and GoRouter forms the frontend. Supabase provides the backend; Gemini is accessed via Edge Functions. The timeline sample shows fictional records, without diagnosis.
+
+### Expenses Tracker
+
+Keep everyday spending in one place and see how individual expenses add up.
+
+- Intended audience: People who want a clearer view of their spending.
+- Repository: https://github.com/kiranimmadi2/expenses-tracker_app
+- Implementation: The repository description confirms Flutter, Firebase, and BLoC. Budget calculations here are portfolio sample behavior, without claims about production features.
+
+### MCP Code Analysis
+
+Give coding agents structured context about a Python project: its files, functions, and potential issues.
+
+- Intended audience: Developers and agent builders exploring Python codebases.
+- Repository: https://github.com/kiranimmadi2/MCP-Server
+- Implementation: The repository uses the Python standard library. Its README lists full JSON-RPC MCP server registration as roadmap work. The sample illustrates tool requests rather than a connected MCP session.
+
+### GenAI Email Writer
+
+Connect a job listing to relevant portfolio work and turn that context into a personalized outreach email.
+
+- Intended audience: People preparing targeted professional outreach.
+- Repository: https://github.com/kiranimmadi2/GenAi-Email-Writter
+- Implementation: The documented stack uses Streamlit, LangChain, and Groq. Sample jobs, tone choices, and drafts are prepared locally; no email is sent.
+
+### Family Tree
+
+Build a family tree and make the connections between relatives easier to discover.
+
+- Intended audience: Families documenting people and their relationships.
+- Repository: https://github.com/kiranimmadi2/family-tree
+- Implementation: The Plink Tree README describes Flutter, flutter_bloc, GoRouter, and Firebase. The sample contains fictional people and expandable branches.
 
 ### HomeBuildAI
-- **Category**: Construction Tech / Mobile AI
-- **GitHub URL**: [https://github.com/kiranimmadi2/HomeBuildAI](https://github.com/kiranimmadi2/HomeBuildAI)
-- **Tech Stack**: Flutter, Firebase, Vision AI APIs, Dart
-- **Architecture**: Mobile application for construction contractors and home builders that calculates architectural material estimates, bill of quantities (BOQ), and budget projections from floor plans.
 
-### AI-Stock-Trading-APP
-- **Category**: Quantitative Finance / Algorithmic Trading
-- **GitHub URL**: [https://github.com/kiranimmadi2/AI-Stock-Trading-APP](https://github.com/kiranimmadi2/AI-Stock-Trading-APP)
-- **Tech Stack**: Python, Pandas, yfinance, Streamlit, Plotly
-- **Architecture**: Quantitative trading analytics platform computing RSI, MACD, Bollinger Bands, and moving averages on historical asset equities with visual trade signal generation.
+Explore a rule-based approach to home design and how sample planning assumptions affect material costs.
 
-### Mobile_Sales_Analysis
-- **Category**: Data Science / Retail BI
-- **GitHub URL**: [https://github.com/kiranimmadi2/Mobile_Sales_Analysis](https://github.com/kiranimmadi2/Mobile_Sales_Analysis)
-- **Tech Stack**: Python, Pandas, Seaborn, Matplotlib, Streamlit
-- **Architecture**: End-to-end retail business intelligence application processing transactional datasets across brands, geographies, and pricing brackets to uncover revenue patterns.
+- Intended audience: People exploring an early home-design idea.
+- Repository: https://github.com/kiranimmadi2/HomeBuildAI
+- Implementation: The README identifies a rule-based home design generator in Flutter. The material calculator is an educational illustration with explicit coefficients, excluding labour and other construction costs.
 
-### News-Summarization
-- **Category**: NLP / Abstractive Summarization
-- **GitHub URL**: [https://github.com/kiranimmadi2/News-Summarization](https://github.com/kiranimmadi2/News-Summarization)
-- **Tech Stack**: Python, Hugging Face Transformers, BeautifulSoup4
-- **Architecture**: Automated web intelligence pipeline that scrapes article feeds across news sources, removes boilerplate, and generates concise abstractive summaries using pre-trained Transformer architectures.
+### AI Stock Trading
 
-### Rock-vs-Mine-Prediction
-- **Category**: Machine Learning / Classification
-- **GitHub URL**: [https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction](https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction)
-- **Tech Stack**: Python, scikit-learn, NumPy, Matplotlib
-- **Architecture**: Spectral sonar signal classification pipeline evaluating 60 frequency band readings to discriminate underwater cylindrical metal mines from granite rocks with high precision.
+Bring market data and news sentiment into a trading dashboard and decision pipeline.
 
-### Cloud-Based-CCTV-Footage
-- **Category**: Cloud Systems / Video Surveillance
-- **GitHub URL**: [https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage](https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage)
-- **Tech Stack**: Python, OpenCV, Cloud Storage, Docker
-- **Architecture**: Distributed video monitoring pipeline processing camera feeds, extracting activity snapshots, compressing video segments, and securely uploading event triggers to cloud storage buckets.
+- Intended audience: Developers exploring market-data and sentiment workflows.
+- Repository: https://github.com/kiranimmadi2/AI-Stock-Trading-APP
+- Implementation: The README describes FastAPI, stock APIs, brokerage integrations, and Flutter. The local replay uses fictitious prices and illustrative risk rules; it places no trades and makes no return claims.
 
-### CCTV-Surveillance-Prototype
-- **Category**: Edge Computer Vision
-- **GitHub URL**: [https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype](https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype)
-- **Tech Stack**: Python, OpenCV, Haar Cascades, NumPy
-- **Architecture**: Real-time edge motion detection prototype analyzing live optical camera streams with frame differencing and Haar cascade object classifiers.
+### Mobile Sales Analysis
 
-### Text-to-Emoji-Encryption-and-Decryption
-- **Category**: Information Security / Steganography
-- **GitHub URL**: [https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption](https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption)
-- **Tech Stack**: Python, Tkinter, Cryptography, Unicode Mapping
-- **Architecture**: Steganographic cryptographic tool mapping ciphertext bytes into visually innocuous sequences of unicode emojis to bypass superficial text inspection and transport encrypted messages safely.
+Explore mobile-phone listings to understand how brands, prices, and customer ratings compare.
 
----
+- Intended audience: Analysts examining a mobile marketplace dataset.
+- Repository: https://github.com/kiranimmadi2/Mobile_Sales_Analysis
+- Implementation: The README describes Pandas, Matplotlib, and Seaborn. The portfolio uses a separate fictional monthly sales fixture so visitors can try filters.
+
+### News Summarization
+
+Explore company news, compare sentiment, and turn article information into a shorter briefing.
+
+- Intended audience: Readers following news about a company.
+- Repository: https://github.com/kiranimmadi2/News-Summarization
+- Implementation: The repository documents Streamlit, FastAPI, TextBlob, NLTK, and gTTS. The sample compares fictional articles with prepared summaries; it fetches no live news.
+
+### Rock vs Mine Prediction
+
+Explore a classification task that distinguishes rock and mine samples from sonar signals.
+
+- Intended audience: Learners and developers exploring signal classification.
+- Repository: https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction
+- Implementation: The repository description confirms the sonar-classification objective; a README was unavailable. The sample reveals fixed labeled examples, without running a model or claiming accuracy.
+
+### Cloud CCTV Footage
+
+Organize camera recordings so authorized users can find and review footage through a shared system.
+
+- Intended audience: Teams managing recordings from multiple cameras.
+- Repository: https://github.com/kiranimmadi2/cloud-based-CCTV-footage
+- Implementation: The README describes storage, streaming, playback, and access control, but lists multiple possible technologies. This explorer does not claim a specific deployed cloud architecture.
+
+### CCTV Surveillance Prototype
+
+Explore a dashboard concept that brings camera feeds, search, and alerts into one view.
+
+- Intended audience: Teams evaluating a camera-monitoring interface.
+- Repository: https://github.com/kiranimmadi2/cctv-surveillance-prototype
+- Implementation: The repository identifies an HTML dashboard prototype. This sample uses drawn scenes and fixed overlays; it performs no facial recognition or live detection.
+
+### Text to Emoji Encoding
+
+Turn a message into an emoji sequence, then decode it to recover the original text.
+
+- Intended audience: People exploring a playful way to represent text.
+- Repository: https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption
+- Implementation: This sample maps UTF-8 bytes to pairs of emoji symbols so Unicode text can round-trip. It is a portfolio implementation of the encoding idea, not an AES cipher.
 
 ## 4. Technical Skills & Tools Matrix
 
@@ -187,14 +219,8 @@ The projects below are published under Kiran Immadi's official GitHub account (`
 3. Cross-platform mobile engineering in Flutter with native Dart C++ FFI bindings.
 4. Scalable asynchronous microservices and computer vision pipelines.
 
-### Q: What flagship open-source projects has Kiran Immadi built?
-**A**: Key projects include:
-- `AI-Agent-Browser-Automation`: Natural language autonomous web browser agent.
-- `Indian-Law-AI-Assistant`: High-throughput legal question-answering RAG system.
-- `MCP-Server`: Model Context Protocol implementation for AI tools.
-- `SingleTap`: Lightning-fast minimalist Android launcher using Flutter and C++ FFI.
-- `HealthOS`: Offline-first clinic and medical record management suite.
-- `QueryAI`: Natural language to SQL synthesis dashboard.
+### Q: What projects can visitors explore?
+**A**: All 17 projects listed above have an overview, a local interactive sample, a workflow explanation, and a repository link. Project samples use fictional fixtures or browser calculations, without live backend connections.
 
 ### Q: Where is Kiran Immadi located and what are his work preferences?
 **A**: Kiran Immadi is based in Bangalore, Karnataka, India. He works with startups, enterprises, and engineering teams globally across the United States, Europe, and Asia in remote, hybrid, or consulting arrangements.

@@ -1,1137 +1,541 @@
-/**
- * Kiran Immadi - Unified Projects Component System & Data
- * Renders Zig-Zag layout (One Big Full-Width, Two Medium Side-by-Side)
- * with precise Apple-aesthetic UI components and 2026 Interactive Detail Modal View.
- */
-
+/* Project stories. IDs and repository URLs stay stable; sample workflows run locally. */
 const PROJECTS_DATA = [
   {
-    id: 'ai-agent-browser-automation',
-    title: 'AI-Agent-Browser-Automation',
-    subtitle: 'Autonomous Web Navigation & DOM Interaction Engine',
-    description: 'Autonomous browser agent that understands natural language commands to control browsers, fill forms, navigate multi-step flows, and extract web data.',
-    fullDescription: 'An advanced autonomous AI agent that interprets natural language commands to automatically navigate complex web applications, perform multi-step form completions, handle dynamic element inspection, and execute automated data extraction pipelines. Built with Python, browser-use, and Playwright integration.',
-    highlights: [
-      'Natural language command interpretation powered by LLMs (GPT-4o / Claude 3.5)',
-      'Dynamic DOM element inspection, selector generation, and visual layout awareness',
-      'Multi-step form filling, automated authentication, and error recovery handling',
-      'Structured JSON data extraction and automated multi-page workflow execution'
-    ],
-    architecture: 'Python Core • Playwright Controller • LLM Reasoning Loop • Event-Driven Action Pipeline',
-    metrics: ['99.2% Action Precision', 'Multi-Tab Concurrency', 'Zero Hardcoded Selectors'],
-    tags: ['Python', 'Browser-Use', 'LLM'],
-    githubUrl: 'https://github.com/kiranimmadi2/AI-Agent-Browser-Automation',
-    previewType: 'browser-agent',
-    layout: 'wide'
+    id: 'ai-agent-browser-automation', title: 'AI Browser Automation', category: 'AI & automation',
+    description: 'Turn a plain-language task into browser actions, from filling forms to collecting information.',
+    audience: 'People repeating the same tasks across websites.',
+    problem: 'Opening pages, entering information, and collecting results by hand takes time and attention.',
+    result: 'A browser agent interprets the task and works through the required actions.',
+    input: 'A task in everyday language', output: 'Completed actions and collected data',
+    features: ['Natural-language browser tasks', 'Configurable AI models', 'Persistent browser sessions'],
+    steps: [['Describe the task', 'The WebUI accepts a goal written in everyday language.'], ['Plan browser actions', 'An AI model and browser-use turn the goal into actions on the page.'], ['Interact with the page', 'The browser opens pages, enters information, and collects the requested data.'], ['Review the result', 'The user can inspect the outcome and the browser session.']],
+    implementation: 'Python and Gradio provide the WebUI; browser-use and Playwright connect the agent to the browser. The repository credits the browser-use foundation.',
+    tags: ['Python', 'Gradio', 'Browser-Use', 'Playwright'], demoId: 'browser-agent', layout: 'wide',
+    githubUrl: 'https://github.com/kiranimmadi2/AI-Agent-Browser-Automation'
   },
   {
-    id: 'indian-law-ai-assistant',
-    title: 'Indian-Law-AI-Assistant',
-    subtitle: 'Multilingual Legal Intelligence & Case Judgment Explainer',
-    description: 'Multilingual legal reasoning assistant that parses PDFs, Word docs, and judgments to explain complex legal cases in simple terms across Indian languages.',
-    fullDescription: 'A specialized legal AI platform designed to ingest high-volume Indian legal documents (PDFs, Word docs, court judgments, statutes) and provide context-aware summaries, legal clause extraction, and simplified explanations in regional languages like Hindi, Telugu, Tamil, and English.',
-    highlights: [
-      'Deep PDF & OCR parsing of High Court and Supreme Court case judgments',
-      'Semantic search over Indian Penal Code (IPC), Bharatiya Nyaya Sanhita (BNS), and precedents',
-      'Multilingual synthesis in Telugu, Hindi, Tamil, Kannada, and English',
-      'Automated risk assessment and clause-by-clause contract analysis'
-    ],
-    architecture: 'LangChain RAG Framework • OCR Ingestion Engine • FAISS Vector Store • Multilingual LLM',
-    metrics: ['100k+ Legal Tokens Parsed', '5+ Regional Languages', '<1.5s Vector Retrieval'],
-    tags: ['Python', 'NLP', 'OCR'],
-    githubUrl: 'https://github.com/kiranimmadi2/Indian-law-AI-assistant',
-    previewType: 'legal-assistant',
-    layout: 'standard'
+    id: 'indian-law-ai-assistant', title: 'Indian Law AI Assistant', category: 'AI & documents',
+    description: 'Make legal documents easier to understand with plain-language explanations and Indian-language translations.',
+    audience: 'Readers who need help understanding a legal document.',
+    problem: 'Formal language and unfamiliar terminology make legal documents difficult to read.',
+    result: 'Document summaries and translated explanations make the text easier to follow.',
+    input: 'A PDF, Word document, or image', output: 'A summary in the reader’s language',
+    features: ['Document uploads', 'Language detection', 'Case summaries and translation'],
+    steps: [['Provide a document', 'The app accepts PDF, DOCX, or image documents.'], ['Read the content', 'The document content and its language are prepared for analysis.'], ['Explain and translate', 'An OpenAI or Gemini model produces a summary and translated explanation.'], ['Review the original', 'The reader compares the explanation with the source document.']],
+    implementation: 'The Python app supports OpenAI and Google Gemini models. The sample uses fictional excerpts and prepared translations; it provides no legal advice.',
+    tags: ['Python', 'OpenAI', 'Gemini'], demoId: 'legal', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/Indian-Law-AI-Assistant'
   },
   {
-    id: 'query-ai',
-    title: 'QueryAI',
-    subtitle: 'Conversational Natural Language to SQL Interface',
-    description: 'Conversational data interface that translates natural language into structured database queries, enabling non-technical users to interact with data seamlessly.',
-    fullDescription: 'QueryAI bridges the gap between non-technical business users and complex SQL databases. By taking natural language questions, QueryAI generates validated SQL queries, executes them safely against databases, and presents interactive 3D charts and tabular summaries.',
-    highlights: [
-      'Context-aware text-to-SQL schema mapping with multi-table JOIN synthesis',
-      'Built-in SQL sanitizer, query validator, and read-only execution guardrails',
-      'Automatic visual chart selection (3D bar charts, line graphs, KPI cards)',
-      'Interactive conversation history with schema-aware query refinement'
-    ],
-    architecture: 'React UI • Python FastAPI Engine • Text-to-SQL LLM • Dynamic Charting Component',
-    metrics: ['94% Query Precision', '<300ms Generation Speed', 'Zero Injection Risk'],
-    tags: ['NLP', 'LLM', 'SQL'],
-    githubUrl: 'https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface',
-    previewType: 'query-ai',
-    layout: 'standard'
+    id: 'query-ai', title: 'QueryAI', category: 'AI & data',
+    description: 'Ask a business question in ordinary language and explore the answer as a table or chart.',
+    audience: 'Business teams exploring information held in a database.',
+    problem: 'Answering a simple data question can require someone who knows SQL and the database structure.',
+    result: 'A conversational interface connects questions to structured queries and visual results.',
+    input: 'A question about business data', output: 'A query, table, and chart',
+    features: ['Natural-language queries', 'Structured database retrieval', 'Charts and result tables'],
+    steps: [['Ask a question', 'A React interface captures the business question.'], ['Translate to a query', 'The documented NLP layer uses Gemini to turn the question into SQL.'], ['Retrieve the answer', 'The backend connects the query to the internal database.'], ['Show the result', 'Tables and charts make the returned data easier to interpret.']],
+    implementation: 'The README describes React, Gemini, database APIs, and D3.js / Chart.js. This portfolio sample uses fixed questions and fictional sales data.',
+    tags: ['React', 'Gemini', 'SQL', 'Data Visualization'], demoId: 'query', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface'
   },
   {
-    id: 'singletap',
-    title: 'SingleTap',
-    subtitle: 'Ultra-Low Latency Flutter Utility with Native C++ FFI',
-    description: 'Cross-platform mobile utility leveraging native C++ modules via Dart FFI for performance-sensitive tasks and ultra low-latency executions.',
-    fullDescription: 'SingleTap is a high-performance cross-platform mobile utility engineered with Flutter and Dart Foreign Function Interface (FFI). By bypassing platform channel overhead, it links directly to compiled C/C++ native dynamic libraries for sub-millisecond execution speeds and zero-copy memory buffers.',
-    highlights: [
-      'Direct C++ memory pointers via Dart FFI for sub-millisecond execution (<0.8ms)',
-      'Custom high-speed event dispatchers avoiding standard Android/iOS platform channels',
-      '120 FPS fluid UI rendering with zero frame-drop micro-interactions',
-      'Optimized memory lifecycle management with native C++ pointer cleanup'
-    ],
-    architecture: 'Flutter UI • Dart FFI Engine • Native C++ Dynamic Libraries • Zero-Copy Buffers',
-    metrics: ['<0.8ms Execution Latency', '120 FPS Framerate', '0% Channel Overhead'],
-    tags: ['Flutter', 'Dart', 'C++ FFI'],
-    githubUrl: 'https://github.com/kiranimmadi2/SingleTap',
-    previewType: 'singletap',
-    layout: 'wide'
+    id: 'singletap', title: 'SingleTap', category: 'Flutter & native code',
+    description: 'Explore how a Flutter interface can pass a task to native code and bring the result back to the screen.',
+    audience: 'Teams exploring Flutter applications with native processing.',
+    problem: 'Some application tasks need to connect a cross-platform interface with native code.',
+    result: 'The portfolio’s described approach connects Flutter and native C++ through Dart FFI.',
+    input: 'An action in the Flutter interface', output: 'A result returned from native code',
+    features: ['Flutter interface concept', 'Dart FFI integration concept', 'Native C++ processing concept'],
+    steps: [['Flutter interface', 'A user starts an action in the app.'], ['Dart FFI bridge', 'Dart Foreign Function Interface provides a route to a native function.'], ['Native processing', 'A native function performs the task and returns a value.'], ['Update the interface', 'The result returns to Dart and is displayed in Flutter.']],
+    implementation: 'This illustrates the Flutter / Dart FFI / C++ approach described in the portfolio. Repository documentation was unavailable during verification; no performance claims are made.',
+    sourceAvailable: false, tags: ['Flutter', 'Dart', 'C++ FFI'], demoId: 'native', layout: 'wide',
+    githubUrl: 'https://github.com/kiranimmadi2/SingleTap'
   },
   {
-    id: 'healthos',
-    title: 'HealthOS',
-    subtitle: 'Privacy-First On-Device AI Health Tracking Suite',
-    description: 'Personal health tracking suite running on-device AI models for privacy and zero-latency performance without transmitting data to external servers.',
-    fullDescription: 'HealthOS is a biometric telemetry mobile platform engineered for 100% private, on-device health data analysis. Powered by quantized LiteRT (TensorFlow Lite) and ONNX models running directly on mobile NPUs, HealthOS processes ECG waveforms and vital telemetry with zero cloud transmission.',
-    highlights: [
-      'Real-time ECG waveform processing & anomaly pattern detection',
-      'On-device ONNX & LiteRT neural network execution with hardware NPU acceleration',
-      'Complete offline functionality guaranteeing 100% biometric data privacy',
-      'Interactive health scoring, cardiac telemetry, and trend analytics'
-    ],
-    architecture: 'Flutter Mobile App • LiteRT / ONNX Runtime • Hardware NPU Acceleration • SQLite Engine',
-    metrics: ['100% On-Device Privacy', '30ms Inference Latency', 'Zero Cloud Transmission'],
-    tags: ['Flutter', 'LiteRT', 'ONNX'],
-    githubUrl: 'https://github.com/kiranimmadi2/healthos',
-    previewType: 'healthos',
-    layout: 'standard'
+    id: 'healthos', title: 'HealthOS', category: 'Flutter & healthcare',
+    description: 'Bring patient, doctor, hospital, and lab workflows together in a shared Flutter health platform.',
+    audience: 'Patients and care teams working across appointments and reports.',
+    problem: 'Different participants in healthcare need coordinated access to information and workflows.',
+    result: 'Separate role-based apps share a common platform and reusable application packages.',
+    input: 'Patient and care-team information', output: 'Coordinated portals and health records',
+    features: ['Patient and doctor applications', 'Hospital and lab portals', 'Shared models and UI components'],
+    steps: [['Choose a portal', 'Patients, doctors, hospitals, and labs have dedicated Flutter applications.'], ['Share components', 'Shared packages provide models, UI elements, and database access.'], ['Coordinate information', 'Supabase supplies authentication, database, storage, and realtime services.'], ['Use the AI gateway', 'Documented Edge Functions proxy Gemini requests from the application.']],
+    implementation: 'Flutter with Riverpod and GoRouter forms the frontend. Supabase provides the backend; Gemini is accessed via Edge Functions. The timeline sample shows fictional records, without diagnosis.',
+    tags: ['Flutter', 'Riverpod', 'Supabase', 'Gemini'], demoId: 'health', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/healthos'
   },
   {
-    id: 'expenses-tracker-app',
-    title: 'Expenses-Tracker-App',
-    subtitle: 'Cross-Platform Finance Management with BLoC Architecture',
-    description: 'Personal finance and budget monitoring app with real-time sync, BLoC state management architecture, and Firebase cloud persistence.',
-    fullDescription: 'A comprehensive personal finance and budget tracking app designed using clean BLoC (Business Logic Component) state management architecture in Flutter. It features real-time cloud data synchronization, automated budget alerts, and categorical spending analytics.',
-    highlights: [
-      'BLoC architecture strictly separating UI, domain logic, and data layers',
-      'Real-time multi-device sync with Firebase Firestore & offline cache persistence',
-      'Interactive visual budget progress bars and expense category breakdowns',
-      'Multi-currency support and automated recurring expense scheduling'
-    ],
-    architecture: 'Flutter BLoC Pattern • Firebase Firestore & Auth • Reactive Streams • Clean Architecture',
-    metrics: ['Real-time Cloud Sync', '100% Offline First', 'Clean Architecture'],
-    tags: ['Flutter', 'BLoC', 'Firebase'],
-    githubUrl: 'https://github.com/kiranimmadi2/expenses-tracker_app',
-    previewType: 'expenses',
-    layout: 'standard'
+    id: 'expenses-tracker-app', title: 'Expenses Tracker', category: 'Flutter & finance',
+    description: 'Keep everyday spending in one place and see how individual expenses add up.',
+    audience: 'People who want a clearer view of their spending.',
+    problem: 'Small purchases are easy to lose track of across notes and receipts.',
+    result: 'An expense-tracking app organizes spending; the sample shows category totals and a running budget.',
+    input: 'Expenses and categories', output: 'An organized spending view',
+    features: ['Expense tracking', 'Flutter application', 'Firebase and BLoC stack'],
+    steps: [['Record a purchase', 'Capture an expense in the application.'], ['Organize the state', 'BLoC separates application state from interface updates.'], ['Connect the data layer', 'The repository describes a Flutter app using Firebase.'], ['Review spending', 'The local illustration groups expenses and calculates a budget balance.']],
+    implementation: 'The repository description confirms Flutter, Firebase, and BLoC. Budget calculations here are portfolio sample behavior, without claims about production features.',
+    tags: ['Flutter', 'BLoC', 'Firebase'], demoId: 'expenses', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/expenses-tracker_app'
   },
   {
-    id: 'mcp-server',
-    title: 'MCP-Server',
-    subtitle: 'Model Context Protocol Diagnostic & Code Intelligence Server',
-    description: 'Custom Model Context Protocol implementation exposing diagnostic and code analysis tools to LLM coding agents, adhering to modern Model Context Protocol standards.',
-    fullDescription: 'A production implementation of Anthropic’s Model Context Protocol (MCP) written with Python and FastMCP. It exposes real-time workspace diagnostics, code search, AST symbol resolution, and file system inspection tools directly to LLM agents like Claude and Cursor IDE.',
-    highlights: [
-      'FastMCP implementation of standardized Model Context Protocol tools and resources',
-      'AST (Abstract Syntax Tree) code analysis, dependency tree resolution, and linter hooks',
-      'Safe bidirectional IPC stream handling with strict input validation schema',
-      'High-speed workspace symbol indexing and automated code refactoring handlers'
-    ],
-    architecture: 'Python FastMCP Engine • JSON-RPC IPC Protocol • AST Code Inspector • File Watcher',
-    metrics: ['4+ Custom MCP Tools', '<10ms IPC Response', 'MCP Spec V1 Compliant'],
-    tags: ['Python', 'FastMCP', 'Developer Tools'],
-    githubUrl: 'https://github.com/kiranimmadi2/MCP-Server',
-    previewType: 'mcp-server',
-    layout: 'wide'
+    id: 'mcp-server', title: 'MCP Code Analysis', category: 'Developer tools',
+    description: 'Give coding agents structured context about a Python project: its files, functions, and potential issues.',
+    audience: 'Developers and agent builders exploring Python codebases.',
+    problem: 'An agent needs usable code context before it can reason about a project.',
+    result: 'Python code-analysis operations return structured information about project files and patterns.',
+    input: 'A project path or analysis request', output: 'Structured code context',
+    features: ['Project structure scanning', 'Python code-element extraction', 'Pattern and anti-pattern detection'],
+    steps: [['Select an operation', 'Choose project scanning, file analysis, or pattern searching.'], ['Inspect the files', 'The Python tool reads code from the target project.'], ['Extract structure', 'It maps classes, functions, imports, or potential anti-patterns.'], ['Return agent context', 'Structured results can be used as a code-analysis tool backend.']],
+    implementation: 'The repository uses the Python standard library. Its README lists full JSON-RPC MCP server registration as roadmap work. The sample illustrates tool requests rather than a connected MCP session.',
+    tags: ['Python', 'Code Analysis', 'MCP Tool Backend'], demoId: 'mcp', layout: 'wide',
+    githubUrl: 'https://github.com/kiranimmadi2/MCP-Server'
   },
   {
-    id: 'genai-email-writter',
-    title: 'GenAi-Email-Writter',
-    subtitle: 'Automated Cold Outreach & Job Description Analyzer',
-    description: 'Automated cold outreach generator that extracts job descriptions and crafts personalized emails with relevant portfolio links using LangChain and Groq.',
-    fullDescription: 'An automated email generation tool that parses target job listings, extracts key skill requirements, matches them with specific portfolio repositories, and crafts tailored, high-converting outreach emails using LangChain and Groq LLaMA-3.3 LLM inference.',
-    highlights: [
-      'Web scraping and structured text extraction from complex job postings',
-      'Automated portfolio relevance matching algorithm',
-      'Ultra-fast email generation powered by Groq LLaMA 3.3 LLM inference engine',
-      'Customizable tone, length, and call-to-action outreach parameters'
-    ],
-    architecture: 'LangChain Framework • Groq LLaMA-3.3 API • Web Scraping Engine • Web Interface',
-    metrics: ['<500ms Generation Speed', 'Automated Skill Matching', 'High Conversion Copy'],
-    tags: ['Python', 'LangChain', 'Groq'],
-    githubUrl: 'https://github.com/kiranimmadi2/GenAi-Email-Writter',
-    previewType: 'email-writer',
-    layout: 'standard'
+    id: 'genai-email-writter', title: 'GenAI Email Writer', category: 'AI & writing',
+    description: 'Connect a job listing to relevant portfolio work and turn that context into a personalized outreach email.',
+    audience: 'People preparing targeted professional outreach.',
+    problem: 'A generic email rarely explains why someone’s work fits a particular opportunity.',
+    result: 'The generator extracts job information and includes relevant portfolio links in an email draft.',
+    input: 'A careers page or job listing', output: 'A tailored outreach draft',
+    features: ['Job listing extraction', 'Portfolio relevance matching', 'Contextual email generation'],
+    steps: [['Read the listing', 'The Streamlit app takes a careers-page URL and extracts job listings.'], ['Find requirements', 'LangChain helps structure the listing into useful context.'], ['Match portfolio work', 'Relevant links are retrieved from a vector database.'], ['Draft the email', 'Groq supplies model inference to produce personalized outreach.']],
+    implementation: 'The documented stack uses Streamlit, LangChain, and Groq. Sample jobs, tone choices, and drafts are prepared locally; no email is sent.',
+    tags: ['Python', 'LangChain', 'Groq', 'Streamlit'], demoId: 'email', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/GenAi-Email-Writter'
   },
   {
-    id: 'family-tree',
-    title: 'Family-Tree',
-    subtitle: 'Interactive High-Performance Genealogy Mapping Tool',
-    description: 'Interactive genealogy mapping tool with custom node layout algorithms for multi-generational trees with high-performance Canvas rendering.',
-    fullDescription: 'An interactive genealogy visualization platform that dynamically renders multi-generational family trees. Built with custom node positioning algorithms and Flutter’s hardware-accelerated Canvas API, supporting smooth panning, zooming, and node relationship editing.',
-    highlights: [
-      'Custom dynamic tree layout algorithm for complex multi-branch family graphs',
-      'Flutter Canvas API hardware-accelerated rendering supporting thousands of nodes',
-      'Interactive node expansion, relationship linking, and photo attachment',
-      'Export capability to vector graphics, PDF, and structured JSON formats'
-    ],
-    architecture: 'Flutter / Dart Canvas API • Custom Graph Layout Engine • Local Indexed Database',
-    metrics: ['60 FPS Pan & Zoom', '1000+ Nodes Support', 'Hardware Accelerated'],
-    tags: ['Flutter', 'Dart', 'Canvas API'],
-    githubUrl: 'https://github.com/kiranimmadi2/family-tree',
-    previewType: 'family-tree',
-    layout: 'standard'
+    id: 'family-tree', title: 'Family Tree', category: 'Flutter & relationships',
+    description: 'Build a family tree and make the connections between relatives easier to discover.',
+    audience: 'Families documenting people and their relationships.',
+    problem: 'Names alone do not show how relatives across generations are connected.',
+    result: 'A navigable family tree connects profiles with relationship paths.',
+    input: 'People and family relationships', output: 'A tree with discoverable connections',
+    features: ['Family profiles and relationships', 'Relationship-path discovery', 'Search and language support'],
+    steps: [['Add a person', 'Capture names, dates, places, and photos in the tree.'], ['Link relatives', 'Relationships connect the individual profiles.'], ['Explore connections', 'The app helps explain paths between people in the family.'], ['Find profiles', 'Search and person handles help users navigate their tree.']],
+    implementation: 'The Plink Tree README describes Flutter, flutter_bloc, GoRouter, and Firebase. The sample contains fictional people and expandable branches.',
+    tags: ['Flutter', 'BLoC', 'Firebase', 'GoRouter'], demoId: 'family', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/family-tree'
   },
   {
-    id: 'homebuildai',
-    title: 'HomeBuildAI',
-    subtitle: 'Architectural & Construction Material AI Estimator',
-    description: 'Architectural and construction planning companion to track materials, milestones, and project progress with smart AI assistance.',
-    fullDescription: 'A smart construction companion application designed to assist builders and homeowners in planning structural blueprints, tracking construction milestones, estimating raw material quantities (cement, steel, bricks), and managing budgets with AI assistance.',
-    highlights: [
-      'Blueprint CAD analysis and dimension extraction with Vision AI models',
-      'Automated raw material quantity estimation with live market cost feeds',
-      'Dynamic milestone tracking schedules and construction progress alerts',
-      'Budget variance analysis and automated expense forecasting'
-    ],
-    architecture: 'Flutter Mobile App • Vision AI Blueprint Parser • Construction Estimator Engine',
-    metrics: ['Sub-5% Budget Variance', 'Automated CAD Parsing', 'Full Milestone Tracker'],
-    tags: ['Flutter', 'Dart', 'Vision AI'],
-    githubUrl: 'https://github.com/kiranimmadi2/HomeBuildAI',
-    previewType: 'homebuild',
-    layout: 'wide'
+    id: 'homebuildai', title: 'HomeBuildAI', category: 'Flutter & planning',
+    description: 'Explore a rule-based approach to home design and how sample planning assumptions affect material costs.',
+    audience: 'People exploring an early home-design idea.',
+    problem: 'Early planning involves space choices and assumptions that can be hard to compare.',
+    result: 'The repository describes a rule-based home design generator built as a Flutter application.',
+    input: 'Home-design requirements', output: 'A rule-based design concept',
+    features: ['Home-design focus', 'Rule-based generation', 'Flutter application'],
+    steps: [['Describe the space', 'Provide requirements to guide a home-design concept.'], ['Apply design rules', 'The documented approach is rule-based generation.'], ['Review a concept', 'Flutter provides the application interface.'], ['Explore assumptions', 'The portfolio calculator separately illustrates area-based material costs; it is not a verified project estimator.']],
+    implementation: 'The README identifies a rule-based home design generator in Flutter. The material calculator is an educational illustration with explicit coefficients, excluding labour and other construction costs.',
+    tags: ['Flutter', 'Dart', 'Rule-Based Design'], demoId: 'home', layout: 'wide',
+    githubUrl: 'https://github.com/kiranimmadi2/HomeBuildAI'
   },
   {
-    id: 'ai-stock-trading-app',
-    title: 'AI-Stock-Trading-APP',
-    subtitle: 'Automated Market Sentiment & Algorithmic Trading Platform',
-    description: 'Automated trading system analyzing market data and news sentiment with high-speed FastAPI backend and risk management rules.',
-    fullDescription: 'An automated financial trading platform that combines real-time stock market data feeds, technical indicator algorithms, and financial news sentiment analysis (NLP) to generate automated signals with embedded risk management rules.',
-    highlights: [
-      'High-throughput FastAPI backend for real-time market data streaming',
-      'NLP sentiment scoring on financial news streams and market sentiment feeds',
-      'Automated signal generation with configurable stop-loss and position limits',
-      'Backtesting engine for evaluating trading strategies against historical datasets'
-    ],
-    architecture: 'FastAPI Python Server • Financial NLP Engine • WebSocket Telemetry • Trading Guardrails',
-    metrics: ['+18.4% Alpha Signal Execution', 'Sub-second Signal Pipeline', 'Risk Guardrails'],
-    tags: ['FastAPI', 'Python', 'FinTech'],
-    githubUrl: 'https://github.com/kiranimmadi2/AI-Stock-Trading-APP',
-    previewType: 'trading',
-    layout: 'standard'
+    id: 'ai-stock-trading-app', title: 'AI Stock Trading', category: 'AI & market data',
+    description: 'Bring market data and news sentiment into a trading dashboard and decision pipeline.',
+    audience: 'Developers exploring market-data and sentiment workflows.',
+    problem: 'Prices and news arrive from different sources and need to be considered together.',
+    result: 'The project describes a Flutter dashboard connected to a FastAPI trading backend.',
+    input: 'Market data and news sentiment', output: 'A dashboard and trading decision flow',
+    features: ['Market-data integration', 'News sentiment analysis', 'Flutter dashboard and FastAPI backend'],
+    steps: [['Collect data', 'Stock APIs provide market information to the backend.'], ['Consider sentiment', 'News sentiment contributes context to the decision pipeline.'], ['Prepare an action', 'The project describes integration with brokerage services.'], ['Display the state', 'A Flutter frontend presents the dashboard.']],
+    implementation: 'The README describes FastAPI, stock APIs, brokerage integrations, and Flutter. The local replay uses fictitious prices and illustrative risk rules; it places no trades and makes no return claims.',
+    tags: ['FastAPI', 'Python', 'Flutter'], demoId: 'trading', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/AI-Stock-Trading-APP'
   },
   {
-    id: 'mobile-sales-analysis',
-    title: 'Mobile_Sales_Analysis',
-    subtitle: 'Exploratory Data Analysis Pipeline for Marketplace Intelligence',
-    description: 'EDA pipeline analyzing mobile marketplace data for customer trends, brand share distribution, and pricing insights.',
-    fullDescription: 'A comprehensive data analytics and exploratory data analysis (EDA) pipeline that processes large-scale mobile marketplace sales data to uncover purchasing patterns, brand market share distributions, price elasticity, and seasonal consumer trends.',
-    highlights: [
-      'Automated data cleaning, outlier filtering, and missing value imputation',
-      'Visual market share distribution analysis using Seaborn and Matplotlib',
-      'Customer segmentation and price sensitivity statistical modeling',
-      'Statistical hypothesis testing and executive summary dashboard generation'
-    ],
-    architecture: 'Python Data Analytics Stack (Pandas, NumPy, Seaborn, Matplotlib, SciPy)',
-    metrics: ['34.2% YoY Insight Unlocked', 'Automated EDA Pipeline', 'Executive Reports'],
-    tags: ['Python', 'Pandas', 'Seaborn'],
-    githubUrl: 'https://github.com/kiranimmadi2/Mobile_Sales_Analysis',
-    previewType: 'sales-analysis',
-    layout: 'standard'
+    id: 'mobile-sales-analysis', title: 'Mobile Sales Analysis', category: 'Data & analytics',
+    description: 'Explore mobile-phone listings to understand how brands, prices, and customer ratings compare.',
+    audience: 'Analysts examining a mobile marketplace dataset.',
+    problem: 'A spreadsheet of listings hides patterns in pricing, ratings, and brand availability.',
+    result: 'Exploratory analysis turns the dataset into comparisons and visual insights.',
+    input: 'Mobile marketplace data', output: 'Brand, price, and rating comparisons',
+    features: ['Price and rating distributions', 'Brand comparisons', 'Exploratory charts'],
+    steps: [['Load the dataset', 'The documented dataset includes brand, model, memory, storage, rating, and prices.'], ['Inspect distributions', 'Python analysis explores ratings and selling prices.'], ['Compare brands', 'Charts compare brand availability and average prices.'], ['Explain patterns', 'The analysis translates observations into marketplace insights.']],
+    implementation: 'The README describes Pandas, Matplotlib, and Seaborn. The portfolio uses a separate fictional monthly sales fixture so visitors can try filters.',
+    tags: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'], demoId: 'sales', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/Mobile_Sales_Analysis'
   },
   {
-    id: 'news-summarization',
-    title: 'News-Summarization',
-    subtitle: 'Multi-Source Abstractive News Parser & Audio TTS Engine',
-    description: 'Automated news parser with abstractive summarization models and realistic text-to-speech audio synthesis for quick daily briefings.',
-    fullDescription: 'An intelligent news aggregation tool that fetches real-time articles from global news outlets, applies abstractive summarization transformer models to generate 3-bullet summaries, and synthesizes realistic neural text-to-speech (TTS) audio briefings.',
-    highlights: [
-      'Web article scraping and automated content boilerplate removal',
-      'Abstractive summarization powered by HuggingFace Transformer models',
-      'Neural text-to-speech audio synthesis for hands-free audio briefings',
-      'Categorical tagging (Tech, Finance, World, Science) with custom audio playback'
-    ],
-    architecture: 'HuggingFace Transformers • Python Web Parser • Neural TTS Engine • Audio Controls',
-    metrics: ['3-Bullet Quick Digests', 'Real-Time Audio Synthesis', 'Multi-Category Support'],
-    tags: ['Transformers', 'TTS Engine', 'Python'],
-    githubUrl: 'https://github.com/kiranimmadi2/News-Summarization',
-    previewType: 'news-summary',
-    layout: 'wide'
+    id: 'news-summarization', title: 'News Summarization', category: 'AI & news',
+    description: 'Explore company news, compare sentiment, and turn article information into a shorter briefing.',
+    audience: 'Readers following news about a company.',
+    problem: 'Reading many articles makes it difficult to see the overall story quickly.',
+    result: 'The application brings news articles, sentiment information, and Hindi audio summaries into one interface.',
+    input: 'A company and analysis period', output: 'Article insights and a shorter briefing',
+    features: ['News extraction', 'Sentiment and topic analysis', 'Hindi text-to-speech summaries'],
+    steps: [['Choose a company', 'The user selects a company and period in Streamlit.'], ['Collect articles', 'The backend extracts news through GoogleNews.'], ['Analyze the text', 'TextBlob and NLTK support sentiment and topic analysis.'], ['Review the briefing', 'The interface presents article insights and Hindi audio summaries using gTTS.']],
+    implementation: 'The repository documents Streamlit, FastAPI, TextBlob, NLTK, and gTTS. The sample compares fictional articles with prepared summaries; it fetches no live news.',
+    tags: ['Python', 'Streamlit', 'FastAPI', 'TextBlob'], demoId: 'news', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/News-Summarization'
   },
   {
-    id: 'rock-vs-mine-prediction',
-    title: 'Rock-vs-Mine-Prediction',
-    subtitle: 'Underwater Sonar Frequency Signal ML Classifier',
-    description: 'Machine learning classifier using sonar signal frequencies to distinguish underwater rocks from hazardous naval mines.',
-    fullDescription: 'A machine learning classification system trained on high-frequency sonar signals to accurately distinguish underwater rock formations from dangerous naval explosive mines, ensuring maritime safety and automated sonar interpretation.',
-    highlights: [
-      'Feature scaling, principal component analysis (PCA), and spectral filtering',
-      'Machine learning model evaluation (Logistic Regression, SVM, Random Forest)',
-      'High-confidence classification score output with decision boundary analysis',
-      'Real-time single-sample inference endpoint for embedded maritime hardware'
-    ],
-    architecture: 'Python Scikit-Learn • Sonar Spectral Signal Processor • NumPy & Pandas',
-    metrics: ['98.4% Classification Accuracy', 'Instant Inference', 'Maritime Defense Ready'],
-    tags: ['Python', 'Scikit-Learn', 'ML'],
-    githubUrl: 'https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction',
-    previewType: 'rock-mine',
-    layout: 'standard'
+    id: 'rock-vs-mine-prediction', title: 'Rock vs Mine Prediction', category: 'Machine learning',
+    description: 'Explore a classification task that distinguishes rock and mine samples from sonar signals.',
+    audience: 'Learners and developers exploring signal classification.',
+    problem: 'A list of sonar measurements is difficult to interpret without a classification model.',
+    result: 'The repository describes a model that classifies sonar samples into rock or mine categories.',
+    input: 'Sonar signal measurements', output: 'A rock or mine classification',
+    features: ['Sonar-based classification', 'Two labeled output categories', 'Machine-learning project'],
+    steps: [['Inspect a sample', 'A sonar sample contains a sequence of signal measurements.'], ['Prepare the features', 'The measurements become the model’s input features.'], ['Classify the signal', 'A trained classifier distinguishes the rock and mine categories.'], ['Review the label', 'The predicted category can be compared with a known sample label.']],
+    implementation: 'The repository description confirms the sonar-classification objective; a README was unavailable. The sample reveals fixed labeled examples, without running a model or claiming accuracy.',
+    tags: ['Python', 'Machine Learning', 'Sonar Data'], demoId: 'sonar', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction'
   },
   {
-    id: 'cloud-based-cctv-footage',
-    title: 'Cloud-Based-CCTV-Footage',
-    subtitle: 'Distributed Smart CCTV Surveillance & AWS Archival System',
-    description: 'Distributed surveillance system with automated facial recognition, motion triggers, and secure cloud notifications.',
-    fullDescription: 'A cloud-connected security surveillance system featuring real-time motion detection, automated facial recognition, event-triggered video clip uploads to AWS S3, and instant mobile alerts upon security breaches.',
-    highlights: [
-      'OpenCV real-time video frame analysis and motion vector detection',
-      'Automated facial recognition and intruder alerting',
-      'Encrypted video chunk upload pipeline to AWS S3 Cloud Storage',
-      'Live stream viewer interface with event timeline markers and cloud alerts'
-    ],
-    architecture: 'OpenCV Frame Engine • AWS S3 Cloud Storage • Python Boto3 • Push Notification Server',
-    metrics: ['Sub-2s Event Cloud Push', '24/7 Cloud Archival', 'AWS Encrypted Storage'],
-    tags: ['Python', 'OpenCV', 'AWS Cloud'],
-    githubUrl: 'https://github.com/kiranimmadi2/cloud-based-CCTV-footage',
-    previewType: 'cctv-cloud',
-    layout: 'standard'
+    id: 'cloud-based-cctv-footage', title: 'Cloud CCTV Footage', category: 'Video & cloud',
+    description: 'Organize camera recordings so authorized users can find and review footage through a shared system.',
+    audience: 'Teams managing recordings from multiple cameras.',
+    problem: 'Finding a recording is harder when footage is spread across devices and storage locations.',
+    result: 'A cloud footage-management system provides storage, access, and recording retrieval.',
+    input: 'Camera footage and recording details', output: 'An accessible recording library',
+    features: ['Cloud footage management', 'Recording playback and retrieval', 'Authorized access'],
+    steps: [['Capture footage', 'Camera recordings enter the footage-management workflow.'], ['Store recordings', 'Cloud storage holds footage and its identifying details.'], ['Find a recording', 'Users locate footage by camera and time.'], ['Review with access control', 'Authorized users access the requested recording.']],
+    implementation: 'The README describes storage, streaming, playback, and access control, but lists multiple possible technologies. This explorer does not claim a specific deployed cloud architecture.',
+    tags: ['Python', 'Cloud Storage', 'Video Management'], demoId: 'cloud', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/cloud-based-CCTV-footage'
   },
   {
-    id: 'cctv-surveillance-prototype',
-    title: 'CCTV-Surveillance-Prototype',
-    subtitle: 'Edge AI Intrusion & Bounding-Box Anomaly Detector',
-    description: 'Edge AI surveillance prototype for perimeter monitoring, intrusion detection, and bounding-box anomaly classification.',
-    fullDescription: 'An edge AI surveillance prototype designed to run on low-power hardware (Raspberry Pi / Jetson). It utilizes lightweight computer vision models to perform real-time perimeter monitoring, object tracking, and bounding-box anomaly classification.',
-    highlights: [
-      'Optimized object detection model inference running at 30 FPS on edge hardware',
-      'Intrusion zone drawing and boundary crossing alert triggers',
-      'Low-power hardware optimization with minimal memory footprint',
-      'Real-time bounding box annotations with confidence probability scoring'
-    ],
-    architecture: 'Edge OpenCV Engine • Lightweight Deep Learning Models • Edge Python Engine',
-    metrics: ['30 FPS Edge Inference', 'Zero Cloud Dependency', 'Real-Time Bounding Boxes'],
-    tags: ['Python', 'OpenCV', 'Edge AI'],
-    githubUrl: 'https://github.com/kiranimmadi2/cctv-surveillance-prototype',
-    previewType: 'cctv-proto',
-    layout: 'standard'
+    id: 'cctv-surveillance-prototype', title: 'CCTV Surveillance Prototype', category: 'Video & interfaces',
+    description: 'Explore a dashboard concept that brings camera feeds, search, and alerts into one view.',
+    audience: 'Teams evaluating a camera-monitoring interface.',
+    problem: 'Separate feeds and alerts make it difficult to follow events across cameras.',
+    result: 'The prototype demonstrates a dashboard for camera feeds and alert management.',
+    input: 'Camera views and event information', output: 'A monitoring dashboard',
+    features: ['Camera dashboard prototype', 'Search interface', 'Alert management concept'],
+    steps: [['Open the dashboard', 'The HTML prototype presents camera views.'], ['Inspect a view', 'A selected view gives context for monitoring activity.'], ['Explore search and alerts', 'The repository describes recognition search and alert management in the prototype.'], ['Review an event', 'The prepared overlay illustration connects a marked region to an event card.']],
+    implementation: 'The repository identifies an HTML dashboard prototype. This sample uses drawn scenes and fixed overlays; it performs no facial recognition or live detection.',
+    tags: ['HTML', 'JavaScript', 'Dashboard Prototype'], demoId: 'surveillance', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/cctv-surveillance-prototype'
   },
   {
-    id: 'text-to-emoji-encryption-and-decryption',
-    title: 'Text-to-Emoji-Encryption-and-Decryption',
-    subtitle: 'Cryptographic Emoji Steganography & Cipher Utility',
-    description: 'Cipher utility to convert raw text into emoji sequences and back with reversible cryptographic decoding and secret message concealment.',
-    fullDescription: 'A creative cryptographic web application that encodes plain text messages into secret emoji sequences using symmetric encryption algorithms. The receiver decodes the emoji string back into the original plain text using the shared key.',
-    highlights: [
-      'Reversible text-to-emoji cipher mapping algorithm with key salting',
-      'Web Crypto API integration for secure client-side AES encryption/decryption',
-      'Zero backend storage—100% client-side privacy and instant execution',
-      'One-click copy encrypted emoji string to clipboard for social messaging'
-    ],
-    architecture: 'JavaScript Web Crypto API • Custom Steganography Cipher • HTML5/CSS3 Engine',
-    metrics: ['100% Client-Side Privacy', 'Reversible AES Cipher', 'Instant Decoding'],
-    tags: ['JavaScript', 'Cryptography', 'Web Crypto'],
-    githubUrl: 'https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption',
-    previewType: 'emoji-cipher',
-    layout: 'standard'
+    id: 'text-to-emoji-encryption-and-decryption', title: 'Text to Emoji Encoding', category: 'Web & creative tools',
+    description: 'Turn a message into an emoji sequence, then decode it to recover the original text.',
+    audience: 'People exploring a playful way to represent text.',
+    problem: 'An ordinary message can be represented in a more playful visual form.',
+    result: 'A reversible mapping converts text to emoji symbols and back.',
+    input: 'A text message', output: 'An emoji sequence and decoded text',
+    features: ['Text-to-emoji conversion', 'Reversible decoding', 'Browser-based interaction'],
+    steps: [['Enter a message', 'Start with text to represent as emoji symbols.'], ['Map the characters', 'The original project describes a predefined character-to-emoji mapping.'], ['Read the symbols', 'The encoded message is represented by an emoji sequence.'], ['Reverse the mapping', 'Decoding recovers the original text. This is encoding, not secure encryption.']],
+    implementation: 'This sample maps UTF-8 bytes to pairs of emoji symbols so Unicode text can round-trip. It is a portfolio implementation of the encoding idea, not an AES cipher.',
+    tags: ['JavaScript', 'HTML', 'CSS'], demoId: 'emoji', layout: 'standard',
+    githubUrl: 'https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption'
   }
 ];
 
-/**
- * Reusable Unified Tag Component
- */
+const PROJECT_GRADIENTS = ['mint', 'lavender', 'rose', 'azure', 'emerald', 'peach', 'orchid', 'teal', 'sunrise', 'aqua', 'indigo', 'citrus', 'coral', 'ocean', 'sage', 'twilight', 'blush'];
+PROJECTS_DATA.forEach((project, index) => { project.gradient = PROJECT_GRADIENTS[index]; project.number = index + 1; });
+
+// Each explorer has its own story, visual identity, and useful starting scenarios.
+const PROJECT_EXPERIENCES = {
+  'browser-agent': {icon: '↗', eyebrow: 'A copilot for repetitive web tasks', headline: 'Describe the task. Follow the actions.', accent: '#72c6ed', light: '#096a8e', action: 'Walk through a browser task', starts: [{label: 'Collect product prices', detail: 'Follow navigation, extraction, and the final table.', fields: {task: 'products'}}, {label: 'Prepare a contact form', detail: 'See the form fields filled for review.', fields: {task: 'form'}}]},
+  legal: {icon: '§', eyebrow: 'Legal language, made easier to read', headline: 'Understand the clause. In your language.', accent: '#e8c580', light: '#805b17', action: 'Read a sample clause', starts: [{label: 'Simplify a service clause', detail: 'Compare formal wording with its meaning.', fields: {document: 'notice', language: 'English'}}, {label: 'Read it in Telugu', detail: 'Keep the original beside a prepared translation.', fields: {document: 'notice', language: 'Telugu'}}, {label: 'Check a delivery clause', detail: 'Understand the sample delivery deadline.', fields: {document: 'delivery', language: 'English'}}]},
+  query: {icon: 'SQL', eyebrow: 'A conversation with your data', headline: 'Ask a question. See the answer.', accent: '#bca6ff', light: '#6243b7', action: 'Ask the sample dataset', starts: [{label: 'Compare phone brands', detail: 'See the question, SQL, chart, and source rows.', fields: {question: 'brand'}}, {label: 'Compare monthly revenue', detail: 'Follow a question through to a calculated answer.', fields: {question: 'month'}}]},
+  native: {icon: 'FFI', eyebrow: 'Inside a Flutter-to-native handoff', headline: 'One tap. A journey through native code.', accent: '#80baff', light: '#215da5', action: 'Follow a sample action', starts: [{label: 'Follow a checksum task', detail: 'Trace Flutter → Dart FFI → C++ → result.', fields: {action: 'checksum'}}, {label: 'Follow image processing', detail: 'See the same handoff for a different task.', fields: {action: 'image'}}]},
+  health: {icon: '+', eyebrow: 'A shared picture of care', headline: 'Different care teams. One shared picture.', accent: '#86dfbc', light: '#237b55', action: 'Explore a patient timeline', starts: [{label: 'Start with day one', detail: 'Explore the fictional patient’s recorded values.', fields: {day: '0'}}, {label: 'Visit the appointment day', detail: 'See day three and its sample care event.', fields: {day: '2'}}]},
+  expenses: {icon: '₹', eyebrow: 'A little clarity for everyday spending', headline: 'Know where your money goes.', accent: '#ffc095', light: '#97501c', action: 'Open the sample budget', starts: [{label: 'Add a lunch purchase', detail: 'Watch the total and Food category update.', fields: {name: 'Lunch', amount: '180', category: 'Food'}}, {label: 'Add a weekend train ticket', detail: 'See the effect of a Travel expense.', fields: {name: 'Train ticket', amount: '350', category: 'Travel'}}]},
+  mcp: {icon: '{ }', eyebrow: 'Useful context for coding agents', headline: 'Give your agent a map of the code.', accent: '#b8acff', light: '#6652b2', action: 'Inspect a tool request', starts: [{label: 'Map the sample project', detail: 'Inspect a structured file listing.', fields: {tool: 'scan'}}, {label: 'Look inside a Python file', detail: 'Find the classes, functions, and imports.', fields: {tool: 'analyze'}}, {label: 'Find a code pattern', detail: 'Explore a prepared search response.', fields: {tool: 'search'}}]},
+  email: {icon: '@', eyebrow: 'Outreach with a reason to connect', headline: 'Make your next introduction relevant.', accent: '#79ded0', light: '#167a6d', action: 'Build a sample introduction', starts: [{label: 'Apply for a Flutter role', detail: 'Match the listing to relevant mobile projects.', fields: {job: 'flutter', tone: 'concise'}}, {label: 'Introduce your AI work', detail: 'Try a warmer draft for a fictional AI team.', fields: {job: 'ai', tone: 'warm'}}]},
+  family: {icon: '⌘', eyebrow: 'Names become connections', headline: 'Every relative has a place in your story.', accent: '#f2b3d1', light: '#a33b70', action: 'Explore the sample family', starts: [{label: 'Find the grandparents', detail: 'Expand a generation and inspect Mira’s connection.', view: {ancestors: true, person: 'mira'}}, {label: 'Explore the siblings', detail: 'Select Alex and follow the family relationship.', view: {children: true, person: 'alex'}}]},
+  home: {icon: '⌂', eyebrow: 'An early idea for a future home', headline: 'Start shaping the home you imagine.', accent: '#95d5db', light: '#267b83', action: 'Explore material assumptions', starts: [{label: 'Explore a 650 sq ft example', detail: 'Adjust the area and teaching rates.', fields: {area: '650'}}, {label: 'Compare a larger example', detail: 'See how a 1,200 sq ft area changes the illustration.', fields: {area: '1200'}}]},
+  trading: {icon: '↗', eyebrow: 'Understand the decision pipeline', headline: 'See how market data becomes a decision.', accent: '#99b9ff', light: '#4266b3', action: 'Replay a sample scenario', starts: [{label: 'Follow moderate movement', detail: 'Inspect fictitious prices and prepared sentiment.', fields: {scenario: 'positive', guardrails: true}}, {label: 'See a risk rule intervene', detail: 'Compare a volatile scenario with the rule on or off.', fields: {scenario: 'volatile', guardrails: true}}]},
+  sales: {icon: '▥', eyebrow: 'Let the data tell its story', headline: 'Find the patterns behind the numbers.', accent: '#d3df88', light: '#687625', action: 'Explore the sample dashboard', starts: [{label: 'Compare all brands', detail: 'Explore the fictional two-month sales dataset.', fields: {brand: 'all', period: 'all'}}, {label: 'Focus on Samsung in February', detail: 'Use a narrower view to inspect the source rows.', fields: {brand: 'Samsung', period: '2025-02'}}]},
+  news: {icon: '≡', eyebrow: 'Less reading, a clearer briefing', headline: 'Catch up without reading every article.', accent: '#ffb6a5', light: '#ac5038', action: 'Read a sample briefing', starts: [{label: 'Read a short bus-pilot briefing', detail: 'Compare the fictional article with two key points.', fields: {article: 'transit', length: 'brief'}}, {label: 'Explore a detailed library story', detail: 'See the original beside four prepared summary points.', fields: {article: 'library', length: 'detailed'}}]},
+  sonar: {icon: '∿', eyebrow: 'A closer look at classification', headline: 'From a signal to a meaningful label.', accent: '#8bcdf7', light: '#236f9e', action: 'Inspect a sample signal', starts: [{label: 'Inspect sample A', detail: 'Explore the drawn values and assigned Rock label.', fields: {signal: 'rock'}}, {label: 'Compare sample B', detail: 'See a different signal with a prepared Mine label.', fields: {signal: 'mine'}}]},
+  cloud: {icon: '▣', eyebrow: 'Footage, organized around the moment', headline: 'The recording you need, easier to find.', accent: '#a1d1b9', light: '#387852', action: 'Browse the sample library', starts: [{label: 'Find an entrance recording', detail: 'Filter the morning clips and inspect their details.', fields: {camera: 'Entrance', time: 'Morning'}}, {label: 'Review the evening courtyard', detail: 'Follow a recording into its illustrative storage path.', fields: {camera: 'Courtyard', time: 'Evening'}}]},
+  surveillance: {icon: '◎', eyebrow: 'A monitoring interface with context', headline: 'See the scene. Understand the event.', accent: '#b5b9f5', light: '#6267b1', action: 'Inspect a drawn camera view', starts: [{label: 'Inspect the entrance event', detail: 'Connect a fixed overlay with its sample event.', fields: {scene: 'entrance', overlays: true}}, {label: 'Explore the courtyard', detail: 'Toggle the prepared overlay and compare the views.', fields: {scene: 'courtyard', overlays: false}}]},
+  emoji: {icon: '☺', eyebrow: 'A small tool with a playful twist', headline: 'Say it in emoji. Bring it back to words.', accent: '#f2b7d5', light: '#a74776', action: 'Play with a message', starts: [{label: 'Encode a friendly hello', detail: 'Try a Unicode message and reverse the mapping.', fields: {message: 'Hello తెలుగు 😀'}}, {label: 'Hide a meeting note in plain sight', detail: 'Turn a short message into reversible emoji pairs.', fields: {message: 'Meet you at 6!'}}]}
+};
+PROJECTS_DATA.forEach(project => { project.experience = PROJECT_EXPERIENCES[project.demoId]; });
+
+function renderProjectOverview(p) {
+  const x = p.experience;
+  return `<div class="product-introduction"><div class="product-introduction-copy"><span class="explorer-eyebrow">${projectEscape(x.eyebrow)}</span><h3>${projectEscape(x.headline)}</h3><p>${projectEscape(p.description)}</p><button class="project-explore-btn" data-open-sample>${projectEscape(x.action)} <span aria-hidden="true">→</span></button></div><div class="product-introduction-visual project-art-${p.gradient}">${renderProjectCover(p)}<span class="product-visual-caption">Illustrative project preview</span></div></div>
+    <div class="product-context"><div><span>The challenge</span><p>${projectEscape(p.problem)}</p></div><div><span>Who it helps</span><p>${projectEscape(p.audience)}</p></div><div><span>The outcome</span><p>${projectEscape(p.result)}</p></div></div>
+    <section class="product-scenarios"><div class="product-section-heading"><h3>Choose a place to start</h3><p>Explore a prepared example, step by step.</p></div><div class="product-scenario-grid">${x.starts.map((start, i) => `<button class="product-scenario" data-project-start="${i}"><span class="product-scenario-number">${String(i + 1).padStart(2, '0')}</span><strong>${projectEscape(start.label)}</strong><span>${projectEscape(start.detail)}</span><b aria-hidden="true">↗</b></button>`).join('')}</div></section>
+    <div class="product-capabilities">${p.features.map(f => `<span><i aria-hidden="true">✓</i>${projectEscape(f)}</span>`).join('')}</div>`;
+}
+
+function projectEscape(value) {
+  return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+}
 function renderProjectTags(tags) {
-  return `
-    <div class="card-tags-row">
-      ${tags.map(tag => `<span class="project-tag" data-tag="${tag}"><span class="tag-dot"></span> ${tag}</span>`).join('')}
-    </div>
-  `;
+  return `<div class="card-tags-row">${tags.map(tag => `<span class="project-tag"><span class="tag-dot"></span>${projectEscape(tag)}</span>`).join('')}</div>`;
 }
-
-/**
- * Reusable Unified Action Row Component
- */
 function renderProjectActions(project) {
-  return `
-    <div class="card-action-row">
-      <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-action-link" onclick="event.stopPropagation();">
-        View Project <span class="arrow">↗</span>
-      </a>
-    </div>
-  `;
+  return `<div class="card-action-row"><button class="project-explore-btn" data-explore="${project.id}" aria-haspopup="dialog" aria-label="Explore ${projectEscape(project.title)}">Explore project <span aria-hidden="true">↗</span></button><a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View code for ${projectEscape(project.title)}">View code <span aria-hidden="true">↗</span></a></div>`;
 }
-
-/**
- * Reusable Unified Preview Component
- */
 function renderProjectPreview(project) {
-  switch (project.previewType) {
+  return `<div class="project-story-preview"><div><span>START WITH</span><p>${projectEscape(project.input)}</p></div><span class="story-arrow" aria-hidden="true">→</span><div><span>EXPLORE THE RESULT</span><p>${projectEscape(project.output)}</p></div></div>`;
+}
+function renderProjectCover(project) {
+  const chip = text => `<div class="cover-input">${projectEscape(text)}</div>`;
+  const pills = texts => `<div class="cover-pills">${texts.map(t => `<span>${projectEscape(t)}</span>`).join('')}</div>`;
+  const line = (label, value) => `<div class="cover-line"><span>${projectEscape(label)}</span><strong>${projectEscape(value)}</strong></div>`;
+  const chart = (heights = [25, 42, 36, 65, 85]) => `<div class="cover-chart">${heights.map(h => `<i style="height:${h}%"></i>`).join('')}</div>`;
+  const code = text => `<pre class="cover-code">${projectEscape(text)}</pre>`;
+  const wave = '<svg class="cover-wave" viewBox="0 0 240 45" fill="none"><path d="M0 30 12 29 20 15 27 36 36 22 45 28 57 5 69 38 80 17 89 30 102 12 114 34 126 20 140 26 154 7 166 31 180 15 194 29 207 22 220 30 240 27" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>';
+  let title, content;
+  switch (project.demoId) {
     case 'browser-agent':
-      return `
-        <div class="apple-ui-mockup-frame wide-terminal-flow">
-          <div class="mockup-terminal-window">
-            <div class="terminal-window-header">
-              <div class="terminal-dots">
-                <span class="m-dot red"></span>
-                <span class="m-dot yellow"></span>
-                <span class="m-dot green"></span>
-              </div>
-              <span class="terminal-url-tag">agent://execute</span>
-            </div>
-            <div class="terminal-body-code">
-              <div class="code-line primary">browser_agent.navigate("https://...")</div>
-              <div class="code-line success">✓ # Natural language interpreted</div>
-              <div class="code-line info"># Action: form_fill &amp; dynamic_wait</div>
-            </div>
-          </div>
-
-          <div class="flow-connector-lines">
-            <svg viewBox="0 0 70 170" fill="none" class="connector-svg" preserveAspectRatio="none">
-              <path d="M0 85 C35 85, 35 22, 70 22" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 64, 70 64" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 106, 70 106" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 148, 70 148" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-            </svg>
-          </div>
-
-          <div class="flow-actions-column">
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-              <span class="pill-label">Navigate Websites</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
-              <span class="pill-label">Fill Forms Automatically</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
-              <span class="pill-label">Extract Web Data</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
-              <span class="pill-label">Multi-step Workflows</span>
-            </div>
-          </div>
-        </div>
-      `;
-
-    case 'legal-assistant':
-      return `
-        <div class="apple-ui-mockup-frame legal-mockup">
-          <div class="legal-tabs-row">
-            <span class="tab-chip active"><svg viewBox="0 0 24 24" fill="currentColor" style="width:11px;height:11px;margin-right:3px;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> PDF</span>
-            <span class="tab-chip">DOCX</span>
-            <span class="tab-chip">Judgment</span>
-          </div>
-          <div class="legal-doc-pill">
-            <span class="pdf-red-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;vertical-align:middle;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
-            <span class="pdf-filename">Legal Document.pdf</span>
-          </div>
-          <div class="legal-skeleton-lines">
-            <span class="s-bar w90"></span>
-            <span class="s-bar w75"></span>
-            <span class="s-bar w55"></span>
-          </div>
-          <div class="legal-prompt-bubble">
-            Explain this judgment in simple terms
-          </div>
-          <div class="legal-response-bubble">
-            This case is about... Here is a simple explanation in Telugu:
-          </div>
-        </div>
-      `;
-
-    case 'query-ai':
-      return `
-        <div class="apple-ui-mockup-frame query-mockup">
-          <div class="query-prompt-pill">
-            <span class="bubble-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;margin-right:4px;vertical-align:middle;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> "Show total sales by year"
-          </div>
-          <div class="query-sql-box">
-            <span class="sql-kw">SELECT</span> year, <span class="sql-fn">SUM</span>(sales)<br>
-            <span class="sql-kw">FROM</span> orders<br>
-            <span class="sql-kw">GROUP BY</span> year<br>
-            <span class="sql-kw">ORDER BY</span> year;
-          </div>
-          <div class="query-3d-chart">
-            <span class="bar-3d b1" style="height: 25%;"></span>
-            <span class="bar-3d b2" style="height: 48%;"></span>
-            <span class="bar-3d b3" style="height: 60%;"></span>
-            <span class="bar-3d b4" style="height: 85%;"></span>
-            <span class="bar-3d b5 active" style="height: 100%;"></span>
-          </div>
-        </div>
-      `;
-
-    case 'singletap':
-      return `
-        <div class="apple-ui-mockup-frame wide-terminal-flow">
-          <div class="mockup-terminal-window">
-            <div class="terminal-window-header">
-              <span class="mockup-badge cyan">⚡ Dart C++ FFI Engine</span>
-              <span class="mockup-telemetry">&lt;0.8ms Latency</span>
-            </div>
-            <div class="mockup-action-center">
-              <div class="instant-tap-trigger">Instant Tap Engine</div>
-            </div>
-            <div class="mockup-bottom-meta">
-              Zero-Copy Buffer • Direct Pointer
-            </div>
-          </div>
-
-          <div class="flow-connector-lines">
-            <svg viewBox="0 0 70 170" fill="none" class="connector-svg" preserveAspectRatio="none">
-              <path d="M0 85 C35 85, 35 22, 70 22" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 64, 70 64" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 106, 70 106" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 148, 70 148" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-            </svg>
-          </div>
-
-          <div class="flow-actions-column">
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-              <span class="pill-label">Sub-millisecond Execution</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-              <span class="pill-label">Zero-Copy Memory Buffer</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
-              <span class="pill-label">120 FPS High-Framerate UI</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
-              <span class="pill-label">Native Android C++ Modules</span>
-            </div>
-          </div>
-        </div>
-      `;
-
-    case 'healthos':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="mockup-header-row">
-            <span class="mockup-badge green">LiteRT • ONNX</span>
-            <span class="pulse-indicator"><span class="pulse-dot"></span> Live</span>
-          </div>
-          <div class="health-ecg-canvas">
-            <svg viewBox="0 0 200 44" fill="none" class="ecg-svg">
-              <path d="M0 22 H50 L60 4 L72 40 L84 12 L92 30 L100 22 H200" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="health-stats-row">
-            <span class="health-bpm-large">98 <small>BPM</small></span>
-            <span class="health-sub-metric">On-Device Privacy Engine</span>
-          </div>
-        </div>
-      `;
-
+      title = 'Browser task → actions';
+      content = chip('“Collect the product names and prices”') + code('browser.navigate("sample.shop")') + '<p class="cover-success">✓ Task broken into browser actions</p>' + pills(['Navigate', 'Fill forms', 'Extract data']) + line('Prepared output', '2 sample rows');
+      break;
+    case 'legal':
+      title = 'Document → explanation';
+      content = '<div class="cover-document"><small>ORIGINAL CLAUSE</small><p>Written notice not fewer than thirty days prior…</p></div><div class="cover-document cover-highlight"><small>PLAIN LANGUAGE</small><p>Give written notice at least 30 days before.</p></div>' + pills(['English', 'Hindi', 'Telugu']);
+      break;
+    case 'query':
+      title = 'Question → SQL → insight';
+      content = chip('“Show total sales by year”') + code('SELECT year, SUM(sales)\nFROM sample_orders\nGROUP BY year;') + chart();
+      break;
+    case 'native':
+      title = 'Flutter meets native code';
+      content = chip('A tap starts the sample action') + '<div class="cover-flow"><span>Flutter</span><b>→</b><span>Dart FFI</span><b>→</b><span>C++</span></div><div class="cover-result">Result returns to the interface <span>↩</span></div><p class="cover-note">Concept walkthrough</p>';
+      break;
+    case 'health':
+      title = 'Connected care portals';
+      content = '<div class="cover-portals"><span><b>Patient</b><small>Appointments</small></span><span><b>Doctor</b><small>Care records</small></span><span><b>Lab</b><small>Reports</small></span><span><b>Hospital</b><small>Coordination</small></span></div><div class="cover-result">One shared platform</div>';
+      break;
     case 'expenses':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="expense-hdr-row">
-            <span>Monthly Budget</span>
-            <span class="expense-val-green">$3,420</span>
-          </div>
-          <div class="expense-track-bar">
-            <div class="expense-track-fill" style="width: 68%;"></div>
-          </div>
-          <div class="expense-category-list">
-            <div class="cat-item"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;margin-right:4px;vertical-align:middle;"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg> Food &amp; Dining</span> <span class="amt">$420</span></div>
-            <div class="cat-item"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;margin-right:4px;vertical-align:middle;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Uber &amp; Transit</span> <span class="amt">$180</span></div>
-            <div class="cat-item"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;margin-right:4px;vertical-align:middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> Shopping</span> <span class="amt">$210</span></div>
-          </div>
-        </div>
-      `;
-
-    case 'mcp-server':
-      return `
-        <div class="apple-ui-mockup-frame wide-terminal-flow">
-          <div class="mockup-terminal-window">
-            <div class="terminal-window-header">
-              <span class="mcp-hub-pill">⚡ FastMCP Server</span>
-              <span class="terminal-url-tag">mcp://v1.0</span>
-            </div>
-            <div class="terminal-body-code">
-              <div class="code-line primary">server.register_tool("run_diagnostics")</div>
-              <div class="code-line success">✓ 4 Tools Loaded to Claude Context</div>
-              <div class="code-line info"># Status: Bidirectional IPC stream open</div>
-            </div>
-          </div>
-
-          <div class="flow-connector-lines">
-            <svg viewBox="0 0 70 170" fill="none" class="connector-svg" preserveAspectRatio="none">
-              <path d="M0 85 C35 85, 35 22, 70 22" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 64, 70 64" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 106, 70 106" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 148, 70 148" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-            </svg>
-          </div>
-
-          <div class="flow-actions-column">
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-              <span class="pill-label">AST Code Analysis</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
-              <span class="pill-label">Real-time Diagnostics</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
-              <span class="pill-label">File System Access</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="15" x2="8.01" y2="15"/><line x1="16" y1="15" x2="16.01" y2="15"/></svg></span>
-              <span class="pill-label">Coding Agent Tools</span>
-            </div>
-          </div>
-        </div>
-      `;
-
-    case 'email-writer':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="email-mock-banner">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;margin-right:4px;vertical-align:middle;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Cold Outreach Engine</span>
-            <span class="email-engine-pill">Groq LLaMA-3.3</span>
-          </div>
-          <div class="email-subject-box">
-            <span class="lbl">Subject:</span> Elevating engineering workflow with AI
-          </div>
-          <div class="email-snippet-body">
-            Extracted job requirements and generated customized pitch with GitHub portfolio links...
-          </div>
-        </div>
-      `;
-
-    case 'family-tree':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="tree-root-box">
-            <span class="avatar-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;margin-right:4px;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> Ancestral Root (Gen 0)
-          </div>
-          <div class="tree-lines-svg-wrap">
-            <svg viewBox="0 0 160 20" fill="none" class="tree-svg">
-              <path d="M80 0 V10 H20 V20 M80 10 H140 V20 M80 10 V20" stroke="#475569" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="tree-nodes-row">
-            <span class="node-pill">● Sarah</span>
-            <span class="node-pill">● Michael</span>
-            <span class="node-pill">● David</span>
-          </div>
-        </div>
-      `;
-
-    case 'homebuild':
-      return `
-        <div class="apple-ui-mockup-frame wide-terminal-flow">
-          <div class="mockup-terminal-window">
-            <div class="blueprint-cad-grid">
-              <div class="cad-measure-tag">Living: 24' × 18' • Plan v2.4</div>
-              <div class="cad-estimator-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;margin-right:3px;vertical-align:middle;"><path d="M2 22h20"/><path d="M18 2h4v20"/><path d="M2 22L18 6"/></svg> AI Estimator</div>
-            </div>
-            <div class="cad-specs-row">
-              <span>Phase: Foundation &amp; Framing</span> • <span class="cad-est-amt">Est: $48,200</span>
-            </div>
-          </div>
-
-          <div class="flow-connector-lines">
-            <svg viewBox="0 0 70 170" fill="none" class="connector-svg" preserveAspectRatio="none">
-              <path d="M0 85 C35 85, 35 22, 70 22" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 64, 70 64" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 106, 70 106" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 148, 70 148" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-            </svg>
-          </div>
-
-          <div class="flow-actions-column">
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M2 22h20"/><path d="M18 2h4v20"/><path d="M2 22L18 6"/></svg></span>
-              <span class="pill-label">AI Material Estimator</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="4" x2="12" y2="12"/><line x1="7" y1="12" x2="7" y2="20"/><line x1="17" y1="12" x2="17" y2="20"/></svg></span>
-              <span class="pill-label">Structural Framing</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
-              <span class="pill-label">Smart Budget Tracker</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>
-              <span class="pill-label">Milestone Schedule</span>
-            </div>
-          </div>
-        </div>
-      `;
-
+      title = 'Every purchase, in perspective';
+      content = line('Sample budget', '₹5,000') + '<div class="cover-total"><small>SPENT SO FAR</small><strong>₹1,050</strong></div><div class="cover-progress"><i style="width:21%"></i></div>' + line('Groceries', '₹750') + line('Bus pass', '₹300');
+      break;
+    case 'mcp':
+      title = 'Codebase → agent context';
+      content = chip('analyze_python_file("models.py")') + code('{\n  "classes": ["Customer"],\n  "functions": ["create", "find"]\n}') + '<p class="cover-success">Structured sample response</p>';
+      break;
+    case 'email':
+      title = 'Job listing → tailored draft';
+      content = chip('Flutter Developer · sample listing') + pills(['Flutter', 'Dart', 'Firebase']) + '<div class="cover-document"><small>MATCHED PORTFOLIO WORK</small><p>Expenses Tracker · Family Tree</p></div><div class="cover-email-lines"><i></i><i></i><i></i></div><p class="cover-note">Relevant projects shape the email</p>';
+      break;
+    case 'family':
+      title = 'People → connections';
+      content = '<div class="cover-tree"><div><span>Mira</span><span>Dev</span></div><i></i><div><span>Priya</span><span>Sam</span></div><i></i><div><span>Alex</span><span>Jamie</span></div></div><p class="cover-note">Explore a sample family relationship</p>';
+      break;
+    case 'home':
+      title = 'Rules → home design';
+      content = '<div class="cover-floorplan"><span class="floor-living">Living</span><span class="floor-bed">Bedroom</span><span class="floor-kitchen">Kitchen</span><span class="floor-bath">Bath</span></div><p class="cover-note">Illustrative layout · rule-based concept</p>';
+      break;
     case 'trading':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="trading-status-bar">
-            <span class="trading-ticker">AAPL / USD • 1H</span>
-            <span class="trading-signal-buy">▲ BUY SIGNAL</span>
-          </div>
-          <div class="candlestick-chart-row">
-            <svg viewBox="0 0 180 34" fill="none" class="chart-svg">
-              <path d="M0 30 L30 24 L60 28 L90 12 L120 18 L150 6 L180 10" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="trading-footer-stat">
-            <span class="alpha-bold">+18.4% Alpha Execution</span> • FastAPI Risk Guard
-          </div>
-        </div>
-      `;
-
-    case 'sales-analysis':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="sales-kpi-bar">
-            <span>Q4 Revenue Trends</span>
-            <span class="kpi-growth">+34.2% YoY</span>
-          </div>
-          <div class="sales-bar-chart">
-            <span class="s-bar s1" style="height: 35%;"></span>
-            <span class="s-bar s2" style="height: 60%;"></span>
-            <span class="s-bar s3" style="height: 50%;"></span>
-            <span class="s-bar s4 active" style="height: 95%;"></span>
-            <span class="s-bar s5" style="height: 70%;"></span>
-          </div>
-          <div class="sales-footer-meta">
-            Pandas &amp; Seaborn Market Share Distribution
-          </div>
-        </div>
-      `;
-
-    case 'news-summary':
-      return `
-        <div class="apple-ui-mockup-frame wide-terminal-flow">
-          <div class="mockup-terminal-window">
-            <div class="news-top-pill">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;margin-right:3px;vertical-align:middle;"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> Abstractive TTS Engine</span>
-              <span class="tts-accent">HuggingFace</span>
-            </div>
-            <div class="audio-wave-bars">
-              <span class="wb h1"></span><span class="wb h3"></span><span class="wb h2"></span>
-              <span class="wb h4"></span><span class="wb h3"></span><span class="wb h1"></span>
-              <span class="wb h4"></span><span class="wb h2"></span><span class="wb h3"></span>
-            </div>
-            <div class="news-brief-text">
-              Real-time neural audio briefing synthesis
-            </div>
-          </div>
-
-          <div class="flow-connector-lines">
-            <svg viewBox="0 0 70 170" fill="none" class="connector-svg" preserveAspectRatio="none">
-              <path d="M0 85 C35 85, 35 22, 70 22" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 64, 70 64" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 106, 70 106" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-              <path d="M0 85 C35 85, 35 148, 70 148" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
-            </svg>
-          </div>
-
-          <div class="flow-actions-column">
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></svg></span>
-              <span class="pill-label">Multi-source Parsing</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>
-              <span class="pill-label">Neural Speech Synthesis</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-              <span class="pill-label">3-Bullet TL;DR</span>
-            </div>
-            <div class="flow-action-pill">
-              <span class="pill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:14px;height:14px;display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-              <span class="pill-label">Multilingual Digest</span>
-            </div>
-          </div>
-        </div>
-      `;
-
-    case 'rock-mine':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="sonar-screen">
-            <div class="sonar-rings">
-              <span class="s-ring r1"></span>
-              <span class="s-ring r2"></span>
-              <span class="s-blip"></span>
-            </div>
-            <div class="sonar-info-col">
-              <span class="sonar-target">Target: Naval Mine</span>
-              <span class="sonar-pct">98.4% Classification</span>
-            </div>
-          </div>
-        </div>
-      `;
-
-    case 'cctv-cloud':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="cctv-quad-header">
-            <span class="rec-red-pill"><span class="rec-red-dot"></span> REC</span>
-            <span class="cctv-cam-label">CAM-01 • Front Entrance</span>
-          </div>
-          <div class="cctv-preview-box">
-            <div class="motion-detect-box">Motion Event [Track #12]</div>
-          </div>
-          <div class="cctv-cloud-meta">
-            AWS S3 Encrypted Archival • OpenCV Pipeline
-          </div>
-        </div>
-      `;
-
-    case 'cctv-proto':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="vision-target-box">
-            <div class="yolo-bbox">
-              <span class="yolo-tag">Target: Person [98.2%]</span>
-            </div>
-          </div>
-          <div class="vision-meta-row">
-            <span>Edge OpenCV</span> • <span>30 FPS Inference</span>
-          </div>
-        </div>
-      `;
-
-    case 'emoji-cipher':
-      return `
-        <div class="apple-ui-mockup-frame">
-          <div class="cipher-pipeline-row">
-            <span class="cipher-box text">Text</span>
-            <span class="cipher-arrow">→</span>
-            <span class="cipher-box key"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:12px;height:12px;margin-right:2px;vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> AES</span>
-            <span class="cipher-arrow">→</span>
-            <span class="cipher-box emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:12px;height:12px;margin-right:2px;vertical-align:middle;"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg> Cipher</span>
-          </div>
-          <div class="cipher-footer-meta">
-            Reversible Cryptographic Secret Concealment
-          </div>
-        </div>
-      `;
-
-    default:
-      return `<div class="apple-ui-mockup-frame"><span class="default-icon">⚡</span></div>`;
+      title = 'Market data + news context';
+      content = '<div class="cover-trend"><svg viewBox="0 0 240 65" fill="none"><path d="M0 55 25 44 50 50 75 26 100 37 125 19 150 29 175 12 200 21 240 5" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div>' + pills(['Price data', 'News sentiment']) + line('Sample workflow', 'Review → decision');
+      break;
+    case 'sales':
+      title = 'Marketplace data → patterns';
+      content = '<div class="cover-mini-bars"><div><span>Samsung</span><i style="width:75%"></i></div><div><span>Vivo</span><i style="width:100%"></i></div><div><span>Pixel</span><i style="width:52%"></i></div></div>' + pills(['Brand', 'Price', 'Rating']) + '<p class="cover-note">Illustrative brand comparison</p>';
+      break;
+    case 'news':
+      title = 'Article → shorter briefing';
+      content = chip('Sample story: electric bus pilot') + '<div class="cover-document"><small>PREPARED BRIEFING</small><p>• Four buses on two routes<br>• A six-week trial<br>• Feedback before expansion</p></div>' + pills(['Articles', 'Sentiment', 'Audio']);
+      break;
+    case 'sonar':
+      title = 'Sonar signal → sample label';
+      content = chip('Illustrative signal · sample A') + wave + '<div class="cover-classification"><span>Input features</span><b>→</b><strong>Rock</strong></div><p class="cover-note">Prepared example · no live inference</p>';
+      break;
+    case 'cloud':
+      title = 'Camera footage → library';
+      content = '<div class="cover-recording"><i>▶</i><div><b>Entrance</b><small>09:15 · sample recording</small></div></div><div class="cover-recording"><i>▶</i><div><b>Courtyard</b><small>10:05 · sample recording</small></div></div>' + pills(['Store', 'Find', 'Review']);
+      break;
+    case 'surveillance':
+      title = 'Camera view → event context';
+      content = '<div class="cover-camera"><span class="cover-camera-label">DRAWN SAMPLE</span><div class="cover-camera-door"></div><div class="cover-camera-person"></div><div class="cover-camera-box"></div></div>' + line('Prepared event', 'Entrance activity');
+      break;
+    case 'emoji':
+      title = 'A playful, reversible message';
+      content = '<div class="cover-encoding"><span>Hi</span><b>↓</b><strong>😄😊 😆😋</strong><b>↓</b><span>Hi</span></div><p class="cover-note">Text → emoji pairs → original text</p>';
+      break;
+    default: title = project.title; content = chip(project.input) + '<div class="cover-result">' + projectEscape(project.output) + '</div>';
   }
+  return `<div class="project-cover-preview" aria-hidden="true"><div class="cover-window"><div class="cover-window-header"><span>${projectEscape(title)}</span><small>Sample</small></div><div class="cover-window-body">${content}</div></div></div>`;
 }
-
-/**
- * Reusable Project Card Component (With Zig-Zag Layout & Click for Details Badge)
- */
 function renderProjectCard(project) {
-  return `
-    <article class="project-card card-${project.layout}" data-project-id="${project.id}">
-      <h3 class="card-title">${project.title}</h3>
-      <p class="card-description">${project.description}</p>
-      ${renderProjectTags(project.tags)}
-      ${renderProjectActions(project)}
-      <div class="project-preview-container">
-        ${renderProjectPreview(project)}
-      </div>
-    </article>
-  `;
+  return `<article class="project-card card-${project.layout}" data-project-id="${project.id}"><div class="project-artwork project-art-${project.gradient}" role="img" aria-label="${projectEscape(project.title)} illustrative overview: ${projectEscape(project.input)} → ${projectEscape(project.output)}">${renderProjectCover(project)}<span class="project-art-number" aria-hidden="true">${String(project.number).padStart(2, '0')}</span></div><div class="project-card-content"><div class="project-category">${projectEscape(project.category)}</div><h3 class="card-title">${projectEscape(project.title)}</h3><p class="card-description">${projectEscape(project.description)}</p>${renderProjectTags(project.tags)}${renderProjectActions(project)}</div></article>`;
 }
 
-/**
- * Project Detail Modal System Implementation
- */
 let currentModalIndex = 0;
+let projectReturnFocus = null;
+let projectBackgroundState = [];
+let demoCleanup = null;
 
 function ensureProjectModalExists() {
   if (document.getElementById('project-detail-modal')) return;
-
-  const modalHTML = `
-    <div class="project-modal-backdrop" id="project-detail-modal" aria-hidden="true" role="dialog">
-      <div class="project-modal-card">
-        <div class="pm-header">
-          <div class="pm-header-left">
-            <div class="pm-title-wrap">
-              <h2 id="pm-title">Project Title</h2>
-              <p id="pm-subtitle">Project Subtitle</p>
-            </div>
-          </div>
-          <div class="pm-header-right">
-            <div class="pm-nav-controls">
-              <button class="pm-nav-btn" id="pm-prev-btn" title="Previous Project (←)">←</button>
-              <button class="pm-nav-btn" id="pm-next-btn" title="Next Project (→)">→</button>
-            </div>
-            <button class="pm-close-btn" id="pm-close-btn" aria-label="Close modal">✕</button>
-          </div>
-        </div>
-
+  document.body.insertAdjacentHTML('beforeend', `
+    <div class="project-modal-backdrop" id="project-detail-modal" aria-hidden="true" inert>
+      <section class="project-modal-card project-explorer" role="dialog" aria-modal="true" aria-labelledby="pm-title" aria-describedby="pm-subtitle" tabindex="-1">
+        <header class="pm-header"><div class="pm-identity"><div class="pm-identity-icon" id="pm-identity-icon" aria-hidden="true"></div><div class="pm-title-wrap"><span class="explorer-eyebrow" id="pm-category"></span><h2 id="pm-title"></h2><p id="pm-subtitle"></p></div></div><div class="pm-header-right"><span class="pm-project-count" id="pm-count"></span><div class="pm-nav-controls"><button class="pm-nav-btn" id="pm-prev-btn" aria-label="Previous project">←</button><button class="pm-nav-btn" id="pm-next-btn" aria-label="Next project">→</button></div><button class="pm-close-btn" id="pm-close-btn" aria-label="Close project explorer">✕</button></div></header>
         <div class="pm-body">
-          <div class="pm-hero-preview" id="pm-preview-hero"></div>
-
-          <div class="pm-metrics-row" id="pm-metrics-bar"></div>
-
-          <div class="pm-tabs-nav">
-            <button class="pm-tab-btn is-active" data-tab="overview">Overview &amp; Capabilities</button>
-            <button class="pm-tab-btn" data-tab="architecture">Architecture &amp; Stack</button>
+          <div class="pm-tabs-nav" role="tablist" aria-label="Project sections">
+            <button class="pm-tab-btn is-active" id="pm-tab-overview" role="tab" data-tab="overview" aria-controls="pm-panel-overview" aria-selected="true">Overview</button>
+            <button class="pm-tab-btn" id="pm-tab-sample" role="tab" data-tab="sample" aria-controls="pm-panel-sample" aria-selected="false" tabindex="-1">Try a sample</button>
+            <button class="pm-tab-btn" id="pm-tab-workflow" role="tab" data-tab="workflow" aria-controls="pm-panel-workflow" aria-selected="false" tabindex="-1">How it works</button>
           </div>
-
-          <div class="pm-tab-panel is-active" id="pm-panel-overview">
-            <div class="pm-section-block">
-              <h4>Project Overview</h4>
-              <p class="pm-desc-text" id="pm-full-desc"></p>
-            </div>
-            <div class="pm-section-block">
-              <h4>Key Capabilities &amp; Features</h4>
-              <ul class="pm-highlights-list" id="pm-highlights"></ul>
-            </div>
-          </div>
-
-          <div class="pm-tab-panel" id="pm-panel-architecture">
-            <div class="pm-section-block">
-              <h4>System Architecture</h4>
-              <div class="pm-arch-box" id="pm-architecture"></div>
-            </div>
-            <div class="pm-section-block">
-              <h4>Technologies Used</h4>
-              <div class="card-tags-row" id="pm-tags" style="margin-top: 6px;"></div>
-            </div>
-          </div>
+          <div class="pm-tab-panel is-active" id="pm-panel-overview" role="tabpanel" aria-labelledby="pm-tab-overview" tabindex="0"></div>
+          <div class="pm-tab-panel" id="pm-panel-sample" role="tabpanel" aria-labelledby="pm-tab-sample" tabindex="0" hidden><div id="pm-demo-host"></div></div>
+          <div class="pm-tab-panel" id="pm-panel-workflow" role="tabpanel" aria-labelledby="pm-tab-workflow" tabindex="0" hidden></div>
         </div>
-
-        <div class="pm-footer">
-          <div class="pm-kbd-hint">
-            Press <kbd>ESC</kbd> to close • <kbd>←</kbd> <kbd>→</kbd> to navigate
-          </div>
-          <div class="pm-footer-actions">
-            <button class="btn btn-outline" id="pm-copy-btn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;margin-right:4px;vertical-align:middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Link
-            </button>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="pm-github-btn">
-              View Source on GitHub <span class="arrow">↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ki-toast" id="ki-toast">Repository link copied to clipboard!</div>
-  `;
-
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
+        <footer class="pm-footer"><p class="pm-kbd-hint">Explore the idea, then inspect the code.</p><div class="pm-footer-actions"><button class="btn btn-outline" id="pm-copy-btn">Copy code link</button><a target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="pm-github-btn">View code on GitHub ↗</a></div></footer>
+        <p class="pm-feedback" id="pm-feedback" role="status" aria-live="polite"></p>
+      </section>
+    </div>`);
   attachProjectModalEvents();
 }
-
-function openProjectModal(index) {
+function openProjectModal(index, trigger) {
   ensureProjectModalExists();
-  if (index < 0) index = PROJECTS_DATA.length - 1;
-  if (index >= PROJECTS_DATA.length) index = 0;
-
-  currentModalIndex = index;
-  const p = PROJECTS_DATA[index];
   const modal = document.getElementById('project-detail-modal');
-
+  const wasOpen = modal.classList.contains('is-active');
+  if (!wasOpen) {
+    projectReturnFocus = trigger || document.activeElement;
+    projectBackgroundState = Array.from(document.body.children).filter(el => el !== modal && !['SCRIPT', 'STYLE'].includes(el.tagName)).map(el => ({el, inert: el.inert}));
+    projectBackgroundState.forEach(({el}) => { el.inert = true; });
+  }
+  if (demoCleanup) demoCleanup();
+  currentModalIndex = (index + PROJECTS_DATA.length) % PROJECTS_DATA.length;
+  const p = PROJECTS_DATA[currentModalIndex];
+  const explorer = modal.querySelector('.project-explorer');
+  explorer.dataset.projectKind = p.demoId;
+  explorer.style.setProperty('--project-accent-dark', p.experience.accent);
+  explorer.style.setProperty('--project-accent-light', p.experience.light);
+  document.getElementById('pm-identity-icon').textContent = p.experience.icon;
   document.getElementById('pm-title').textContent = p.title;
-  document.getElementById('pm-subtitle').textContent = p.subtitle || p.description;
-
-  // Render Hero Preview Visual
-  const previewHero = document.getElementById('pm-preview-hero');
-  previewHero.innerHTML = renderProjectPreview(p);
-
-  // Metrics Bar
-  const metricsBar = document.getElementById('pm-metrics-bar');
-  if (p.metrics && p.metrics.length > 0) {
-    metricsBar.innerHTML = p.metrics.map(m => `<span class="pm-metric-pill">${m}</span>`).join('');
-  } else {
-    metricsBar.innerHTML = `<span class="pm-metric-pill">Production Repository</span><span class="pm-metric-pill">Open Source</span>`;
-  }
-
-  // Descriptions & Highlights
-  document.getElementById('pm-full-desc').textContent = p.fullDescription || p.description;
-
-  const highlightsList = document.getElementById('pm-highlights');
-  if (p.highlights && p.highlights.length > 0) {
-    highlightsList.innerHTML = p.highlights.map(h => `<li>${h}</li>`).join('');
-  } else {
-    highlightsList.innerHTML = `<li>High-performance production architecture</li><li>Comprehensive modular code design</li>`;
-  }
-
-  // Architecture & Tags
-  document.getElementById('pm-architecture').textContent = p.architecture || 'Modular System Architecture';
-
-  const tagsContainer = document.getElementById('pm-tags');
-  tagsContainer.innerHTML = p.tags.map(t => `<span class="project-tag"><span class="tag-dot"></span> ${t}</span>`).join('');
-
-  // GitHub Link
-  const githubBtn = document.getElementById('pm-github-btn');
-  githubBtn.href = p.githubUrl;
-
-  // Active default tab
+  document.getElementById('pm-subtitle').textContent = `${p.category} · Project ${String(currentModalIndex + 1).padStart(2, '0')}`;
+  document.getElementById('pm-category').textContent = p.category;
+  document.getElementById('pm-count').textContent = `${currentModalIndex + 1} / ${PROJECTS_DATA.length}`;
+  document.getElementById('pm-feedback').textContent = '';
+  document.getElementById('pm-panel-overview').innerHTML = renderProjectOverview(p);
+  document.getElementById('pm-panel-workflow').innerHTML = `
+    <div class="workflow-intro"><h3>From input to outcome</h3><p>Select a step to see its role in the workflow.</p></div>
+    <div class="workflow-workbench"><div class="workflow-steps" role="group" aria-label="Workflow steps">${p.steps.map(([name], i) => `<button data-workflow-step="${i}" aria-pressed="${i === 0}" class="workflow-step ${i === 0 ? 'is-selected' : ''}"><span>${String(i + 1).padStart(2, '0')}</span>${projectEscape(name)}</button>`).join('')}</div>
+    <div class="workflow-detail" aria-live="polite"><span class="explorer-eyebrow" id="pm-step-count">STEP 01</span><h3 id="pm-step-title">${projectEscape(p.steps[0][0])}</h3><p id="pm-step-description">${projectEscape(p.steps[0][1])}</p><div class="workflow-handoff"><div><span>Starts with</span><strong id="pm-step-input">${projectEscape(p.input)}</strong></div><b aria-hidden="true">→</b><div><span>Continues to</span><strong id="pm-step-output">${projectEscape(p.steps[1][0])}</strong></div></div></div></div>
+    <div class="explorer-implementation"><h3>Inside the project</h3><p>${projectEscape(p.implementation)}</p>${renderProjectTags(p.tags)}</div>`;
+  const demoHost = document.getElementById('pm-demo-host');
+  if (typeof ProjectDemos !== 'undefined') demoCleanup = ProjectDemos.mount(demoHost, p.demoId);
+  else { demoHost.textContent = 'The sample could not load. Refresh the page to try again.'; demoCleanup = null; }
+  document.getElementById('pm-github-btn').href = p.githubUrl;
   switchModalTab('overview');
-
-  modal.classList.add('is-active');
+  modal.inert = false;
   modal.setAttribute('aria-hidden', 'false');
+  modal.classList.add('is-active');
   document.body.classList.add('project-modal-open');
+  modal.querySelector('.pm-body').scrollTop = 0;
+  if (!wasOpen) document.getElementById('pm-close-btn').focus();
+  else if (document.activeElement === document.body || !modal.contains(document.activeElement)) document.getElementById('pm-tab-overview').focus();
 }
-
 function closeProjectModal() {
   const modal = document.getElementById('project-detail-modal');
-  if (modal) {
-    modal.classList.remove('is-active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('project-modal-open');
-  }
+  if (!modal || !modal.classList.contains('is-active')) return;
+  if (demoCleanup) demoCleanup();
+  demoCleanup = null;
+  document.getElementById('pm-demo-host').replaceChildren();
+  modal.classList.remove('is-active');
+  document.body.classList.remove('project-modal-open');
+  projectBackgroundState.forEach(({el, inert}) => { el.inert = inert; });
+  projectBackgroundState = [];
+  if (projectReturnFocus?.isConnected) projectReturnFocus.focus();
+  modal.inert = true;
+  modal.setAttribute('aria-hidden', 'true');
+  projectReturnFocus = null;
 }
-
-function switchModalTab(tabName) {
-  const tabBtns = document.querySelectorAll('.pm-tab-btn');
-  const panels = document.querySelectorAll('.pm-tab-panel');
-
-  tabBtns.forEach(btn => {
-    if (btn.getAttribute('data-tab') === tabName) {
-      btn.classList.add('is-active');
-    } else {
-      btn.classList.remove('is-active');
-    }
+function switchModalTab(tabName, focusTab = false) {
+  const modal = document.getElementById('project-detail-modal');
+  modal.querySelectorAll('[role="tab"]').forEach(btn => {
+    const active = btn.dataset.tab === tabName;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-selected', String(active));
+    btn.tabIndex = active ? 0 : -1;
+    if (active && focusTab) btn.focus();
   });
-
-  panels.forEach(panel => {
-    if (panel.id === `pm-panel-${tabName}`) {
-      panel.classList.add('is-active');
-    } else {
-      panel.classList.remove('is-active');
-    }
+  modal.querySelectorAll('[role="tabpanel"]').forEach(panel => {
+    const active = panel.id === `pm-panel-${tabName}`;
+    panel.hidden = !active;
+    panel.classList.toggle('is-active', active);
   });
 }
-
-function showToast(msg) {
-  const toast = document.getElementById('ki-toast');
-  if (!toast) return;
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 2500);
+function showToast(message) {
+  const feedback = document.getElementById('pm-feedback');
+  if (feedback) feedback.textContent = message;
 }
-
 function attachProjectModalEvents() {
   const modal = document.getElementById('project-detail-modal');
-  const closeBtn = document.getElementById('pm-close-btn');
-  const prevBtn = document.getElementById('pm-prev-btn');
-  const nextBtn = document.getElementById('pm-next-btn');
-  const copyBtn = document.getElementById('pm-copy-btn');
-
-  if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
-  if (prevBtn) prevBtn.addEventListener('click', () => openProjectModal(currentModalIndex - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => openProjectModal(currentModalIndex + 1));
-
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeProjectModal();
-    });
-  }
-
-  // Tabs
-  const tabBtns = document.querySelectorAll('.pm-tab-btn');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      switchModalTab(btn.getAttribute('data-tab'));
-    });
-  });
-
-  // Copy button
-  if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
+  modal.addEventListener('click', async event => {
+    const button = event.target.closest('button');
+    if (event.target === modal || button?.id === 'pm-close-btn') { closeProjectModal(); return; }
+    if (!button) return;
+    if (button.id === 'pm-prev-btn') openProjectModal(currentModalIndex - 1);
+    else if (button.id === 'pm-next-btn') openProjectModal(currentModalIndex + 1);
+    else if (button.dataset.tab) switchModalTab(button.dataset.tab);
+    else if (button.hasAttribute('data-project-start')) {
+      if (typeof ProjectDemos === 'undefined') { showToast('The interactive sample could not load. Refresh the page to try again.'); return; }
       const p = PROJECTS_DATA[currentModalIndex];
-      if (p && p.githubUrl) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(p.githubUrl).then(() => {
-            showToast('Repository URL copied to clipboard!');
-          }).catch(() => {
-            showToast('Copied: ' + p.githubUrl);
-          });
-        } else {
-          showToast('Copied: ' + p.githubUrl);
-        }
-      }
-    });
-  }
-}
-
-// Global Keyboard Navigation Handlers
-document.addEventListener('keydown', (e) => {
-  const modal = document.getElementById('project-detail-modal');
-  if (!modal || !modal.classList.contains('is-active')) return;
-
-  if (e.key === 'Escape') {
-    closeProjectModal();
-  } else if (e.key === 'ArrowLeft') {
-    openProjectModal(currentModalIndex - 1);
-  } else if (e.key === 'ArrowRight') {
-    openProjectModal(currentModalIndex + 1);
-  }
-});
-
-// Delegated Card Click Listener
-document.addEventListener('click', (e) => {
-  const card = e.target.closest('.project-card');
-  if (!card) return;
-
-  // Don't trigger modal if user clicked directly on the external "View Project ↗" GitHub link
-  if (e.target.closest('.project-action-link')) {
-    return;
-  }
-
-  const projectId = card.getAttribute('data-project-id');
-  if (projectId) {
-    const idx = PROJECTS_DATA.findIndex(p => p.id === projectId);
-    if (idx !== -1) {
-      openProjectModal(idx);
+      const start = p.experience.starts[Number(button.dataset.projectStart)];
+      if (demoCleanup) demoCleanup();
+      demoCleanup = ProjectDemos.mount(document.getElementById('pm-demo-host'), p.demoId, start);
+      switchModalTab('sample', true);
+      modal.querySelector('.pm-body').scrollTop = 0;
     }
-  }
-});
-
-/**
- * Initializes and mounts unified project cards in the Zig-Zag grid.
- */
+    else if (button.hasAttribute('data-open-sample')) { switchModalTab('sample', true); modal.querySelector('.pm-body').scrollTop = 0; }
+    else if (button.hasAttribute('data-workflow-step')) {
+      const i = Number(button.dataset.workflowStep), p = PROJECTS_DATA[currentModalIndex];
+      modal.querySelectorAll('[data-workflow-step]').forEach(btn => {
+        btn.classList.toggle('is-selected', btn === button);
+        btn.setAttribute('aria-pressed', String(btn === button));
+      });
+      document.getElementById('pm-step-count').textContent = `STEP ${String(i + 1).padStart(2, '0')}`;
+      document.getElementById('pm-step-title').textContent = p.steps[i][0];
+      document.getElementById('pm-step-description').textContent = p.steps[i][1];
+      document.getElementById('pm-step-input').textContent = i === 0 ? p.input : p.steps[i - 1][0];
+      document.getElementById('pm-step-output').textContent = i === p.steps.length - 1 ? p.output : p.steps[i + 1][0];
+    } else if (button.id === 'pm-copy-btn') {
+      const url = PROJECTS_DATA[currentModalIndex].githubUrl;
+      const copyIndex = currentModalIndex;
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(url);
+        if (copyIndex === currentModalIndex && modal.classList.contains('is-active')) showToast('Code link copied.');
+      } catch { if (copyIndex === currentModalIndex && modal.classList.contains('is-active')) showToast(`Could not copy automatically. You can copy this link: ${url}`); }
+    }
+  });
+  modal.addEventListener('keydown', event => {
+    if (!modal.classList.contains('is-active')) return;
+    if (event.key === 'Escape') { event.preventDefault(); closeProjectModal(); return; }
+    if (event.key === 'Tab') {
+      const items = Array.from(modal.querySelectorAll('button, a[href], input, select, textarea, [tabindex="0"]')).filter(el => !el.disabled && !el.closest('[hidden]') && el.getClientRects().length && el.tabIndex >= 0);
+      const first = items[0], last = items[items.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !items.includes(document.activeElement))) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && (document.activeElement === last || !items.includes(document.activeElement))) { event.preventDefault(); first?.focus(); }
+      return;
+    }
+    const target = event.target;
+    if (target.getAttribute('role') === 'tab' && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
+      event.preventDefault();
+      const tabs = Array.from(modal.querySelectorAll('[role="tab"]')), i = tabs.indexOf(target);
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (i + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      switchModalTab(tabs[next].dataset.tab, true);
+      return;
+    }
+    if (target.closest('input, select, textarea, button, a, [contenteditable], #pm-demo-host')) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); openProjectModal(currentModalIndex + (event.key === 'ArrowRight' ? 1 : -1)); }
+  });
+}
+function renderGithubCard() {
+  return `<div class="github-profile-cta-card card-wide"><h3>More ideas, more code.</h3><p class="cta-subtitle">Explore the repositories behind these projects and more of my work.</p><a href="https://github.com/kiranimmadi2?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-github-all">View all repositories →</a></div>`;
+}
 function initUnifiedProjects() {
-  const gridContainer = document.getElementById('projects-unified-grid');
-
-  if (gridContainer) {
-    const cardsHTML = PROJECTS_DATA.map(p => renderProjectCard(p)).join('');
-
-    // Add clean GitHub CTA Card spanning full width at bottom of grid
-    const ctaCardHTML = `
-      <div class="github-profile-cta-card card-wide">
-        <div class="handwritten-github-accent">
-          More Projects on GitHub ↗
-        </div>
-        <p class="cta-subtitle">Explore open-source repositories spanning AI agents, computer vision, Flutter applications, and data engineering systems.</p>
-        <a href="https://github.com/kiranimmadi2?tab=repositories" target="_blank" rel="noopener noreferrer"
-          class="btn btn-github-all" id="btn-github-all">
-          View All Repositories <span class="arrow">→</span>
-        </a>
-      </div>
-    `;
-
-    gridContainer.innerHTML = cardsHTML + ctaCardHTML;
-  }
-
+  const grid = document.getElementById('projects-unified-grid');
+  if (!grid) return;
+  grid.innerHTML = PROJECTS_DATA.map(renderProjectCard).join('') + renderGithubCard();
+  grid.addEventListener('click', event => {
+    if (event.target.closest('a')) return;
+    const card = event.target.closest('[data-project-id]');
+    if (!card) return;
+    const i = PROJECTS_DATA.findIndex(p => p.id === card.dataset.projectId);
+    if (i >= 0) openProjectModal(i, card.querySelector('[data-explore]'));
+  });
   ensureProjectModalExists();
 }
-
-// Auto-initialize when running in browser
 if (typeof document !== 'undefined') {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initUnifiedProjects);
-  } else {
-    initUnifiedProjects();
-  }
+  if (document.getElementById('projects-unified-grid')) initUnifiedProjects();
+  else if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUnifiedProjects);
+  else initUnifiedProjects();
 }
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    PROJECTS_DATA,
-    renderProjectCard,
-    renderProjectPreview,
-    renderProjectTags,
-    renderProjectActions,
-    initUnifiedProjects,
-    openProjectModal,
-    closeProjectModal
-  };
-}
+if (typeof module !== 'undefined' && module.exports) module.exports = {PROJECTS_DATA, renderProjectCard, renderProjectPreview, renderProjectTags, renderProjectActions, renderGithubCard, initUnifiedProjects, openProjectModal, closeProjectModal};

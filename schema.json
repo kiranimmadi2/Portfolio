@@ -182,13 +182,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 1,
-          "name": "AI-Agent-Browser-Automation",
-          "applicationCategory": "DeveloperApplication",
-          "operatingSystem": "Cross-Platform",
-          "description": "Autonomous browser agent executing multi-step web workflows from natural language commands.",
+          "name": "AI Browser Automation",
+          "description": "Turn a plain-language task into browser actions, from filling forms to collecting information.",
           "url": "https://github.com/kiranimmadi2/AI-Agent-Browser-Automation",
           "codeRepository": "https://github.com/kiranimmadi2/AI-Agent-Browser-Automation",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -196,13 +193,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 2,
-          "name": "Indian-Law-AI-Assistant",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "description": "Production RAG system for legal document question-answering and case law intelligence.",
+          "name": "Indian Law AI Assistant",
+          "description": "Make legal documents easier to understand with plain-language explanations and Indian-language translations.",
           "url": "https://github.com/kiranimmadi2/Indian-Law-AI-Assistant",
           "codeRepository": "https://github.com/kiranimmadi2/Indian-Law-AI-Assistant",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -211,12 +205,9 @@
           "@type": "SoftwareApplication",
           "position": 3,
           "name": "QueryAI",
-          "applicationCategory": "DeveloperApplication",
-          "operatingSystem": "Web",
-          "description": "AI-powered natural language to SQL and data query assistant with interactive visualization.",
-          "url": "https://github.com/kiranimmadi2/QueryAI",
-          "codeRepository": "https://github.com/kiranimmadi2/QueryAI",
-          "programmingLanguage": "Python",
+          "description": "Ask a business question in ordinary language and explore the answer as a table or chart.",
+          "url": "https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface",
+          "codeRepository": "https://github.com/kiranimmadi2/QueryAI.An-AI-powered-Data-Query-Interface",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -224,13 +215,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 4,
-          "name": "MCP-Server",
-          "applicationCategory": "DeveloperApplication",
-          "operatingSystem": "Cross-Platform",
-          "description": "Model Context Protocol implementation connecting local tools and file APIs with Claude and AI agents.",
-          "url": "https://github.com/kiranimmadi2/MCP-Server",
-          "codeRepository": "https://github.com/kiranimmadi2/MCP-Server",
-          "programmingLanguage": "Python",
+          "name": "SingleTap",
+          "description": "Explore how a Flutter interface can pass a task to native code and bring the result back to the screen.",
+          "url": "https://github.com/kiranimmadi2/SingleTap",
+          "codeRepository": "https://github.com/kiranimmadi2/SingleTap",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -238,13 +226,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 5,
-          "name": "GenAi-Email-Writter",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "description": "Context-aware executive email generation engine leveraging LLMs and structured templates.",
-          "url": "https://github.com/kiranimmadi2/GenAi-Email-Writter",
-          "codeRepository": "https://github.com/kiranimmadi2/GenAi-Email-Writter",
-          "programmingLanguage": "Python",
+          "name": "HealthOS",
+          "description": "Bring patient, doctor, hospital, and lab workflows together in a shared Flutter health platform.",
+          "url": "https://github.com/kiranimmadi2/healthos",
+          "codeRepository": "https://github.com/kiranimmadi2/healthos",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -252,13 +237,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 6,
-          "name": "SingleTap",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Android",
-          "description": "Ultra-fast minimalist Android launcher powered by Flutter, Dart, and C++ FFI.",
-          "url": "https://github.com/kiranimmadi2/SingleTap",
-          "codeRepository": "https://github.com/kiranimmadi2/SingleTap",
-          "programmingLanguage": "Dart, C++",
+          "name": "Expenses Tracker",
+          "description": "Keep everyday spending in one place and see how individual expenses add up.",
+          "url": "https://github.com/kiranimmadi2/expenses-tracker_app",
+          "codeRepository": "https://github.com/kiranimmadi2/expenses-tracker_app",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -266,13 +248,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 7,
-          "name": "HealthOS",
-          "applicationCategory": "MedicalApplication",
-          "operatingSystem": "Cross-Platform Mobile",
-          "description": "Offline-first clinical management system with appointment scheduling and encrypted records.",
-          "url": "https://github.com/kiranimmadi2/HealthOS",
-          "codeRepository": "https://github.com/kiranimmadi2/HealthOS",
-          "programmingLanguage": "Dart, Flutter",
+          "name": "MCP Code Analysis",
+          "description": "Give coding agents structured context about a Python project: its files, functions, and potential issues.",
+          "url": "https://github.com/kiranimmadi2/MCP-Server",
+          "codeRepository": "https://github.com/kiranimmadi2/MCP-Server",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -280,13 +259,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 8,
-          "name": "Expenses-Tracker-App",
-          "applicationCategory": "FinanceApplication",
-          "operatingSystem": "Cross-Platform Mobile",
-          "description": "Zero-latency financial tracking application with offline persistence and dynamic analytics.",
-          "url": "https://github.com/kiranimmadi2/Expenses-Tracker-App",
-          "codeRepository": "https://github.com/kiranimmadi2/Expenses-Tracker-App",
-          "programmingLanguage": "Dart, Flutter",
+          "name": "GenAI Email Writer",
+          "description": "Connect a job listing to relevant portfolio work and turn that context into a personalized outreach email.",
+          "url": "https://github.com/kiranimmadi2/GenAi-Email-Writter",
+          "codeRepository": "https://github.com/kiranimmadi2/GenAi-Email-Writter",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -294,13 +270,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 9,
-          "name": "Family-Tree",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Cross-Platform Mobile",
-          "description": "Interactive multi-generational pedigree visualization tool with custom canvas rendering.",
-          "url": "https://github.com/kiranimmadi2/Family-Tree",
-          "codeRepository": "https://github.com/kiranimmadi2/Family-Tree",
-          "programmingLanguage": "Dart, Flutter",
+          "name": "Family Tree",
+          "description": "Build a family tree and make the connections between relatives easier to discover.",
+          "url": "https://github.com/kiranimmadi2/family-tree",
+          "codeRepository": "https://github.com/kiranimmadi2/family-tree",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -309,12 +282,9 @@
           "@type": "SoftwareApplication",
           "position": 10,
           "name": "HomeBuildAI",
-          "applicationCategory": "DesignApplication",
-          "operatingSystem": "Cross-Platform Mobile",
-          "description": "AI architectural estimator computing floor plans and construction budgets on mobile.",
+          "description": "Explore a rule-based approach to home design and how sample planning assumptions affect material costs.",
           "url": "https://github.com/kiranimmadi2/HomeBuildAI",
           "codeRepository": "https://github.com/kiranimmadi2/HomeBuildAI",
-          "programmingLanguage": "Dart, Flutter",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -322,13 +292,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 11,
-          "name": "AI-Stock-Trading-APP",
-          "applicationCategory": "FinanceApplication",
-          "operatingSystem": "Web",
-          "description": "Algorithmic market intelligence dashboard computing technical indicators and signal models.",
+          "name": "AI Stock Trading",
+          "description": "Bring market data and news sentiment into a trading dashboard and decision pipeline.",
           "url": "https://github.com/kiranimmadi2/AI-Stock-Trading-APP",
           "codeRepository": "https://github.com/kiranimmadi2/AI-Stock-Trading-APP",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -336,13 +303,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 12,
-          "name": "Mobile_Sales_Analysis",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "description": "Retail business intelligence and sales forecasting application.",
+          "name": "Mobile Sales Analysis",
+          "description": "Explore mobile-phone listings to understand how brands, prices, and customer ratings compare.",
           "url": "https://github.com/kiranimmadi2/Mobile_Sales_Analysis",
           "codeRepository": "https://github.com/kiranimmadi2/Mobile_Sales_Analysis",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -350,13 +314,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 13,
-          "name": "News-Summarization",
-          "applicationCategory": "NewsApplication",
-          "operatingSystem": "Web",
-          "description": "Automated abstractive news summarization pipeline using Hugging Face Transformer models.",
+          "name": "News Summarization",
+          "description": "Explore company news, compare sentiment, and turn article information into a shorter briefing.",
           "url": "https://github.com/kiranimmadi2/News-Summarization",
           "codeRepository": "https://github.com/kiranimmadi2/News-Summarization",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -364,13 +325,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 14,
-          "name": "Rock-vs-Mine-Prediction",
-          "applicationCategory": "ScientificApplication",
-          "operatingSystem": "Cross-Platform",
-          "description": "Underwater sonar signal machine learning classification system.",
+          "name": "Rock vs Mine Prediction",
+          "description": "Explore a classification task that distinguishes rock and mine samples from sonar signals.",
           "url": "https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction",
           "codeRepository": "https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -378,13 +336,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 15,
-          "name": "Cloud-Based-CCTV-Footage",
-          "applicationCategory": "SecurityApplication",
-          "operatingSystem": "Cloud / Server",
-          "description": "Automated cloud video surveillance pipeline for real-time security streams.",
-          "url": "https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage",
-          "codeRepository": "https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage",
-          "programmingLanguage": "Python",
+          "name": "Cloud CCTV Footage",
+          "description": "Organize camera recordings so authorized users can find and review footage through a shared system.",
+          "url": "https://github.com/kiranimmadi2/cloud-based-CCTV-footage",
+          "codeRepository": "https://github.com/kiranimmadi2/cloud-based-CCTV-footage",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -392,13 +347,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 16,
-          "name": "CCTV-Surveillance-Prototype",
-          "applicationCategory": "SecurityApplication",
-          "operatingSystem": "Cross-Platform",
-          "description": "Edge computer vision prototype for motion tracking and security frame analysis using OpenCV.",
-          "url": "https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype",
-          "codeRepository": "https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype",
-          "programmingLanguage": "Python",
+          "name": "CCTV Surveillance Prototype",
+          "description": "Explore a dashboard concept that brings camera feeds, search, and alerts into one view.",
+          "url": "https://github.com/kiranimmadi2/cctv-surveillance-prototype",
+          "codeRepository": "https://github.com/kiranimmadi2/cctv-surveillance-prototype",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -406,13 +358,10 @@
         {
           "@type": "SoftwareApplication",
           "position": 17,
-          "name": "Text-to-Emoji-Encryption-and-Decryption",
-          "applicationCategory": "SecurityApplication",
-          "operatingSystem": "Cross-Platform",
-          "description": "Steganographic cipher encoder converting cryptographic text into emoji representations.",
+          "name": "Text to Emoji Encoding",
+          "description": "Turn a message into an emoji sequence, then decode it to recover the original text.",
           "url": "https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption",
           "codeRepository": "https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption",
-          "programmingLanguage": "Python",
           "author": {
             "@id": "https://kiranimmadi2.github.io/Portfolio/#person"
           }
@@ -436,7 +385,7 @@
           "name": "What makes Kiran Immadi a top AI Architect and GenAI Builder?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiran Immadi architects end-to-end autonomous agentic solutions including browser automation agents (AI-Agent-Browser-Automation), Model Context Protocol (MCP) servers, and enterprise RAG systems (Indian-Law-AI-Assistant) leveraging FastAPI, Groq LPUs, LangChain, and vector embeddings."
+            "text": "Kiran’s portfolio includes browser automation, legal document explanation and translation, Python code-analysis tools, and contextual email generation. Each project has an explanation, source link, and clearly labeled local sample."
           }
         },
         {
@@ -444,7 +393,7 @@
           "name": "Why hire Kiran Immadi for Flutter and Mobile Application Development?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiran Immadi is an experienced Flutter Developer who engineers high-framerate 60fps/120fps iOS and Android applications. His work includes deep native C++ integration via Dart FFI (SingleTap), resilient offline-first data architectures (HealthOS, Expenses-Tracker-App), and on-device AI integration (HomeBuildAI)."
+            "text": "Kiran builds Flutter applications from one codebase for Android, iOS, Windows, and the web. His portfolio includes HealthOS with Flutter and Supabase, an expenses app with Firebase and BLoC, Family Tree, and the rule-based HomeBuildAI design project."
           }
         },
         {
@@ -468,7 +417,7 @@
           "name": "What open source projects has Kiran Immadi created?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiran Immadi has authored open source projects including AI-Agent-Browser-Automation (autonomous web navigation agent), Indian-Law-AI-Assistant (legal RAG engine), SingleTap (minimalist C++ FFI launcher), MCP-Server (Anthropic Model Context Protocol), HealthOS (clinical management system), QueryAI (natural language to SQL), and more."
+            "text": "AI Browser Automation: Turn a plain-language task into browser actions, from filling forms to collecting information. Indian Law AI Assistant: Make legal documents easier to understand with plain-language explanations and Indian-language translations. QueryAI: Ask a business question in ordinary language and explore the answer as a table or chart. SingleTap: Explore how a Flutter interface can pass a task to native code and bring the result back to the screen. HealthOS: Bring patient, doctor, hospital, and lab workflows together in a shared Flutter health platform. Expenses Tracker: Keep everyday spending in one place and see how individual expenses add up. MCP Code Analysis: Give coding agents structured context about a Python project: its files, functions, and potential issues. GenAI Email Writer: Connect a job listing to relevant portfolio work and turn that context into a personalized outreach email. Family Tree: Build a family tree and make the connections between relatives easier to discover. HomeBuildAI: Explore a rule-based approach to home design and how sample planning assumptions affect material costs. AI Stock Trading: Bring market data and news sentiment into a trading dashboard and decision pipeline. Mobile Sales Analysis: Explore mobile-phone listings to understand how brands, prices, and customer ratings compare. News Summarization: Explore company news, compare sentiment, and turn article information into a shorter briefing. Rock vs Mine Prediction: Explore a classification task that distinguishes rock and mine samples from sonar signals. Cloud CCTV Footage: Organize camera recordings so authorized users can find and review footage through a shared system. CCTV Surveillance Prototype: Explore a dashboard concept that brings camera feeds, search, and alerts into one view. Text to Emoji Encoding: Turn a message into an emoji sequence, then decode it to recover the original text."
           }
         },
         {
