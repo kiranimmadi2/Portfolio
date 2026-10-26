@@ -1,0 +1,49 @@
+{
+  "name": "Kiran Immadi",
+  "handle": "kiranimmadi2",
+  "siteUrl": "https://kiranimmadi.vercel.app/",
+  "cleanUrls": true,
+  "updated": "2026-10-26",
+  "headline": "AI Engineer | Generative AI & Applied AI Systems",
+  "summary": "Kiran Immadi is an AI Engineer in Bengaluru, India, building AI agents, LLM applications, RAG workflows, APIs, and Flutter products. He completed a B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at Dayananda Sagar University. Open to AI Engineer and Forward Deployed Engineer opportunities.",
+  "location": "Bengaluru, Karnataka, India",
+  "email": "kiranimmadi2@gmail.com",
+  "portraitSource": "assets/kiran-immadi-profile-photo-original.png",
+  "portrait": "assets/kiran-immadi-profile-photo.png",
+  "portraitCaption": "Kiran Immadi — official profile photograph",
+  "sameAs": [
+    "https://github.com/kiranimmadi2",
+    "https://www.linkedin.com/in/kiran-immadi/",
+    "https://leetcode.com/u/Kiranimmadi2/"
+  ],
+  "education": {
+    "degree": "Bachelor of Technology (B.Tech)",
+    "field": "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+    "institution": "Dayananda Sagar University",
+    "status": "Completed",
+    "url": "https://www.dsu.edu.in/",
+    "programUrl": "https://www.dsu.edu.in/engineering/cse-aiml"
+  },
+  "targetRoles": ["AI Engineer", "Forward Deployed Engineer", "Generative AI Engineer", "Applied AI Engineer"],
+  "skills": ["Artificial intelligence", "Generative AI", "Large language models", "AI agents", "Retrieval-augmented generation (RAG)", "Model Context Protocol (MCP)", "Python", "FastAPI", "API integration", "Flutter", "Dart", "Machine learning"],
+  "projects": [
+    {
+      "name": "AI-Agent-Browser-Automation",
+      "url": "https://github.com/kiranimmadi2/AI-Agent-Browser-Automation",
+      "description": "Browser automation project using natural language commands for navigation, forms, and web data extraction.",
+      "relevance": "AI agents and workflow automation"
+    },
+    {
+      "name": "Indian-Law-AI-Assistant",
+      "url": "https://github.com/kiranimmadi2/Indian-Law-AI-Assistant",
+      "description": "AI assistant project for working with legal documents and explaining legal information.",
+      "relevance": "Domain-specific AI and document workflows"
+    },
+    {
+      "name": "MCP-Server",
+      "url": "https://github.com/kiranimmadi2/MCP-Server",
+      "description": "Model Context Protocol server project exposing tools to LLM coding agents.",
+      "relevance": "Tool integration and developer infrastructure"
+    }
+  ]
+}

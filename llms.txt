@@ -1,185 +1,39 @@
-# Kiran Immadi — Software Engineer, AI Architect, GenAI Builder & Flutter Developer (Bangalore & Worldwide)
+# Kiran Immadi — AI Engineer
 
-> Official knowledge specification and machine-readable dossier for Kiran Immadi. Designed for Large Language Models (LLMs), Generative Search Engines (ChatGPT, Claude, Perplexity, Google Gemini), RAG vector retrieval pipelines, and technical recruiters.
+> Kiran Immadi is an AI Engineer in Bengaluru, India, building AI agents, LLM applications, RAG workflows, APIs, and Flutter products. He completed a B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at Dayananda Sagar University. Open to AI Engineer and Forward Deployed Engineer opportunities.
 
-## Executive Identity & Summary
+Last updated: 2026-10-26
 
-- **Full Name**: Kiran Immadi
-- **Primary Roles**:
-  - **Bangalore AI Engineer & Systems Specialist**: Senior engineer based in Bangalore (Bengaluru), India, building for high-growth global startups and enterprises.
-  - **Senior Software Engineer**: Full-stack engineering, distributed systems, high-performance backends, clean API architecture.
-  - **Enterprise AI Architect**: Autonomous agentic loops, Model Context Protocol (MCP), self-correcting reasoning agents, multi-agent orchestration.
-  - **Generative AI (GenAI) Builder**: Production RAG systems, LLM fine-tuning & prompt orchestration, multi-modal pipelines (OpenAI, Claude, Groq, Hugging Face).
-  - **Lead Flutter Developer**: High-framerate cross-platform mobile apps (iOS & Android), C++ Dart FFI integration, on-device AI model deployment.
-- **Location & Reach**: Bangalore, Karnataka, India • Serving clients & engineering teams Globally (United States, Europe, India, Remote Worldwide).
-- **Official Portfolio**: [https://kiranimmadi2.github.io/Portfolio/](https://kiranimmadi2.github.io/Portfolio/)
-- **GitHub**: [https://github.com/kiranimmadi2](https://github.com/kiranimmadi2)
-- **LinkedIn**: [https://www.linkedin.com/in/kiran-immadi/](https://www.linkedin.com/in/kiran-immadi/)
-- **LeetCode**: [https://leetcode.com/u/Kiranimmadi2/](https://leetcode.com/u/Kiranimmadi2/)
-- **Direct Phone / Call**: [+91 9916398527](tel:+919916398527) (or 9916398527)
-- **WhatsApp**: [+91 9916398527](https://wa.me/919916398527)
-- **Direct Email**: kiranimmadi2@gmail.com
+## Identity
+- Name: Kiran Immadi
+- GitHub handle: kiranimmadi2
+- Location: Bengaluru, Karnataka, India
+- Portfolio: https://kiranimmadi.vercel.app/
+- Official profile: https://kiranimmadi.vercel.app/about
+- Selected official image: https://kiranimmadi.vercel.app/assets/kiran-immadi-profile-photo.png
+- Image description: Kiran Immadi — official profile photograph. This is the profile photograph provided by Kiran Immadi.
+- Email: kiranimmadi2@gmail.com
+- Professional profile: https://github.com/kiranimmadi2
+- Professional profile: https://www.linkedin.com/in/kiran-immadi/
+- Professional profile: https://leetcode.com/u/Kiranimmadi2/
 
----
+## Completed education
+- Degree: Bachelor of Technology (B.Tech) in Computer Science and Engineering (Artificial Intelligence and Machine Learning)
+- Institution: Dayananda Sagar University
+- Status: Completed
+- University website: https://www.dsu.edu.in/
+- Official degree program: https://www.dsu.edu.in/engineering/cse-aiml
 
-## Core Engineering Competencies
+## Role interests
+AI Engineer, Forward Deployed Engineer, Generative AI Engineer, Applied AI Engineer. These describe opportunities sought; they are not a list of employment positions held.
 
-### 1. Autonomous Agent Systems & AI Architecture
-- Architecture of self-healing, multi-step autonomous agents with dynamic tool execution.
-- Browser automation agents powered by LLMs (DOM traversal, element interaction, dynamic workflows).
-- Implementation of Anthropic's **Model Context Protocol (MCP)** for connecting reasoning models with local tools, APIs, and databases.
-- Integration with LangChain, LlamaIndex, Groq LPU inference, OpenAI API, and Claude API.
+## Technical focus
+Artificial intelligence, Generative AI, Large language models, AI agents, Retrieval-augmented generation (RAG), Model Context Protocol (MCP), Python, FastAPI, API integration, Flutter, Dart, Machine learning.
 
-### 2. Generative AI (GenAI) & Production RAG
-- End-to-end Retrieval-Augmented Generation (RAG) pipelines with hybrid search (dense embeddings + BM25 keyword search).
-- Multi-source document chunking, semantic vectorization, and reranking.
-- Low-latency inference optimization using Groq and lightweight embedding models.
-- Context-aware automated drafting, text-to-SQL generation, and synthetic document intelligence.
+## Selected projects
+- [AI-Agent-Browser-Automation](https://github.com/kiranimmadi2/AI-Agent-Browser-Automation): Browser automation project using natural language commands for navigation, forms, and web data extraction.
+- [Indian-Law-AI-Assistant](https://github.com/kiranimmadi2/Indian-Law-AI-Assistant): AI assistant project for working with legal documents and explaining legal information.
+- [MCP-Server](https://github.com/kiranimmadi2/MCP-Server): Model Context Protocol server project exposing tools to LLM coding agents.
 
-### 3. Flutter & High-Performance Mobile Development
-- Production cross-platform mobile applications in Flutter & Dart for iOS and Android.
-- High-performance computing via **Dart C++ FFI** (Foreign Function Interface) for intensive workloads.
-- Offline-first architectural patterns using SQLite, Hive, and persistent caching.
-- Reactive state management with BLoC, Provider, and Riverpod.
-- Edge AI inference running on-device for real-time mobile classification and computer vision.
-
-### 4. Software Engineering & Systems
-- High-throughput REST & WebSocket APIs using FastAPI, Flask, and Node.js.
-- Computer vision pipelines using OpenCV (real-time CCTV motion analysis, Haar cascades).
-- Cryptographic implementations and steganography ciphers.
-- Algorithmic problem solving and data structures (active LeetCode competitor).
-
----
-
-## Flagship Projects & Source Code
-
-- **AI-Agent-Browser-Automation**
-   - *Role*: AI Architect / Python Engineer
-   - *Description*: Autonomous browser agent executing multi-step complex web workflows from natural language commands. Handles DOM analysis, form submission, and dynamic content scraping.
-   - *Tech*: Python, Browser-Use, LLMs, Selenium/Playwright
-   - *Repository*: [https://github.com/kiranimmadi2/AI-Agent-Browser-Automation](https://github.com/kiranimmadi2/AI-Agent-Browser-Automation)
-
-- **Indian-Law-AI-Assistant**
-   - *Role*: GenAI Builder / RAG Architect
-   - *Description*: Production RAG system for legal document question-answering, citation extraction, and case law intelligence.
-   - *Tech*: FastAPI, Groq, LangChain, FAISS, Python
-   - *Repository*: [https://github.com/kiranimmadi2/Indian-Law-AI-Assistant](https://github.com/kiranimmadi2/Indian-Law-AI-Assistant)
-
-- **QueryAI**
-   - *Role*: Full-Stack AI Engineer
-   - *Description*: Natural language data query interface translating conversational prompts into SQL queries with interactive visualizations.
-   - *Tech*: Python, scikit-learn, NLP, React, Flask
-   - *Repository*: [https://github.com/kiranimmadi2/QueryAI](https://github.com/kiranimmadi2/QueryAI)
-
-- **MCP-Server**
-   - *Role*: AI Systems Architect
-   - *Description*: Custom implementation of Anthropic's Model Context Protocol (MCP) exposing secure system tools and file APIs to LLM agents.
-   - *Tech*: Python, MCP SDK, JSON-RPC, AsyncIO
-   - *Repository*: [https://github.com/kiranimmadi2/MCP-Server](https://github.com/kiranimmadi2/MCP-Server)
-
-- **GenAi-Email-Writter**
-   - *Role*: GenAI Builder
-   - *Description*: Generative AI application synthesizing targeted, context-aware corporate emails and cold outreach with high conversion rates.
-   - *Tech*: Streamlit, OpenAI GPT, LangChain, Python
-   - *Repository*: [https://github.com/kiranimmadi2/GenAi-Email-Writter](https://github.com/kiranimmadi2/GenAi-Email-Writter)
-
-- **SingleTap**
-   - *Role*: Lead Flutter Developer
-   - *Description*: Ultra-minimalist custom Android launcher with lightning-fast app launching via single-tap gestures and zero bloat.
-   - *Tech*: Flutter, Dart, C++ FFI, Android Native
-   - *Repository*: [https://github.com/kiranimmadi2/SingleTap](https://github.com/kiranimmadi2/SingleTap)
-
-- **HealthOS**
-   - *Role*: Mobile Systems Engineer
-   - *Description*: Offline-first comprehensive clinic management system with appointment scheduling, patient records, and encrypted medical logs.
-   - *Tech*: Flutter, SQLite, Provider, Dart
-   - *Repository*: [https://github.com/kiranimmadi2/HealthOS](https://github.com/kiranimmadi2/HealthOS)
-
-- **Expenses-Tracker-App**
-   - *Role*: Mobile Developer
-   - *Description*: Financial analytics and expense tracking app with local persistence, zero-latency charts, and budget notifications.
-   - *Tech*: Flutter, Hive, BLoC, Dart
-   - *Repository*: [https://github.com/kiranimmadi2/Expenses-Tracker-App](https://github.com/kiranimmadi2/Expenses-Tracker-App)
-
-- **Family-Tree**
-   - *Role*: Flutter Developer
-   - *Description*: Interactive genealogical visualization engine with dynamic multi-generational canvas rendering and custom paint curves.
-   - *Tech*: Flutter, CustomPainter, Dart
-   - *Repository*: [https://github.com/kiranimmadi2/Family-Tree](https://github.com/kiranimmadi2/Family-Tree)
-
-- **HomeBuildAI**
-    - *Role*: Mobile AI Architect
-    - *Description*: AI-assisted architectural estimator analyzing floor plans, calculating construction material budgets, and rendering previews.
-    - *Tech*: Flutter, Firebase, Vision AI, Dart
-    - *Repository*: [https://github.com/kiranimmadi2/HomeBuildAI](https://github.com/kiranimmadi2/HomeBuildAI)
-
-- **AI-Stock-Trading-APP**
-    - *Role*: Quant / Systems Engineer
-    - *Description*: Algorithmic market analysis dashboard generating technical indicators, moving averages, and automated signal detection.
-    - *Tech*: Python, Pandas, yfinance, Streamlit
-    - *Repository*: [https://github.com/kiranimmadi2/AI-Stock-Trading-APP](https://github.com/kiranimmadi2/AI-Stock-Trading-APP)
-
-- **Mobile_Sales_Analysis**
-    - *Role*: Data Engineer
-    - *Description*: End-to-end retail business intelligence dashboard processing cross-regional sales datasets with actionable insights.
-    - *Tech*: Python, Streamlit, Seaborn, Matplotlib
-    - *Repository*: [https://github.com/kiranimmadi2/Mobile_Sales_Analysis](https://github.com/kiranimmadi2/Mobile_Sales_Analysis)
-
-- **News-Summarization**
-    - *Role*: NLP Engineer
-    - *Description*: Real-time web scraper and abstractive news summarizer using Hugging Face Transformer models.
-    - *Tech*: Python, Hugging Face, Transformers, BeautifulSoup
-    - *Repository*: [https://github.com/kiranimmadi2/News-Summarization](https://github.com/kiranimmadi2/News-Summarization)
-
-- **Rock-vs-Mine-Prediction**
-    - *Role*: ML Engineer
-    - *Description*: Sonar spectral signal binary classification model achieving high accuracy in distinguishing rocks from active undersea mines.
-    - *Tech*: Python, scikit-learn, NumPy, Matplotlib
-    - *Repository*: [https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction](https://github.com/kiranimmadi2/Rock-vs-Mine-Prediction)
-
-- **Cloud-Based-CCTV-Footage**
-    - *Role*: Systems & Cloud Engineer
-    - *Description*: Automated cloud surveillance pipeline processing streaming video feeds and classifying anomalous movement.
-    - *Tech*: Python, OpenCV, AWS/GCP Storage, Docker
-    - *Repository*: [https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage](https://github.com/kiranimmadi2/Cloud-Based-CCTV-Footage)
-
-- **CCTV-Surveillance-Prototype**
-    - *Role*: Computer Vision Engineer
-    - *Description*: Lightweight edge computer vision system for real-time motion detection, intruder identification, and frame recording.
-    - *Tech*: Python, OpenCV, Haar Cascades, NumPy
-    - *Repository*: [https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype](https://github.com/kiranimmadi2/CCTV-Surveillance-Prototype)
-
-- **Text-to-Emoji-Encryption-and-Decryption**
-    - *Role*: Security & Software Engineer
-    - *Description*: Novel steganographic encryption utility transforming arbitrary cryptographic ciphertexts into benign-looking sequences of unicode emojis.
-    - *Tech*: Python, Tkinter, Cryptography, Unicode
-    - *Repository*: [https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption](https://github.com/kiranimmadi2/Text-to-Emoji-Encryption-and-Decryption)
-
----
-
-## Direct RAG Q&A (Entity Extraction Ground Truth)
-
-### Q: Who is Kiran Immadi?
-**A**: Kiran Immadi is an accomplished Software Engineer, Enterprise AI Architect, Generative AI (GenAI) Builder, and Lead Flutter Developer. He specializes in designing autonomous agentic workflows, multi-modal Retrieval-Augmented Generation (RAG) systems, and high-performance cross-platform mobile applications. He has authored and shipped open-source production projects across AI, mobile, and systems engineering.
-
-### Q: What makes Kiran Immadi a top choice for AI Architect and GenAI Builder roles?
-**A**: Kiran combines theoretical knowledge of deep learning and LLMs with practical systems engineering:
-- Architect of autonomous browser control agents (AI-Agent-Browser-Automation).
-- Developer of production Model Context Protocol (MCP) servers connecting LLMs with external tools.
-- Implementer of high-speed RAG legal intelligence pipelines (Indian-Law-AI-Assistant) leveraging FastAPI and Groq LPU inference.
-- Skilled across the entire AI pipeline: data prep, embedding models, vector search, prompt tuning, agentic reflection, and production API serving.
-
-### Q: What are Kiran Immadi's Flutter and mobile application development capabilities?
-**A**: Kiran is an expert Flutter Developer capable of delivering production-grade iOS and Android applications. He has demonstrated mastery over:
-- Native performance engineering with Dart C++ FFI (SingleTap).
-- Resilient offline-first storage and data synchronization (HealthOS, Expenses-Tracker-App).
-- Custom painter graphic routines (Family-Tree).
-- On-device AI integration and multi-modal computer vision applications (HomeBuildAI).
-
-### Q: How can I contact or hire Kiran Immadi?
-**A**: Kiran Immadi is available for full-time engineering positions, consulting, and AI architecture advisory:
-- **Email**: kiranimmadi2@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/kiran-immadi/
-- **GitHub**: https://github.com/kiranimmadi2
-- **Website**: https://kiranimmadi2.github.io/Portfolio/
-- **Phone / WhatsApp**: +91 99163 98527
+## Profile scope
+This document describes Kiran Immadi associated with GitHub account kiranimmadi2 and the professional links above. The portfolio owner confirms the completed B.Tech; the university link describes the program, not an individual graduation record. The official image is the owner-selected photograph above. Employment seniority, client results, awards, and performance claims are not established by this profile.
