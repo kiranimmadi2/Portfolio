@@ -24,8 +24,26 @@
     "url": "https://www.dsu.edu.in/",
     "programUrl": "https://www.dsu.edu.in/engineering/cse-aiml"
   },
-  "targetRoles": ["AI Engineer", "Forward Deployed Engineer", "Generative AI Engineer", "Applied AI Engineer"],
-  "skills": ["Artificial intelligence", "Generative AI", "Large language models", "AI agents", "Retrieval-augmented generation (RAG)", "Model Context Protocol (MCP)", "Python", "FastAPI", "API integration", "Flutter", "Dart", "Machine learning"],
+  "targetRoles": [
+    "AI Engineer",
+    "Forward Deployed Engineer",
+    "Generative AI Engineer",
+    "Applied AI Engineer"
+  ],
+  "skills": [
+    "Artificial intelligence",
+    "Generative AI",
+    "Large language models",
+    "AI agents",
+    "Retrieval-augmented generation (RAG)",
+    "Model Context Protocol (MCP)",
+    "Python",
+    "FastAPI",
+    "API integration",
+    "Flutter",
+    "Dart",
+    "Machine learning"
+  ],
   "projects": [
     {
       "name": "AI-Agent-Browser-Automation",
@@ -45,5 +63,7 @@
       "description": "Model Context Protocol server project exposing tools to LLM coding agents.",
       "relevance": "Tool integration and developer infrastructure"
     }
-  ]
+  ],
+  "googleSiteVerification": "zZwzEF4Ax5TfVqqiwIb5WEoGzNHJgA7DR5_oxAe7O9w",
+  "homeBodySha256": "39c5d45ef0433450a2dfb293796e29f92e14e07d68e2f2cf9e320635429a5d91"
 }

@@ -49,7 +49,7 @@ I completed a Bachelor of Technology (B.Tech) in Computer Science and Engineerin
 I am open to AI Engineer, Forward Deployed Engineer, Generative AI Engineer, Applied AI Engineer opportunities. My focus is AI agents, LLM applications, RAG workflows, and software integration.
 
 ### Which is Kiran Immadi’s official profile image?
-The photograph shown on this page is my selected official portfolio image. My portfolio, GitHub handle kiranimmadi2, and linked professional profiles identify this profile.
+My selected official profile photograph is linked in the profile metadata and machine-readable profile files. My portfolio, GitHub handle kiranimmadi2, and linked professional profiles identify this profile.
 
 ### How can a recruiter contact Kiran Immadi?
 Email kiranimmadi2@gmail.com with the role, product problem, and team details. You can also find my GitHub and LinkedIn profiles below.

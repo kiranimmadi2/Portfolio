@@ -32,6 +32,7 @@ function metadata(title, description, canonical, type = 'website') {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <meta name="author" content="${esc(p.name)}">
+  ${p.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(p.googleSiteVerification)}">` : ''}
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="${canonical}">
   <link rel="alternate" type="text/plain" href="llms.txt" title="Profile summary">
@@ -55,91 +56,20 @@ function metadata(title, description, canonical, type = 'website') {
   <meta name="twitter:image:alt" content="${esc(p.portraitCaption)}">
   <!-- PROFILE METADATA END -->`;
 }
-function block(html, name, content) {
-  const regex = new RegExp(`<!-- ${name} START -->[\\s\\S]*?<!-- ${name} END -->`);
-  if (!regex.test(html)) throw new Error(`Missing ${name} content marker`);
-  return html.replace(regex, () => `<!-- ${name} START -->\n${content}\n<!-- ${name} END -->`);
-}
-const education = `<article class="profile-fact-card" id="education">
-  <p class="section-tag">EDUCATION · ${esc(p.education.status.toUpperCase())}</p>
-  <h3>${esc(p.education.degree)}</h3>
-  <p>${esc(p.education.field)}</p>
-  <p><a href="${p.education.url}" target="_blank" rel="noopener noreferrer">${esc(p.education.institution)} ↗</a> · Bengaluru, India</p>
-  <p class="profile-detail">DSU's School of Engineering offers the B.Tech CSE (AI &amp; ML) program, combining computer science with artificial intelligence and machine learning.</p>
-  <a class="profile-text-link" href="${p.education.programUrl}" target="_blank" rel="noopener noreferrer">Explore the official CSE (AI &amp; ML) program ↗</a>
-</article>`;
-const roles = `<article class="profile-fact-card">
-  <p class="section-tag">OPEN TO OPPORTUNITIES</p>
-  <h3>AI Engineer &amp; Forward Deployed Engineer</h3>
-  <p>I turn practical problems into AI applications: connecting models, tools, data, and interfaces into usable workflows.</p>
-  <p class="profile-detail">Interested in applied AI roles with hands-on ownership of problem discovery, prototyping, API integration, deployment, and iteration with users.</p>
-  <a class="profile-text-link" href="mailto:${p.email}?subject=AI%20Engineer%20%2F%20Forward%20Deployed%20Engineer%20opportunity">Discuss a role ↗</a>
-</article>`;
-const evidence = `<section class="profile-section" id="recruiter-profile" aria-labelledby="recruiter-title">
-  <div class="container">
-    <p class="section-tag">BACKGROUND &amp; OPPORTUNITIES</p>
-    <h2 class="section-title" id="recruiter-title">Applied AI. End-to-end ownership.</h2>
-    <p class="profile-intro">${esc(p.summary)}</p>
-    <div class="profile-facts-grid">${education}${roles}</div>
-    <div class="profile-evidence">
-      <h3>Explore the engineering behind the profile</h3>
-      <p>Browse the source code and evaluate the implementation for your team's needs.</p>
-      <div class="profile-project-links">${p.projects.map(project => `<a href="${project.url}" target="_blank" rel="noopener noreferrer"><strong>${esc(project.name)} ↗</strong><span>${esc(project.relevance)}</span></a>`).join('\n')}</div>
-      <a class="profile-text-link" href="about.html">Read my full profile and education ↗</a>
-    </div>
-  </div>
-</section>`;
 let home = read('index.html');
 home = home.replace(/<!-- PROFILE METADATA START:[\s\S]*?<!-- PROFILE METADATA END -->/, () => metadata(`${p.name} | AI Engineer & Forward Deployed Engineer Opportunities`, p.summary, p.siteUrl, 'profile'));
 home = home.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => `<script type="application/ld+json">\n${json}\n  </script>`);
-home = home.replace(/<img\b[^>]*\bid="kiran-(light|dark)-img">/g, (_, theme) => `<img src="${esc(p.portrait)}" alt="${esc(p.portraitCaption)}" width="${width}" height="${height}" fetchpriority="high" class="portrait-img ${theme}-portrait official-photo" id="kiran-${theme}-img">`);
-home = home.replace('class="portrait-image-container"', 'class="portrait-image-container official-photo-container"');
-home = block(home, 'PROFILE CONTENT', evidence);
 write('index.html', home);
 
 const questions = [
   ['What is Kiran Immadi’s education?', `I completed a ${degree} at ${p.education.institution}.`],
   ['Which roles is Kiran Immadi interested in?', `I am open to ${p.targetRoles.join(', ')} opportunities. My focus is AI agents, LLM applications, RAG workflows, and software integration.`],
-  ['Which is Kiran Immadi’s official profile image?', 'The photograph shown on this page is my selected official portfolio image. My portfolio, GitHub handle kiranimmadi2, and linked professional profiles identify this profile.'],
+  ['Which is Kiran Immadi’s official profile image?', 'My selected official profile photograph is linked in the profile metadata and machine-readable profile files. My portfolio, GitHub handle kiranimmadi2, and linked professional profiles identify this profile.'],
   ['How can a recruiter contact Kiran Immadi?', `Email ${p.email} with the role, product problem, and team details. You can also find my GitHub and LinkedIn profiles below.`]
 ];
-write('about.html', `<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  ${metadata(`About ${p.name} | AI Engineer, Education & Opportunities`, p.summary, url('about.html'), 'profile')}
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <script type="application/ld+json">${JSON.stringify({ ...graph, '@graph': graph['@graph'].filter(n => n['@type'] !== 'ItemList').map(n => n['@type'] === 'ProfilePage' ? { ...n, '@id': url('about.html#webpage'), url: url('about.html'), name: `About ${p.name}` } : n) }, null, 2)}</script>
-</head>
-<body>
-  <header class="site-header"><div class="header-inner container">
-    <a class="logo" href="index.html"><span class="logo-text">KIRAN IMMADI</span></a>
-    <a class="profile-text-link" href="index.html#projects">Explore my work ↗</a>
-  </div></header>
-  <main class="profile-page">
-    <section class="container profile-bio" aria-labelledby="profile-name">
-      <img src="${esc(p.portrait)}" alt="${esc(p.portraitCaption)}" width="${width}" height="${height}" class="profile-official-image" fetchpriority="high">
-      <div><p class="section-tag">OFFICIAL PROFILE · @${esc(p.handle)}</p>
-        <h1 id="profile-name">${esc(p.name)}</h1>
-        <p class="profile-headline">${esc(p.headline)}</p>
-        <p>${esc(p.summary)}</p>
-        <p class="profile-detail">${esc(p.location)} · Updated ${esc(p.updated)}</p>
-        <div class="profile-social-links"><a href="mailto:${p.email}">Email Kiran ↗</a>${p.sameAs.slice(0, 2).map((link, i) => `<a href="${link}" target="_blank" rel="me noopener noreferrer">${i === 0 ? 'GitHub' : 'LinkedIn'} ↗</a>`).join('')}</div>
-      </div>
-    </section>
-    ${evidence.replace('<a class="profile-text-link" href="about.html">Read my full profile and education ↗</a>', '<a class="profile-text-link" href="index.html#projects">Explore all portfolio projects ↗</a>')}
-    <section class="profile-section"><div class="container profile-questions">
-      <p class="section-tag">PROFILE QUESTIONS</p><h2 class="section-title">Get to know my work.</h2>
-      ${questions.map(([question, answer]) => `<details><summary>${esc(question)}</summary><p>${esc(answer)}</p></details>`).join('\n')}
-    </div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><p>© 2026 ${esc(p.name)} · <a href="index.html">Portfolio</a> · <a href="${p.education.url}">${esc(p.education.institution)}</a></p></div></footer>
-</body>
-</html>\n`);
 
 for (const [file, label, description] of [
+  ['about.html', 'Education & AI Engineering Profile', p.summary],
   ['skills.html', 'AI, Python & Flutter Skills', 'AI engineering, Python, machine learning, and Flutter skills of Kiran Immadi, a B.Tech CSE (AI & ML) graduate from Dayananda Sagar University.'],
   ['projects.html', 'Software & AI Projects', 'Explore software and AI projects by Kiran Immadi. See the main portfolio for selected AI agents, document workflows, and MCP integration work.'],
   ['contact.html', 'Contact for AI Engineering Opportunities', 'Contact Kiran Immadi about AI Engineer, Generative AI Engineer, and Forward Deployed Engineer opportunities. Based in Bengaluru, India.']
@@ -150,6 +80,10 @@ for (const [file, label, description] of [
     html = html.replace(/<!-- PROFILE METADATA START:[\s\S]*?<!-- PROFILE METADATA END -->/, () => meta);
   } else {
     html = html.replace(/\s*<title>[\s\S]*?<\/title>/g, '').replace('</head>', `  ${meta}\n</head>`);
+  }
+  if (file === 'about.html') {
+    const aboutGraph = { ...graph, '@graph': graph['@graph'].filter(n => n['@type'] !== 'ItemList').map(n => n['@type'] === 'ProfilePage' ? { ...n, '@id': url('about.html#webpage'), url: url('about.html'), name: 'About ' + p.name } : n) };
+    html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => '<script type="application/ld+json">' + JSON.stringify(aboutGraph, null, 2) + '</script>');
   }
   write(file, html);
 }

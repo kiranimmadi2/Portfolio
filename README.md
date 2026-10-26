@@ -20,7 +20,9 @@ Open the local URL printed by the server. The local static server uses `about.ht
 
 Edit `profile.json` for identity, education, roles sought, canonical origin, and portrait choice. Then run the first two commands and commit the generated HTML, JSON, text files, sitemap, robots file, and image. The generator writes static content into HTML so crawlers can read it without running JavaScript. The original portfolio layout and project catalogue remain in `index.html`.
 
-The selected portrait is the photograph supplied by Kiran Immadi, preserved in `assets/kiran-immadi-profile-photo-original.png` and copied without alteration to `assets/kiran-immadi-profile-photo.png`. Both home page themes and the About page use this photograph. All search metadata, structured data, image sitemap entries, and AI context files point to it. The prior illustrated portraits remain in `assets/` as backups.
+The visible home page body and stylesheet are restored to commit `006931f`; the original headings, layout, and theme portraits are preserved. The existing About page layout is retained, with factual copy corrected from student to graduate and official DSU links added. The profile maintenance script updates metadata and crawl files without rewriting page bodies.
+
+The search-facing portrait is the photograph supplied by Kiran Immadi, preserved in `assets/kiran-immadi-profile-photo-original.png` and copied without alteration to `assets/kiran-immadi-profile-photo.png`. Search metadata, structured data, image sitemap entries, and AI context files reference it. This is a preferred source image, not a command that forces search providers to display it. The home page still uses its original theme illustrations.
 
 ## Publishing and search updates
 
@@ -28,7 +30,7 @@ These changes are source code until the updated branch is deployed to the existi
 
 1. Deploy these files to the existing Vercel project for `kiranimmadi.vercel.app`. Confirm `/`, `/about`, `/schema.json`, `/llms.txt`, `/sitemap.xml`, and the official image URL return HTTP 200.
 2. Keep `profile.json.siteUrl` set to the actual primary domain. If the domain changes, regenerate before deploying. Avoid a canonical URL pointing to a different, inactive copy of the portfolio. If GitHub Pages is also published, use the Vercel canonical on that copy or configure an appropriate move separately.
-3. Verify ownership in [Google Search Console](https://search.google.com/search-console), submit `https://kiranimmadi.vercel.app/sitemap.xml`, and request indexing for the home page and `/about` using URL Inspection. This needs access to the owner's Search Console account. No fake verification token is included.
+3. A real Google Search Console verification tag from the owner's signed-in account is included in `profile.json` and generated metadata. Keep it in place after verifying ownership. Submit `https://kiranimmadi.vercel.app/sitemap.xml`, and request indexing for the home page and `/about` using URL Inspection. The deployment or code alone does not prove that verification or indexing submission completed; check Search Console for the actual result.
 4. Validate the deployed HTML in [Google's Rich Results Test](https://search.google.com/test/rich-results) and check its reported canonical URL. An eligible profile is not a promise of a particular search appearance.
 5. Keep your LinkedIn, GitHub bio, resume, and job profiles consistent: name, completed B.Tech CSE (AI & ML), DSU, primary website, and selected portrait. A university program link documents the course; it does not independently verify an individual's graduation.
 6. Add concrete project case studies over time: the problem, your contribution, architecture, deployment, repository, and measured outcomes you can substantiate. Evaluate search impressions and recruiter inquiries rather than repeating keywords or claiming unverified seniority.

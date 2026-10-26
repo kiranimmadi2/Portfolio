@@ -34,12 +34,17 @@ for (const file of ['index.html', 'about.html', 'skills.html', 'projects.html', 
     if (!/^(?:https?:|data:|#)/.test(asset)) assert.ok(fs.existsSync(path.join(root, asset)), `${file}: missing ${asset}`);
   }
   for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(match[1]);
-  if (file === 'index.html' || file === 'about.html') {
+  if (file === 'index.html') {
+    const body = html.slice(html.indexOf('<body>')).replace(/\r\n/g, '\n');
+    assert.equal(crypto.createHash('sha256').update(body).digest('hex'), p.homeBodySha256, 'The home page design and visible content must match the requested original version');
+    assert.ok(html.includes(`name="google-site-verification" content="${p.googleSiteVerification}"`));
+  }
+  if (file === 'about.html') {
     const body = html.split('<body>')[1];
     assert.ok(body.includes(p.education.institution), `${file}: visible institution`);
     assert.ok(body.includes(p.education.programUrl), `${file}: official degree program link`);
-    assert.ok(body.includes('Forward Deployed Engineer'), `${file}: target role`);
-    assert.ok(body.includes('EDUCATION · COMPLETED'), `${file}: completed education`);
+    assert.ok(body.includes('B.Tech graduate'), `${file}: completed education`);
+    assert.ok(body.includes('— Completed'), `${file}: qualification status`);
   }
 }
 assert.deepEqual(JSON.parse(read('index.html').match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]), schema, 'Inline schema and downloadable schema must match');
@@ -49,4 +54,4 @@ for (const file of ['llms.txt', 'llms-full.txt']) {
 }
 assert.ok(read('robots.txt').includes(`Sitemap: ${absolute('sitemap.xml')}`));
 for (const file of ['', 'about.html', 'skills.html', 'projects.html', 'contact.html']) assert.ok(read('sitemap.xml').includes(`<loc>${absolute(file)}</loc>`));
-console.log('PASS: education, identity, portrait, schema parity, canonicals, local assets, crawl files, and unique page IDs.');
+console.log('PASS: original home design preserved; education, search photo, schema parity, canonicals, verification tag, crawl files, and page assets agree.');
