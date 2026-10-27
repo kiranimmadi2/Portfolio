@@ -54,9 +54,9 @@ function metadata(title, description, canonical, type = 'website') {
   <link rel="canonical" href="${canonical}">
   <link rel="icon" type="image/png" sizes="${iconWidth}x${iconHeight}" href="/${p.favicon}">
   <link rel="apple-touch-icon" sizes="${iconWidth}x${iconHeight}" href="/${p.favicon}">
-  <link rel="alternate" type="text/plain" href="llms.txt" title="Profile summary">
-  <link rel="alternate" type="application/ld+json" href="schema.json" title="Structured profile data">
-  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Profile summary">
+  <link rel="alternate" type="application/ld+json" href="/schema.json" title="Structured profile data">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <meta property="og:type" content="${type}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:site_name" content="${esc(p.name)}">
@@ -76,7 +76,7 @@ function metadata(title, description, canonical, type = 'website') {
   <!-- PROFILE METADATA END -->`;
 }
 let home = read('index.html');
-home = home.replace(/<!-- PROFILE METADATA START:[\s\S]*?<!-- PROFILE METADATA END -->/, () => metadata(`${p.name} | AI Engineer & Forward Deployed Engineer Opportunities`, p.summary, p.siteUrl, 'profile'));
+home = home.replace(/<!-- PROFILE METADATA START:[\s\S]*?<!-- PROFILE METADATA END -->/, () => metadata(`${p.name} | AI Engineer & Forward Deployed Engineer Opportunities`, p.searchDescription, p.siteUrl, 'profile'));
 home = home.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => `<script type="application/ld+json">\n${json}\n  </script>`);
 write('index.html', home);
 
@@ -88,7 +88,7 @@ const questions = [
 ];
 
 for (const [file, label, description] of [
-  ['about.html', 'Education & AI Engineering Profile', p.summary],
+  ['about.html', 'Education & AI Engineering Profile', `${p.name} completed B.Tech in CSE (AI & ML) at ${p.education.institution}. Explore his education and AI engineering background in Bengaluru, India.`],
   ['skills.html', 'AI, Python & Flutter Skills', 'AI engineering, Python, machine learning, and Flutter skills of Kiran Immadi, a B.Tech CSE (AI & ML) graduate from Dayananda Sagar University.'],
   ['projects.html', 'Software & AI Projects', 'Explore software and AI projects by Kiran Immadi. See the main portfolio for selected AI agents, document workflows, and MCP integration work.'],
   ['contact.html', 'Contact for AI Engineering Opportunities', 'Contact Kiran Immadi about AI Engineer, Generative AI Engineer, and Forward Deployed Engineer opportunities. Based in Bengaluru, India.']
@@ -101,6 +101,7 @@ for (const [file, label, description] of [
     html = html.replace(/\s*<title>[\s\S]*?<\/title>/g, '').replace('</head>', `  ${meta}\n</head>`);
   }
   if (file === 'about.html') {
+    html = html.replace(/<img\b[^>]*class="profile-image"[^>]*>/, () => `<img src="${esc(p.portrait)}" alt="${esc(p.portraitCaption)}" width="${width}" height="${height}" decoding="async" class="profile-image">`);
     const aboutGraph = { ...graph, '@graph': graph['@graph'].filter(n => n['@type'] !== 'ItemList').map(n => n['@type'] === 'ProfilePage' ? { ...n, '@id': url('about.html#webpage'), url: url('about.html'), name: 'About ' + p.name } : n) };
     html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => '<script type="application/ld+json">' + JSON.stringify(aboutGraph, null, 2) + '</script>');
   }

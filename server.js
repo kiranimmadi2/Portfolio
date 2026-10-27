@@ -19,6 +19,8 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURIComponent(req.url.split('?')[0]);
+  // Match the production clean URLs used by navigation and canonical metadata.
+  if (['/about', '/skills', '/projects', '/contact'].includes(reqPath)) reqPath += '.html';
   if (reqPath === '/') reqPath = '/index.html';
   const filePath = path.join(__dirname, reqPath);
 

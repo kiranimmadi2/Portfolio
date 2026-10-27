@@ -16,11 +16,11 @@ node scripts/check-profile.cjs
 node server.js
 ```
 
-Open the local URL printed by the server. The local static server uses `about.html`; Vercel serves its canonical `/about` URL through the existing `cleanUrls` setting.
+Open the local URL printed by the server. Both the local static server and Vercel support canonical paths such as `/about`.
 
 Edit `profile.json` for identity, education, roles sought, canonical origin, and portrait choice. Then run the first two commands and commit the generated HTML, JSON, text files, sitemap, robots file, and image. The generator writes static content into HTML so crawlers can read it without running JavaScript. The original portfolio layout and project catalogue remain in `index.html`.
 
-The visible home page body and stylesheet are restored to commit `006931f`; the original headings, layout, and theme portraits are preserved. The existing About page layout is retained, with factual copy corrected from student to graduate and official DSU links added. The profile maintenance script updates metadata and crawl files without rewriting page bodies.
+The home page appearance and stylesheet are preserved from commit `006931f`; the original headings, layout, text, and theme portraits remain. The existing words "I'm Kiran." now link to `/about`, making the other pages discoverable through ordinary HTML links. The design check allows only this anchor around the original text. The existing About page layout is retained, with factual copy corrected from student to graduate, official DSU links, and the supplied profile photograph. The profile maintenance script updates metadata and crawl files and keeps the About photo aligned with the selected portrait.
 
 The search-facing portrait is the photograph supplied by Kiran Immadi, preserved in `assets/kiran-immadi-profile-photo-original.png` and copied without alteration to `assets/kiran-immadi-profile-photo.png`. Search metadata, structured data, image sitemap entries, and AI context files reference it. This is a preferred source image, not a command that forces search providers to display it. The home page still uses its original theme illustrations.
 
