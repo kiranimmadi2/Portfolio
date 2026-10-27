@@ -35,6 +35,29 @@ a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
 a:hover { color: var(--accent); }
 
 /* ===== Navigation ===== */
+.profile-subpage main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 6rem 1.5rem 2rem;
+        min-height: calc(100vh - 90px);
+}
+
+.profile-subpage nav {
+        justify-content: center;
+        padding: 1rem;
+}
+
+.profile-subpage nav > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+        list-style: none;
+}
+
+/* These small pages use visible links at every width, with no collapsed menu. */
+.profile-subpage .hamburger { display: none; }
+
 header {
         position: fixed;
         top: 0;
@@ -747,6 +770,13 @@ footer {
 }
 
 @media (max-width: 480px) {
+        .profile-subpage .profile-container {
+                    float: none;
+                    position: relative;
+                    top: 0;
+                    margin: 0 auto 1.5rem;
+                    max-width: 100%;
+        }
         .hero-name { font-size: 2rem; }
         .hero-title { font-size: 1.2rem; }
         .contact-grid { grid-template-columns: 1fr; }

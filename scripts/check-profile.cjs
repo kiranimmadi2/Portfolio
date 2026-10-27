@@ -63,7 +63,7 @@ for (const file of ['index.html', 'about.html', 'skills.html', 'projects.html', 
     assert.ok(html.includes(`name="google-site-verification" content="${p.googleSiteVerification}"`));
   }
   if (file === 'about.html') {
-    const body = html.split('<body>')[1];
+    const body = html.split(/<body\b[^>]*>/)[1];
     assert.ok(body.includes(p.education.institution), `${file}: visible institution`);
     assert.ok(body.includes(p.education.programUrl), `${file}: official degree program link`);
     assert.ok(body.includes('B.Tech graduate'), `${file}: completed education`);

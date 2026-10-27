@@ -24,6 +24,8 @@ The home page appearance and stylesheet are preserved from commit `006931f`; the
 
 The search-facing portrait is the photograph supplied by Kiran Immadi, preserved in `assets/kiran-immadi-profile-photo-original.png` and copied without alteration to `assets/kiran-immadi-profile-photo.png`. Search metadata, structured data, image sitemap entries, and AI context files reference it. This is a preferred source image, not a command that forces search providers to display it. The home page still uses its original theme illustrations.
 
+The secondary pages use a scoped `profile-subpage` style to keep the fixed header clear of the page text and photograph. Navigation links remain visible at mobile widths. This affects `styles.css`, not the homepage's `style.css`.
+
 The search favicon is the existing white KI logo on a charcoal square, copied from `assets/apple-touch-icon.png` to the stable `/favicon.png` URL (180 by 180 pixels). Every page declares the same icon. `/favicon.ico` contains the same image as a fallback; theme changes keep this icon stable. `WebSite.name` and `og:site_name` prefer **Kiran Immadi** as the site name, with portfolio and hostname alternatives. Google chooses the displayed site name, favicon, and ranking after recrawling; these preferences cannot force a particular result.
 
 ## Publishing and search updates
