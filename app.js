@@ -8,18 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const htmlRoot = document.documentElement;
 
-  function updateFavicon(theme) {
-    const isDark = theme === 'dark';
-    const pngFavicon = document.getElementById('favicon-png');
-    if (pngFavicon) {
-      pngFavicon.href = isDark ? 'assets/favicon-white-32x32.png' : 'assets/favicon-32x32.png';
-    }
-  }
-
   function setTheme(theme) {
     htmlRoot.setAttribute('data-theme', theme);
     localStorage.setItem('ki_theme', theme);
-    updateFavicon(theme);
     if (themeToggleBtn) {
       const isDark = theme === 'dark';
       themeToggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');

@@ -24,6 +24,8 @@ The visible home page body and stylesheet are restored to commit `006931f`; the 
 
 The search-facing portrait is the photograph supplied by Kiran Immadi, preserved in `assets/kiran-immadi-profile-photo-original.png` and copied without alteration to `assets/kiran-immadi-profile-photo.png`. Search metadata, structured data, image sitemap entries, and AI context files reference it. This is a preferred source image, not a command that forces search providers to display it. The home page still uses its original theme illustrations.
 
+The search favicon is the existing white KI logo on a charcoal square, copied from `assets/apple-touch-icon.png` to the stable `/favicon.png` URL (180 by 180 pixels). Every page declares the same icon. `/favicon.ico` contains the same image as a fallback; theme changes keep this icon stable. `WebSite.name` and `og:site_name` prefer **Kiran Immadi** as the site name, with portfolio and hostname alternatives. Google chooses the displayed site name, favicon, and ranking after recrawling; these preferences cannot force a particular result.
+
 ## Publishing and search updates
 
 These changes are source code until the updated branch is deployed to the existing Vercel project. No changes to Google, ChatGPT, Claude, LinkedIn, or other external profiles are made by editing this repository.
@@ -45,5 +47,7 @@ These changes are source code until the updated branch is deployed to the existi
 - [Google: ProfilePage structured data](https://developers.google.com/search/docs/appearance/structured-data/profile-page): consistent person identity, image, and professional profile links.
 - [Google: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features): ordinary SEO, crawl access, visible text, and structured data matching the page; no special AI markup requirement.
 - [Google: request a recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl): URL Inspection and sitemap submission; indexing is not immediate or guaranteed.
+- [Google: favicons in search](https://developers.google.com/search/docs/appearance/favicon-in-search): stable, crawlable square favicon; recrawling can take days to weeks.
+- [Google: site names](https://developers.google.com/search/docs/appearance/site-names): a concise preferred name in the home page WebSite structured data.
 
 The previous code remains preserved on `backup/current-before-006931f-20261026`, with the prior untracked files in the safety stash. These profile changes are based on the restored `006931f` version.

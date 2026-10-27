@@ -5,7 +5,11 @@
       "@type": "WebSite",
       "@id": "https://kiranimmadi.vercel.app/#website",
       "url": "https://kiranimmadi.vercel.app/",
-      "name": "Kiran Immadi | AI Engineer",
+      "name": "Kiran Immadi",
+      "alternateName": [
+        "Kiran Immadi Portfolio",
+        "kiranimmadi.vercel.app"
+      ],
       "publisher": {
         "@id": "https://kiranimmadi.vercel.app/#person"
       },
@@ -16,7 +20,7 @@
       "@id": "https://kiranimmadi.vercel.app/#webpage",
       "url": "https://kiranimmadi.vercel.app/",
       "name": "Kiran Immadi | AI Engineer & Forward Deployed Engineer Opportunities",
-      "dateModified": "2026-10-26T00:00:00+05:30",
+      "dateModified": "2026-10-27T00:00:00+05:30",
       "isPartOf": {
         "@id": "https://kiranimmadi.vercel.app/#website"
       },

@@ -9,13 +9,28 @@ const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<'
 const url = file => new URL(p.cleanUrls ? file.replace(/\.html$/, '') : file, p.siteUrl).href;
 const ref = id => ({ '@id': url('#' + id) });
 fs.copyFileSync(path.join(root, p.portraitSource), path.join(root, p.portrait));
+// Use the existing, visible KI logo at a stable URL for every theme and crawler.
+fs.copyFileSync(path.join(root, p.faviconSource), path.join(root, p.favicon));
+const icon = fs.readFileSync(path.join(root, p.favicon));
+const iconWidth = icon.readUInt32BE(16), iconHeight = icon.readUInt32BE(20);
+// Modern ICO files support a PNG frame; keep /favicon.ico consistent too.
+const icoHeader = Buffer.alloc(22);
+icoHeader.writeUInt16LE(1, 2);
+icoHeader.writeUInt16LE(1, 4);
+icoHeader[6] = iconWidth === 256 ? 0 : iconWidth;
+icoHeader[7] = iconHeight === 256 ? 0 : iconHeight;
+icoHeader.writeUInt16LE(1, 10);
+icoHeader.writeUInt16LE(32, 12);
+icoHeader.writeUInt32LE(icon.length, 14);
+icoHeader.writeUInt32LE(22, 18);
+fs.writeFileSync(path.join(root, 'favicon.ico'), Buffer.concat([icoHeader, icon]));
 const png = fs.readFileSync(path.join(root, p.portrait));
 const width = png.readUInt32BE(16), height = png.readUInt32BE(20);
 const degree = `${p.education.degree} in ${p.education.field}`;
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebSite', ...ref('website'), url: p.siteUrl, name: `${p.name} | AI Engineer`, publisher: ref('person'), inLanguage: 'en' },
+    { '@type': 'WebSite', ...ref('website'), url: p.siteUrl, name: p.name, alternateName: [`${p.name} Portfolio`, new URL(p.siteUrl).hostname], publisher: ref('person'), inLanguage: 'en' },
     { '@type': 'ProfilePage', ...ref('webpage'), url: p.siteUrl, name: `${p.name} | AI Engineer & Forward Deployed Engineer Opportunities`, dateModified: p.updated + 'T00:00:00+05:30', isPartOf: ref('website'), mainEntity: ref('person'), primaryImageOfPage: ref('portrait'), description: p.summary },
     { '@type': 'Person', ...ref('person'), name: p.name, alternateName: p.handle, url: p.siteUrl, jobTitle: 'AI Engineer', description: p.summary, image: ref('portrait'), email: `mailto:${p.email}`, sameAs: p.sameAs, address: { '@type': 'PostalAddress', addressLocality: 'Bengaluru', addressRegion: 'Karnataka', addressCountry: 'IN' }, alumniOf: ref('university'), hasCredential: ref('degree'), knowsAbout: p.skills, subjectOf: { '@type': 'ProfilePage', url: url('about.html'), name: `About ${p.name}` } },
     { '@type': 'ImageObject', ...ref('portrait'), url: url(p.portrait), contentUrl: url(p.portrait), caption: p.portraitCaption, description: 'Profile photograph provided by Kiran Immadi for his official portfolio.', width, height, representativeOfPage: true },
@@ -32,15 +47,19 @@ function metadata(title, description, canonical, type = 'website') {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <meta name="author" content="${esc(p.name)}">
+  <meta name="application-name" content="${esc(p.name)}">
+  <meta name="apple-mobile-web-app-title" content="${esc(p.name)}">
   ${p.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(p.googleSiteVerification)}">` : ''}
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="${canonical}">
+  <link rel="icon" type="image/png" sizes="${iconWidth}x${iconHeight}" href="/${p.favicon}">
+  <link rel="apple-touch-icon" sizes="${iconWidth}x${iconHeight}" href="/${p.favicon}">
   <link rel="alternate" type="text/plain" href="llms.txt" title="Profile summary">
   <link rel="alternate" type="application/ld+json" href="schema.json" title="Structured profile data">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
   <meta property="og:type" content="${type}">
   <meta property="og:url" content="${canonical}">
-  <meta property="og:site_name" content="Kiran Immadi Portfolio">
+  <meta property="og:site_name" content="${esc(p.name)}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:image" content="${url(p.portrait)}">

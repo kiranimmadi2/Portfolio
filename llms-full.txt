@@ -2,7 +2,7 @@
 
 > Kiran Immadi is an AI Engineer in Bengaluru, India, building AI agents, LLM applications, RAG workflows, APIs, and Flutter products. He completed a B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at Dayananda Sagar University. Open to AI Engineer and Forward Deployed Engineer opportunities.
 
-Last updated: 2026-10-26
+Last updated: 2026-10-27
 
 ## Identity
 - Name: Kiran Immadi

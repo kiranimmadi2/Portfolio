@@ -9,6 +9,9 @@ const absolute = file => new URL(p.cleanUrls ? file.replace(/\.html$/, '') : fil
 const schema = JSON.parse(read('schema.json'));
 const byType = type => schema['@graph'].find(item => item['@type'] === type);
 assert.equal(byType('Person').name, p.name);
+assert.equal(schema['@graph'].filter(item => item['@type'] === 'WebSite').length, 1);
+assert.equal(byType('WebSite').name, p.name);
+assert.ok(byType('WebSite').alternateName.includes(`${p.name} Portfolio`));
 assert.equal(byType('Person').alumniOf['@id'], byType('CollegeOrUniversity')['@id']);
 assert.equal(byType('Person').hasCredential['@id'], byType('EducationalOccupationalCredential')['@id']);
 assert.equal(byType('Person').image['@id'], byType('ImageObject')['@id']);
@@ -20,18 +23,29 @@ assert.equal(byType('ImageObject').width, image.readUInt32BE(16));
 assert.equal(byType('ImageObject').height, image.readUInt32BE(20));
 const digest = file => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex');
 assert.equal(digest(p.portrait), digest(p.portraitSource), 'The selected image must remain unmodified');
+const icon = fs.readFileSync(path.join(root, p.favicon));
+assert.equal(digest(p.favicon), digest(p.faviconSource), 'Use the existing visible KI logo');
+assert.equal(icon.readUInt32BE(16), icon.readUInt32BE(20), 'Favicon must be square');
+assert.ok(icon.readUInt32BE(16) > 48, 'Use a high resolution favicon');
+const ico = fs.readFileSync(path.join(root, 'favicon.ico'));
+assert.equal(ico.readUInt16LE(2), 1);
+assert.equal(ico.readUInt16LE(4), 1);
+assert.deepEqual(ico.subarray(ico.readUInt32LE(18)), icon, 'ICO fallback must show the same logo');
 for (const file of ['index.html', 'about.html', 'skills.html', 'projects.html', 'contact.html']) {
   const html = read(file), canonical = absolute(file === 'index.html' ? '' : file);
   assert.equal((html.match(/<title>/g) || []).length, 1, `${file}: one title`);
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1, `${file}: one canonical`);
   assert.ok(html.includes(`rel="canonical" href="${canonical}"`), `${file}: canonical URL`);
   assert.ok(html.includes(`property="og:image" content="${absolute(p.portrait)}"`), `${file}: selected social image`);
+  assert.equal((html.match(/rel="icon"/g) || []).length, 1, `${file}: one stable favicon`);
+  assert.ok(html.includes(`rel="icon" type="image/png" sizes="180x180" href="/${p.favicon}"`), `${file}: crawlable KI favicon`);
+  assert.ok(html.includes(`property="og:site_name" content="${p.name}"`), `${file}: consistent site name`);
   assert.ok(!/github\.io\/Portfolio|Senior Software Engineer|Enterprise AI Architect|Lead Flutter Developer|B\.Tech student|Diploma in Information/i.test(html), `${file}: stale identity content`);
   const ids = Array.from(html.matchAll(/\bid="([^"]+)"/g), m => m[1]);
   assert.equal(ids.length, new Set(ids).size, `${file}: unique IDs`);
   for (const match of html.matchAll(/<(?:script|link|img)\b[^>]*\b(?:src|href)="([^"]+)"/g)) {
     const asset = match[1].split(/[?#]/)[0];
-    if (!/^(?:https?:|data:|#)/.test(asset)) assert.ok(fs.existsSync(path.join(root, asset)), `${file}: missing ${asset}`);
+    if (!/^(?:https?:|data:|#)/.test(asset)) assert.ok(fs.existsSync(path.join(root, asset.replace(/^\//, ''))), `${file}: missing ${asset}`);
   }
   for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(match[1]);
   if (file === 'index.html') {
